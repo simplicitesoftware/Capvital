@@ -13,3 +13,20 @@
 
 
 
+`CvUser` business object definition
+-----------------------------------
+
+
+
+### Fields
+
+| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      |
+|--------------------------------------------------------------|------------------------------------------|----------|-----------|----------|----------------------------------------------------------------------------------|
+| `cvUserProfile`                                              | enum(10) using `CV_USER_PROFILE` list    | yes      | yes       |          | -                                                                                |
+
+### Lists
+
+* `CV_USER_PROFILE`
+    - `ADH` Adherent
+    - `SUP` Supplier
+

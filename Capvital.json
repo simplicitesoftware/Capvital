@@ -8,5 +8,930 @@
   "mdl_type": "A",
   "mdl_url": null,
   "mdl_comment": null
- }
+ },
+ "links": [
+  {
+   "object": "Group",
+   "label": "Groups",
+   "icon": "img/system/group",
+   "field": "row_module_id",
+   "list": [
+    {
+     "object": "Group",
+     "userkey": "CV_ADHERENT",
+     "item": {
+      "grp_name": "CV_ADHERENT",
+      "grp_comment": null,
+      "grp_type": ["G"],
+      "grp_parent_id__grp_name": null,
+      "grp_home_id__viw_name": "CvAdherentHome",
+      "row_module_id__mdl_name": "Capvital"
+     }
+    },
+    {
+     "object": "Group",
+     "userkey": "CV_ADMIN",
+     "item": {
+      "grp_name": "CV_ADMIN",
+      "grp_comment": null,
+      "grp_type": ["G"],
+      "grp_parent_id__grp_name": null,
+      "grp_home_id__viw_name": "CapvitalAdminHome",
+      "row_module_id__mdl_name": "Capvital"
+     },
+     "links": [{
+      "object": "Profile",
+      "label": "Profiles",
+      "icon": "img/system/profile",
+      "field": "prf_profile_id",
+      "list": [
+       {
+        "object": "Profile",
+        "userkey": "CV_ADMIN~CV_ADHERENT",
+        "item": {
+         "prf_profile_id__grp_name": "CV_ADMIN",
+         "prf_group_id__grp_name": "CV_ADHERENT",
+         "row_module_id__mdl_name": "Capvital"
+        }
+       },
+       {
+        "object": "Profile",
+        "userkey": "CV_ADMIN~CV_SUPPLIER",
+        "item": {
+         "prf_profile_id__grp_name": "CV_ADMIN",
+         "prf_group_id__grp_name": "CV_SUPPLIER",
+         "row_module_id__mdl_name": "Capvital"
+        }
+       }
+      ]
+     }]
+    },
+    {
+     "object": "Group",
+     "userkey": "CV_SUPPLIER",
+     "item": {
+      "grp_name": "CV_SUPPLIER",
+      "grp_comment": null,
+      "grp_type": ["G"],
+      "grp_parent_id__grp_name": null,
+      "grp_home_id__viw_name": "CvSupplierHome",
+      "row_module_id__mdl_name": "Capvital"
+     }
+    }
+   ]
+  },
+  {
+   "object": "ObjectInternal",
+   "label": "Business objects",
+   "icon": "img/system/business_object",
+   "field": "row_module_id",
+   "list": [{
+    "object": "ObjectInternal",
+    "userkey": "CvUser",
+    "item": {
+     "obo_name": "CvUser",
+     "obo_dbtable": "m_user",
+     "obo_role": "OBJ",
+     "obo_class": null,
+     "obo_script_id": null,
+     "obo_usets": "1",
+     "obo_nosearch": "1",
+     "obo_comment": null,
+     "obo_type": "O",
+     "obo_searchspec": "t.cv_user_profile is not null",
+     "obo_delspec": null,
+     "obo_exportorder": 10,
+     "obo_distinct": false,
+     "obo_indexable": false,
+     "obo_groupby": false,
+     "obo_dfltref": null,
+     "obo_template_id__tpl_name": "Base",
+     "obo_cache": "D",
+     "obo_copy": true,
+     "obo_export": true,
+     "obo_pagine": true,
+     "obo_srh_predef": ["1"],
+     "obo_selrow": true,
+     "obo_updall": true,
+     "obo_delall": true,
+     "obo_listsearch": true,
+     "obo_list_edit": [
+      "N",
+      "L",
+      "E"
+     ],
+     "obo_useform": true,
+     "obo_title": null,
+     "obo_icon": null,
+     "obo_refcount": false,
+     "obo_tree": false,
+     "obo_viewmode": "T",
+     "obo_historic": null,
+     "obo_printable": true,
+     "obo_followlink": true,
+     "obo_mergeable": false,
+     "obo_social": ["1"],
+     "obo_rowid_id__fld_name": null,
+     "obo_extend_id__obj_name": "SimpleUser",
+     "row_module_id__mdl_name": "Capvital",
+     "obo_btn_reload": "P",
+     "obo_btn_prefs": "P",
+     "obo_btn_del": "P",
+     "obo_btn_copy": "P",
+     "obo_btn_export": "P",
+     "obo_btn_listadd": "1",
+     "obo_btn_listedit": "1",
+     "obo_btn_listupsert": "1",
+     "obo_btn_updall": "P",
+     "obo_btn_delall": "P",
+     "obo_btn_merge": "P",
+     "obo_btn_save": true,
+     "obo_btn_saveclose": true,
+     "obo_btn_savenew": true,
+     "obo_btn_savecopy": true,
+     "obo_btn_close": true,
+     "obo_tray": false,
+     "obo_dashboard": true,
+     "obo_prefix": "cv_user",
+     "obo_search_ts": null,
+     "obo_minrows": null,
+     "obo_maxrows": null,
+     "obo_sortable": true,
+     "obo_list_areas": null
+    },
+    "links": [
+     {
+      "object": "TranslateObject",
+      "label": "Object translation",
+      "icon": "img/system/translation",
+      "field": "tsl_id",
+      "list": [
+       {
+        "object": "TranslateObject",
+        "userkey": "O~CvUser~ENU",
+        "item": {
+         "tsl_typeObject": "O",
+         "tsl_id__obo_name": "CvUser",
+         "tsl_lang": "ENU",
+         "tsl_value": "Cv user",
+         "tsl_help": null,
+         "row_module_id__mdl_name": "Capvital"
+        }
+       },
+       {
+        "object": "TranslateObject",
+        "userkey": "O~CvUser~FRA",
+        "item": {
+         "tsl_typeObject": "O",
+         "tsl_id__obo_name": "CvUser",
+         "tsl_lang": "FRA",
+         "tsl_value": "Cv user",
+         "tsl_help": null,
+         "row_module_id__mdl_name": "Capvital"
+        }
+       }
+      ]
+     },
+     {
+      "object": "ObjectFieldSystem",
+      "label": "Object fields",
+      "icon": "img/system/object_field",
+      "field": "obf_object_id",
+      "list": [{
+       "object": "ObjectFieldSystem",
+       "userkey": "CvUser~cvUserProfile~10",
+       "item": {
+        "obf_object_id__obo_name": "CvUser",
+        "obf_field_id__fld_name": "cvUserProfile",
+        "obf_field_id__fld_type": "7",
+        "obf_order": 10,
+        "obf_group_by": null,
+        "obf_dfault_order": null,
+        "obf_input": null,
+        "obf_ref_field_id__fld_name": null,
+        "obf_ref_object_id__obo_name": null,
+        "obf_cascad": null,
+        "obf_card": null,
+        "obf_visible": null,
+        "obf_ref_export": true,
+        "obf_copy": null,
+        "obf_ref_order": null,
+        "obf_fld_visible": null,
+        "obf_fld_required": null,
+        "obf_fld_updatable": null,
+        "obf_fld_research": null,
+        "obf_fld_more": null,
+        "obf_fld_listmore": null,
+        "obf_fld_researchreq": null,
+        "obf_fld_dfault": null,
+        "obf_field_id__fld_dfault": "ADH",
+        "obf_area_id__ofa_name": null,
+        "obf_area_id__ofa_position": null,
+        "row_module_id__mdl_name": "Capvital"
+       },
+       "links": [{
+        "object": "Field",
+        "label": "Field",
+        "icon": "img/system/field",
+        "field": "",
+        "list": [{
+         "object": "Field",
+         "userkey": "cvUserProfile",
+         "item": {
+          "fld_name": "cvUserProfile",
+          "fld_dbname": "cv_user_profile",
+          "fld_visible": "3",
+          "fld_updatable": "1",
+          "fld_required": true,
+          "fld_fonctid": false,
+          "fld_research": null,
+          "fld_researchreq": "0",
+          "fld_sort": "C",
+          "fld_more": false,
+          "fld_listmore": false,
+          "fld_listsum": null,
+          "fld_tray": null,
+          "fld_type": "7",
+          "fld_type_id__flt_code": null,
+          "fld_list_id__lov_name": "CV_USER_PROFILE",
+          "fld_copy": true,
+          "fld_size": 10,
+          "fld_minsize": null,
+          "fld_precision": null,
+          "fld_fromdate_id__fld_name": null,
+          "fld_dfault": "ADH",
+          "fld_indexable": false,
+          "fld_autocomp": "0",
+          "fld_groupby": false,
+          "fld_updall": true,
+          "fld_case": null,
+          "fld_righttoleft": false,
+          "fld_rendering": null,
+          "fld_speech": null,
+          "fld_calc": null,
+          "fld_objlist": null,
+          "fld_comment": null,
+          "fld_classification": null,
+          "row_module_id__mdl_name": "Capvital"
+         },
+         "links": [{
+          "object": "TranslateField",
+          "label": "Field translation",
+          "icon": "img/system/translation",
+          "field": "tsl_id",
+          "list": [
+           {
+            "object": "TranslateField",
+            "userkey": "F~cvUserProfile~ENU",
+            "item": {
+             "tsl_typeField": "F",
+             "tsl_id__fld_name": "cvUserProfile",
+             "tsl_lang": "ENU",
+             "tsl_value": "Cv user profile",
+             "tsl_simplehelp": null,
+             "tsl_short_value": null,
+             "tsl_placeholder": null,
+             "tsl_listhelp": null,
+             "row_module_id__mdl_name": "Capvital",
+             "tsl_tooltip": null
+            }
+           },
+           {
+            "object": "TranslateField",
+            "userkey": "F~cvUserProfile~FRA",
+            "item": {
+             "tsl_typeField": "F",
+             "tsl_id__fld_name": "cvUserProfile",
+             "tsl_lang": "FRA",
+             "tsl_value": "Cv user profile",
+             "tsl_simplehelp": null,
+             "tsl_short_value": null,
+             "tsl_placeholder": null,
+             "tsl_listhelp": null,
+             "row_module_id__mdl_name": "Capvital",
+             "tsl_tooltip": null
+            }
+           }
+          ]
+         }]
+        }]
+       }]
+      }]
+     },
+     {
+      "object": "Function",
+      "label": "Function",
+      "icon": "img/system/function",
+      "field": "fct_object_id",
+      "list": [
+       {
+        "object": "Function",
+        "userkey": "CV_USER_CRUD",
+        "item": {
+         "fct_name": "CV_USER_CRUD",
+         "fct_object_id__obj_type": "O",
+         "fct_object_id__obj_name": "CvUser",
+         "fct_function": "CMS",
+         "fct_action_id__act_name": null,
+         "fct_view_id__viw_name": null,
+         "row_module_id__mdl_name": "Capvital"
+        },
+        "links": [{
+         "object": "Grant",
+         "label": "Grant",
+         "icon": "img/system/grant",
+         "field": "grt_function_id",
+         "list": [{
+          "object": "Grant",
+          "userkey": "CV_ADMIN~CV_USER_CRUD~CvUser~",
+          "item": {
+           "grt_group_id__grp_name": "CV_ADMIN",
+           "grt_function_id__fct_name": "CV_USER_CRUD",
+           "grt_function_id__fct_object_id__obj_type": "O",
+           "grt_function_id__fct_object_id__obj_name": "CvUser",
+           "grt_function_id__fct_action_id__act_name": null,
+           "grt_function_id__fct_function": "CMS",
+           "grt_activ": true,
+           "row_module_id__mdl_name": "Capvital"
+          }
+         }]
+        }]
+       },
+       {
+        "object": "Function",
+        "userkey": "CV_USER_R",
+        "item": {
+         "fct_name": "CV_USER_R",
+         "fct_object_id__obj_type": "O",
+         "fct_object_id__obj_name": "CvUser",
+         "fct_function": "L",
+         "fct_action_id__act_name": null,
+         "fct_view_id__viw_name": null,
+         "row_module_id__mdl_name": "Capvital"
+        }
+       }
+      ]
+     }
+    ]
+   }]
+  },
+  {
+   "object": "Domain",
+   "label": "Domains",
+   "icon": "img/system/domain",
+   "field": "row_module_id",
+   "list": [{
+    "object": "Domain",
+    "userkey": "CvAdminDomain",
+    "item": {
+     "obd_name": "CvAdminDomain",
+     "obd_comment": null,
+     "obd_type": "D",
+     "obd_view_id__viw_name": "CapvitalAdminHome",
+     "obd_nohome": false,
+     "obd_icon": "bars",
+     "obd_order": 10,
+     "obd_domain_id__obd_name": null,
+     "row_module_id__mdl_name": "Capvital"
+    },
+    "links": [
+     {
+      "object": "TranslateDomain",
+      "label": "Domain translation",
+      "icon": "img/system/translation",
+      "field": "tsl_id",
+      "list": [
+       {
+        "object": "TranslateDomain",
+        "userkey": "O~CvAdminDomain~ENU",
+        "item": {
+         "tsl_typeObject": "O",
+         "tsl_id__obd_name": "CvAdminDomain",
+         "tsl_lang": "ENU",
+         "tsl_value": "Capvital",
+         "tsl_help": null,
+         "row_module_id__mdl_name": "Capvital"
+        }
+       },
+       {
+        "object": "TranslateDomain",
+        "userkey": "O~CvAdminDomain~FRA",
+        "item": {
+         "tsl_typeObject": "O",
+         "tsl_id__obd_name": "CvAdminDomain",
+         "tsl_lang": "FRA",
+         "tsl_value": "Capvital",
+         "tsl_help": null,
+         "row_module_id__mdl_name": "Capvital"
+        }
+       }
+      ]
+     },
+     {
+      "object": "Function",
+      "label": "Function",
+      "icon": "img/system/function",
+      "field": "fct_object_id",
+      "list": [{
+       "object": "Function",
+       "userkey": "CV_CAPVITAL_ADMIN_DOMAIN_D",
+       "item": {
+        "fct_name": "CV_CAPVITAL_ADMIN_DOMAIN_D",
+        "fct_object_id__obj_type": "D",
+        "fct_object_id__obj_name": "CvAdminDomain",
+        "fct_function": "L",
+        "fct_action_id__act_name": null,
+        "fct_view_id__viw_name": null,
+        "row_module_id__mdl_name": "Capvital"
+       },
+       "links": [{
+        "object": "Grant",
+        "label": "Grant",
+        "icon": "img/system/grant",
+        "field": "grt_function_id",
+        "list": [{
+         "object": "Grant",
+         "userkey": "CV_ADMIN~CV_CAPVITAL_ADMIN_DOMAIN_D~CvAdminDomain~",
+         "item": {
+          "grt_group_id__grp_name": "CV_ADMIN",
+          "grt_function_id__fct_name": "CV_CAPVITAL_ADMIN_DOMAIN_D",
+          "grt_function_id__fct_object_id__obj_type": "D",
+          "grt_function_id__fct_object_id__obj_name": "CvAdminDomain",
+          "grt_function_id__fct_action_id__act_name": null,
+          "grt_function_id__fct_function": "L",
+          "grt_activ": true,
+          "row_module_id__mdl_name": "Capvital"
+         }
+        }]
+       }]
+      }]
+     },
+     {
+      "object": "Map",
+      "label": "Main menu",
+      "icon": "img/system/main_menu",
+      "field": "map_domain_id",
+      "list": [{
+       "object": "Map",
+       "userkey": "CvAdminDomain~10",
+       "item": {
+        "map_domain_id__obd_name": "CvAdminDomain",
+        "map_object_id__obj_name": "CvUser",
+        "map_process_id__pcs_name": null,
+        "map_order": 10,
+        "map_ext": false,
+        "row_module_id__mdl_name": "Capvital"
+       }
+      }]
+     }
+    ]
+   }]
+  },
+  {
+   "object": "FieldList",
+   "label": "List of values",
+   "icon": "img/system/list_of_values",
+   "field": "row_module_id",
+   "list": [{
+    "object": "FieldList",
+    "userkey": "CV_USER_PROFILE",
+    "item": {
+     "lov_name": "CV_USER_PROFILE",
+     "row_module_id__mdl_name": "Capvital",
+     "lov_model_id__mod_name": null,
+     "lov_model_id__mod_image": null
+    },
+    "links": [{
+     "object": "FieldListCode",
+     "label": "List code",
+     "icon": "img/system/list_of_values",
+     "field": "lov_list_id",
+     "list": [
+      {
+       "object": "FieldListCode",
+       "userkey": "CV_USER_PROFILE~ADH",
+       "item": {
+        "lov_list_id__lov_name": "CV_USER_PROFILE",
+        "lov_code": "ADH",
+        "lov_order_by": 1,
+        "lov_label": "Adherent",
+        "row_module_id__mdl_name": "Capvital",
+        "lov_color": null,
+        "lov_color_bg": null,
+        "lov_icon": "icon/color/btn_blue",
+        "lov_display": ["L"]
+       },
+       "links": [{
+        "object": "FieldListValue",
+        "label": "Translated list value",
+        "icon": "img/system/translation",
+        "field": "lov_code_id",
+        "list": [
+         {
+          "object": "FieldListValue",
+          "userkey": "CV_USER_PROFILE~ADH~ENU",
+          "item": {
+           "lov_code_id__lov_list_id__lov_name": "CV_USER_PROFILE",
+           "lov_code_id__lov_code": "ADH",
+           "lov_lang": "ENU",
+           "lov_value": "Adherent",
+           "row_module_id__mdl_name": "Capvital"
+          }
+         },
+         {
+          "object": "FieldListValue",
+          "userkey": "CV_USER_PROFILE~ADH~FRA",
+          "item": {
+           "lov_code_id__lov_list_id__lov_name": "CV_USER_PROFILE",
+           "lov_code_id__lov_code": "ADH",
+           "lov_lang": "FRA",
+           "lov_value": "Adhérent",
+           "row_module_id__mdl_name": "Capvital"
+          }
+         }
+        ]
+       }]
+      },
+      {
+       "object": "FieldListCode",
+       "userkey": "CV_USER_PROFILE~SUP",
+       "item": {
+        "lov_list_id__lov_name": "CV_USER_PROFILE",
+        "lov_code": "SUP",
+        "lov_order_by": 2,
+        "lov_label": "Supplier",
+        "row_module_id__mdl_name": "Capvital",
+        "lov_color": null,
+        "lov_color_bg": null,
+        "lov_icon": "icon/color/btn_green",
+        "lov_display": ["L"]
+       },
+       "links": [{
+        "object": "FieldListValue",
+        "label": "Translated list value",
+        "icon": "img/system/translation",
+        "field": "lov_code_id",
+        "list": [
+         {
+          "object": "FieldListValue",
+          "userkey": "CV_USER_PROFILE~SUP~ENU",
+          "item": {
+           "lov_code_id__lov_list_id__lov_name": "CV_USER_PROFILE",
+           "lov_code_id__lov_code": "SUP",
+           "lov_lang": "ENU",
+           "lov_value": "Supplier",
+           "row_module_id__mdl_name": "Capvital"
+          }
+         },
+         {
+          "object": "FieldListValue",
+          "userkey": "CV_USER_PROFILE~SUP~FRA",
+          "item": {
+           "lov_code_id__lov_list_id__lov_name": "CV_USER_PROFILE",
+           "lov_code_id__lov_code": "SUP",
+           "lov_lang": "FRA",
+           "lov_value": "Fournisseur",
+           "row_module_id__mdl_name": "Capvital"
+          }
+         }
+        ]
+       }]
+      }
+     ]
+    }]
+   }]
+  },
+  {
+   "object": "BPMState",
+   "label": "State",
+   "icon": "img/system/state",
+   "field": "row_module_id",
+   "list": [
+    {
+     "object": "BPMState",
+     "userkey": "CV_USER_PROFILE~ADH",
+     "item": {
+      "sta_lovname": "CV_USER_PROFILE",
+      "sta_state_id__lov_list_id__lov_name": "CV_USER_PROFILE",
+      "sta_state_id__lov_code": "ADH",
+      "sta_state": "ADH",
+      "sta_label": "Adherent",
+      "sta_activ": true,
+      "sta_terminal": false,
+      "sta_read": false,
+      "sta_access": true,
+      "sta_timeout": null,
+      "sta_alert_id__alt_name": null,
+      "row_module_id__mdl_name": "Capvital"
+     }
+    },
+    {
+     "object": "BPMState",
+     "userkey": "CV_USER_PROFILE~SUP",
+     "item": {
+      "sta_lovname": "CV_USER_PROFILE",
+      "sta_state_id__lov_list_id__lov_name": "CV_USER_PROFILE",
+      "sta_state_id__lov_code": "SUP",
+      "sta_state": "SUP",
+      "sta_label": "Supplier",
+      "sta_activ": true,
+      "sta_terminal": false,
+      "sta_read": false,
+      "sta_access": true,
+      "sta_timeout": null,
+      "sta_alert_id__alt_name": null,
+      "row_module_id__mdl_name": "Capvital"
+     }
+    }
+   ]
+  },
+  {
+   "object": "View",
+   "label": "Views",
+   "icon": "img/system/view",
+   "field": "row_module_id",
+   "list": [
+    {
+     "object": "View",
+     "userkey": "CapvitalAdminHome",
+     "item": {
+      "viw_name": "CapvitalAdminHome",
+      "viw_ui": null,
+      "viw_order": 10,
+      "viw_icon": null,
+      "viw_disp_id__dis_code": null,
+      "viw_scope": null,
+      "row_module_id__mdl_name": "Capvital",
+      "viw_theme_id__thm_name": null,
+      "viw_lang": null
+     },
+     "links": [
+      {
+       "object": "TranslateView",
+       "label": "View translation",
+       "icon": "img/system/translation",
+       "field": "tsl_id",
+       "list": [
+        {
+         "object": "TranslateView",
+         "userkey": "V~CapvitalAdminHome~ENU",
+         "item": {
+          "tsl_typeView": "V",
+          "tsl_id__viw_name": "CapvitalAdminHome",
+          "tsl_lang": "ENU",
+          "tsl_value": "Capvital",
+          "tsl_help": null,
+          "row_module_id__mdl_name": "Capvital"
+         }
+        },
+        {
+         "object": "TranslateView",
+         "userkey": "V~CapvitalAdminHome~FRA",
+         "item": {
+          "tsl_typeView": "V",
+          "tsl_id__viw_name": "CapvitalAdminHome",
+          "tsl_lang": "FRA",
+          "tsl_value": "Capvital",
+          "tsl_help": null,
+          "row_module_id__mdl_name": "Capvital"
+         }
+        }
+       ]
+      },
+      {
+       "object": "Function",
+       "label": "Functions",
+       "icon": "img/system/function",
+       "field": "fct_view_id",
+       "list": [{
+        "object": "Function",
+        "userkey": "_CAPVITAL_ADMIN_HOME_V",
+        "item": {
+         "fct_name": "_CAPVITAL_ADMIN_HOME_V",
+         "fct_object_id__obj_type": null,
+         "fct_object_id__obj_name": null,
+         "fct_function": "V",
+         "fct_action_id__act_name": null,
+         "fct_view_id__viw_name": "CapvitalAdminHome",
+         "row_module_id__mdl_name": "Capvital"
+        },
+        "links": [{
+         "object": "Grant",
+         "label": "Grant",
+         "icon": "img/system/grant",
+         "field": "grt_function_id",
+         "list": [{
+          "object": "Grant",
+          "userkey": "CV_ADMIN~_CAPVITAL_ADMIN_HOME_V~~",
+          "item": {
+           "grt_group_id__grp_name": "CV_ADMIN",
+           "grt_function_id__fct_name": "_CAPVITAL_ADMIN_HOME_V",
+           "grt_function_id__fct_object_id__obj_type": null,
+           "grt_function_id__fct_object_id__obj_name": null,
+           "grt_function_id__fct_action_id__act_name": null,
+           "grt_function_id__fct_function": "V",
+           "grt_activ": true,
+           "row_module_id__mdl_name": "Capvital"
+          }
+         }]
+        }]
+       }]
+      }
+     ]
+    },
+    {
+     "object": "View",
+     "userkey": "CvAdherentHome",
+     "item": {
+      "viw_name": "CvAdherentHome",
+      "viw_ui": null,
+      "viw_order": 10,
+      "viw_icon": "bars",
+      "viw_disp_id__dis_code": null,
+      "viw_scope": null,
+      "row_module_id__mdl_name": "Capvital",
+      "viw_theme_id__thm_name": null,
+      "viw_lang": null
+     },
+     "links": [
+      {
+       "object": "TranslateView",
+       "label": "View translation",
+       "icon": "img/system/translation",
+       "field": "tsl_id",
+       "list": [
+        {
+         "object": "TranslateView",
+         "userkey": "V~CvAdherentHome~ENU",
+         "item": {
+          "tsl_typeView": "V",
+          "tsl_id__viw_name": "CvAdherentHome",
+          "tsl_lang": "ENU",
+          "tsl_value": "Capvital",
+          "tsl_help": null,
+          "row_module_id__mdl_name": "Capvital"
+         }
+        },
+        {
+         "object": "TranslateView",
+         "userkey": "V~CvAdherentHome~FRA",
+         "item": {
+          "tsl_typeView": "V",
+          "tsl_id__viw_name": "CvAdherentHome",
+          "tsl_lang": "FRA",
+          "tsl_value": "Capvital",
+          "tsl_help": null,
+          "row_module_id__mdl_name": "Capvital"
+         }
+        }
+       ]
+      },
+      {
+       "object": "Function",
+       "label": "Functions",
+       "icon": "img/system/function",
+       "field": "fct_view_id",
+       "list": [{
+        "object": "Function",
+        "userkey": "_CV_ADHERENT_HOME_V",
+        "item": {
+         "fct_name": "_CV_ADHERENT_HOME_V",
+         "fct_object_id__obj_type": null,
+         "fct_object_id__obj_name": null,
+         "fct_function": "V",
+         "fct_action_id__act_name": null,
+         "fct_view_id__viw_name": "CvAdherentHome",
+         "row_module_id__mdl_name": "Capvital"
+        },
+        "links": [{
+         "object": "Grant",
+         "label": "Grant",
+         "icon": "img/system/grant",
+         "field": "grt_function_id",
+         "list": [
+          {
+           "object": "Grant",
+           "userkey": "CV_ADHERENT~_CV_ADHERENT_HOME_V~~",
+           "item": {
+            "grt_group_id__grp_name": "CV_ADHERENT",
+            "grt_function_id__fct_name": "_CV_ADHERENT_HOME_V",
+            "grt_function_id__fct_object_id__obj_type": null,
+            "grt_function_id__fct_object_id__obj_name": null,
+            "grt_function_id__fct_action_id__act_name": null,
+            "grt_function_id__fct_function": "V",
+            "grt_activ": true,
+            "row_module_id__mdl_name": "Capvital"
+           }
+          },
+          {
+           "object": "Grant",
+           "userkey": "CV_ADMIN~_CV_ADHERENT_HOME_V~~",
+           "item": {
+            "grt_group_id__grp_name": "CV_ADMIN",
+            "grt_function_id__fct_name": "_CV_ADHERENT_HOME_V",
+            "grt_function_id__fct_object_id__obj_type": null,
+            "grt_function_id__fct_object_id__obj_name": null,
+            "grt_function_id__fct_action_id__act_name": null,
+            "grt_function_id__fct_function": "V",
+            "grt_activ": true,
+            "row_module_id__mdl_name": "Capvital"
+           }
+          }
+         ]
+        }]
+       }]
+      }
+     ]
+    },
+    {
+     "object": "View",
+     "userkey": "CvSupplierHome",
+     "item": {
+      "viw_name": "CvSupplierHome",
+      "viw_ui": null,
+      "viw_order": 10,
+      "viw_icon": "bars",
+      "viw_disp_id__dis_code": null,
+      "viw_scope": null,
+      "row_module_id__mdl_name": "Capvital",
+      "viw_theme_id__thm_name": null,
+      "viw_lang": null
+     },
+     "links": [
+      {
+       "object": "TranslateView",
+       "label": "View translation",
+       "icon": "img/system/translation",
+       "field": "tsl_id",
+       "list": [
+        {
+         "object": "TranslateView",
+         "userkey": "V~CvSupplierHome~ENU",
+         "item": {
+          "tsl_typeView": "V",
+          "tsl_id__viw_name": "CvSupplierHome",
+          "tsl_lang": "ENU",
+          "tsl_value": "Capvital",
+          "tsl_help": null,
+          "row_module_id__mdl_name": "Capvital"
+         }
+        },
+        {
+         "object": "TranslateView",
+         "userkey": "V~CvSupplierHome~FRA",
+         "item": {
+          "tsl_typeView": "V",
+          "tsl_id__viw_name": "CvSupplierHome",
+          "tsl_lang": "FRA",
+          "tsl_value": "Capvital",
+          "tsl_help": null,
+          "row_module_id__mdl_name": "Capvital"
+         }
+        }
+       ]
+      },
+      {
+       "object": "Function",
+       "label": "Functions",
+       "icon": "img/system/function",
+       "field": "fct_view_id",
+       "list": [{
+        "object": "Function",
+        "userkey": "_CV_SUPPLIER_HOME_V",
+        "item": {
+         "fct_name": "_CV_SUPPLIER_HOME_V",
+         "fct_object_id__obj_type": null,
+         "fct_object_id__obj_name": null,
+         "fct_function": "V",
+         "fct_action_id__act_name": null,
+         "fct_view_id__viw_name": "CvSupplierHome",
+         "row_module_id__mdl_name": "Capvital"
+        },
+        "links": [{
+         "object": "Grant",
+         "label": "Grant",
+         "icon": "img/system/grant",
+         "field": "grt_function_id",
+         "list": [{
+          "object": "Grant",
+          "userkey": "CV_ADMIN~_CV_SUPPLIER_HOME_V~~",
+          "item": {
+           "grt_group_id__grp_name": "CV_ADMIN",
+           "grt_function_id__fct_name": "_CV_SUPPLIER_HOME_V",
+           "grt_function_id__fct_object_id__obj_type": null,
+           "grt_function_id__fct_object_id__obj_name": null,
+           "grt_function_id__fct_action_id__act_name": null,
+           "grt_function_id__fct_function": "V",
+           "grt_activ": true,
+           "row_module_id__mdl_name": "Capvital"
+          }
+         }]
+        }]
+       }]
+      }
+     ]
+    }
+   ]
+  }
+ ]
 }
