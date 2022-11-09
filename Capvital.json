@@ -93,7 +93,16 @@
      "obo_dbtable": "m_user",
      "obo_role": "OBJ",
      "obo_class": null,
-     "obo_script_id": null,
+     "obo_script_id": {
+      "path": "src/com/simplicite/objects/Capvital/CvUser.java",
+      "size": 1293,
+      "field": "obo_script_id",
+      "mime": "text/plain",
+      "name": "CvUser.java",
+      "id": "5946",
+      "object": "ObjectInternal",
+      "rowid": "2002"
+     },
      "obo_usets": "1",
      "obo_nosearch": "1",
      "obo_comment": null,
