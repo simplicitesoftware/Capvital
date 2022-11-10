@@ -39,6 +39,18 @@
 | `CvFinancialClaim_CvAccount_id` link to **`CvAccount`**      | id                                       |          | yes       |          | -                                                                                |
 | _Ref. `CvFinancialClaim_CvAccount_id.cvAccountName`_         | _char(255)_                              |          |           |          | -                                                                                |
 
+`CvFinancialClaimImport` business object definition
+---------------------------------------------------
+
+
+
+### Fields
+
+| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      |
+|--------------------------------------------------------------|------------------------------------------|----------|-----------|----------|----------------------------------------------------------------------------------|
+| `cvFcClaimImportDate`                                        | datetime                                 | yes      | yes       |          | -                                                                                |
+| `cvFcClaimImportFile`                                        | extfile(10)                              | yes      | yes       |          | -                                                                                |
+
 `CvUser` business object definition
 -----------------------------------
 

@@ -198,6 +198,57 @@ paths:
         required: false
       tags:
       - CvAccount
+  /rest/CvFinancialClaimImport:
+    get:
+      summary: Search CvFinancialClaimImport business object records or get contextualized
+        metadata
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-cvfinancialclaimimport-search
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/ArrayOfCvFinancialClaimImport'
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: query
+        name: _metadata
+        description: Metadata?
+        type: boolean
+        required: false
+      - in: query
+        name: _count
+        description: Count?
+        type: boolean
+        required: false
+      - in: query
+        name: _doc
+        description: Documentation?
+        type: boolean
+        required: false
+      - in: query
+        name: cvFcClaimImportDate
+        description: Search filter for Date
+        type: string
+        required: false
+      - in: query
+        name: cvFcClaimImportFile
+        description: Search filter for File
+        type: string
+        required: false
+      tags:
+      - CvFinancialClaimImport
   /rest/CvAccount/{row_id}:
     post:
       summary: Create a new CvAccountbusiness object record
@@ -358,6 +409,168 @@ paths:
         name: body
       tags:
       - CvAccount
+      consumes:
+      - application/json
+  /rest/CvFinancialClaimImport/{row_id}:
+    post:
+      summary: Create a new CvFinancialClaimImportbusiness object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-cvfinancialclaimimport-create
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/CvFinancialClaimImport'
+          description: Success in creating a new business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/CvFinancialClaimImport'
+        in: body
+        name: body
+      tags:
+      - CvFinancialClaimImport
+      consumes:
+      - application/json
+    get:
+      summary: Get a CvFinancialClaimImport business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-cvfinancialclaimimport-get
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/CvFinancialClaimImport'
+          description: Success in getting a single business object record
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - in: query
+        name: _inline_documents
+        description: Inline documents?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_objects
+        description: Inline objects?
+        type: boolean
+        required: false
+      tags:
+      - CvFinancialClaimImport
+    delete:
+      summary: Delete a CvFinancialClaimImport business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-cvfinancialclaimimport-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      tags:
+      - CvFinancialClaimImport
+    put:
+      summary: Update a CvFinancialClaimImportbusiness object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-cvfinancialclaimimport-update
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/CvFinancialClaimImport'
+          description: Success in updating a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/CvFinancialClaimImport'
+        in: body
+        name: body
+      tags:
+      - CvFinancialClaimImport
       consumes:
       - application/json
   /rest/CvFinancialClaim/{row_id}:
@@ -953,6 +1166,10 @@ definitions:
       label3:
         description: 'Label #3'
         type: string
+  ArrayOfCvFinancialClaimImport:
+    type: array
+    items:
+      $ref: '#/definitions/CvFinancialClaimImport'
   PlaceMapData:
     type: object
     properties:
@@ -980,6 +1197,19 @@ definitions:
     type: array
     items:
       $ref: '#/definitions/CvUser'
+  CvFinancialClaimImport:
+    type: object
+    properties:
+      cvFcClaimImportDate:
+        description: Date
+        type: string
+        example: yyyy-MM-dd HH:mm:ss
+      cvFcClaimImportFile:
+        description: File
+        type: string
+      row_id:
+        description: Unique technical row ID
+        type: string
   Error400:
     type: object
     properties:
@@ -1071,5 +1301,7 @@ tags:
   description: Account
 - name: CvFinancialClaim
   description: Financial claim
+- name: CvFinancialClaimImport
+  description: Financial claim import
 - name: CvUser
   description: Users
