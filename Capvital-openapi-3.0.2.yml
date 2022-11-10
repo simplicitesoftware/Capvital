@@ -16,11 +16,14 @@ components:
           type: integer
           enum:
           - 404
-    ActionResult:
+    CvAccount:
       type: object
       properties:
-        result:
-          description: Action result
+        cvAccountName:
+          description: Name
+          type: string
+        row_id:
+          description: Unique technical row ID
           type: string
     CvUser:
       type: object
@@ -52,7 +55,7 @@ components:
           description: Home page Name
           type: string
         cvUserProfile:
-          description: Cv user profile
+          description: Profile
           type: string
           enum:
           - ADH
@@ -60,8 +63,14 @@ components:
         usr_last_name:
           description: Last name
           type: string
+        CvUser_CvAccount_id__cvAccountName:
+          description: Account Name
+          type: string
         usr_cell_num:
           description: Mobile/cellular phone number
+          type: string
+        CvUser_CvAccount_id:
+          description: Account
           type: string
         usr_lang:
           description: Language
@@ -78,16 +87,6 @@ components:
         usr_first_name:
           description: First name
           type: string
-    TreeviewData:
-      type: object
-      properties:
-        item:
-          description: Object item with lists of linked objects' items
-          type: object
-    ArrayOfCvUser:
-      type: array
-      items:
-        $ref: '#/components/schemas/CvUser'
     PublicationResult:
       type: object
       properties:
@@ -118,6 +117,33 @@ components:
         label3:
           description: 'Label #3'
           type: string
+    PlaceMapData:
+      type: object
+      properties:
+        places:
+          description: Places
+          type: array
+          items:
+            $ref: '#/components/schemas/PlaceData'
+        name:
+          description: Name
+          type: string
+    ActionResult:
+      type: object
+      properties:
+        result:
+          description: Action result
+          type: string
+    TreeviewData:
+      type: object
+      properties:
+        item:
+          description: Object item with lists of linked objects' items
+          type: object
+    ArrayOfCvUser:
+      type: array
+      items:
+        $ref: '#/components/schemas/CvUser'
     Error400:
       type: object
       properties:
@@ -151,17 +177,32 @@ components:
           type: integer
           enum:
           - 500
-    PlaceMapData:
+    CvFinancialClaim:
       type: object
       properties:
-        places:
-          description: Places
-          type: array
-          items:
-            $ref: '#/components/schemas/PlaceData'
-        name:
-          description: Name
+        cvFcChiffreAffaireHT:
+          description: Gross sales
+          type: integer
+        cvFcDate:
+          description: Date
           type: string
+          example: yyyy-MM-dd
+        CvFinancialClaim_CvAccount_id:
+          description: Account
+          type: string
+        cvFcInvoice:
+          description: Invoice
+          type: string
+        CvFinancialClaim_CvAccount_id__cvAccountName:
+          description: Account Name
+          type: string
+        row_id:
+          description: Unique technical row ID
+          type: string
+    ArrayOfCvFinancialClaim:
+      type: array
+      items:
+        $ref: '#/components/schemas/CvFinancialClaim'
     Error403:
       type: object
       properties:
@@ -173,6 +214,10 @@ components:
           type: integer
           enum:
           - 403
+    ArrayOfCvAccount:
+      type: array
+      items:
+        $ref: '#/components/schemas/CvAccount'
   securitySchemes:
     basicAuth:
       scheme: basic
@@ -183,6 +228,84 @@ components:
       type: http
 openapi: 3.0.2
 paths:
+  /rest/CvFinancialClaim:
+    get:
+      summary: Search CvFinancialClaim business object records or get contextualized
+        metadata
+      security:
+      - bearerAuth: []
+      operationId: obj-cvfinancialclaim-search
+      responses:
+        '200':
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArrayOfCvFinancialClaim'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: boolean
+        in: query
+        name: _metadata
+        description: Metadata?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _count
+        description: Count?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _doc
+        description: Documentation?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: cvFcDate
+        description: Search filter for Date
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: cvFcInvoice
+        description: Search filter for Invoice
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: cvFcChiffreAffaireHT
+        description: Search filter for Gross sales
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: CvFinancialClaim_CvAccount_id
+        description: Search filter for Account
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: CvFinancialClaim_CvAccount_id__cvAccountName
+        description: Search filter for Account Name
+        required: false
+      tags:
+      - CvFinancialClaim
   /login:
     get:
       summary: Login (obtain bearer token)
@@ -233,6 +356,496 @@ paths:
                 $ref: '#/components/schemas/Error401'
       tags:
       - session
+  /rest/CvUser/{row_id}/action:resetPassword:
+    get:
+      summary: Call a custom action for a CvUser business object record or for all
+        records
+      security:
+      - bearerAuth: []
+      operationId: obj-cvuser-action-resetpassword
+      responses:
+        '200':
+          description: Success in calling the custom action
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ActionResult'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - CvUser
+  /rest/CvAccount:
+    get:
+      summary: Search CvAccount business object records or get contextualized metadata
+      security:
+      - bearerAuth: []
+      operationId: obj-cvaccount-search
+      responses:
+        '200':
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArrayOfCvAccount'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: boolean
+        in: query
+        name: _metadata
+        description: Metadata?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _count
+        description: Count?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _doc
+        description: Documentation?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: cvAccountName
+        description: Search filter for Name
+        required: false
+      tags:
+      - CvAccount
+  /rest/CvAccount/{row_id}:
+    post:
+      summary: Create a new CvAccountbusiness object record
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CvAccount'
+      operationId: obj-cvaccount-create
+      responses:
+        '200':
+          description: Success in creating a new business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CvAccount'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - CvAccount
+    get:
+      summary: Get a CvAccount business object record
+      security:
+      - bearerAuth: []
+      operationId: obj-cvaccount-get
+      responses:
+        '200':
+          description: Success in getting a single business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CvAccount'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_documents
+        description: Inline documents?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_objects
+        description: Inline objects?
+        required: false
+      tags:
+      - CvAccount
+    delete:
+      summary: Delete a CvAccount business object record
+      security:
+      - bearerAuth: []
+      operationId: obj-cvaccount-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+          content:
+            application/json: {}
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - CvAccount
+    put:
+      summary: Update a CvAccountbusiness object record
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CvAccount'
+      operationId: obj-cvaccount-update
+      responses:
+        '200':
+          description: Success in updating a business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CvAccount'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - CvAccount
+  /rest/CvFinancialClaim/{row_id}:
+    post:
+      summary: Create a new CvFinancialClaimbusiness object record
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CvFinancialClaim'
+      operationId: obj-cvfinancialclaim-create
+      responses:
+        '200':
+          description: Success in creating a new business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CvFinancialClaim'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - CvFinancialClaim
+    get:
+      summary: Get a CvFinancialClaim business object record
+      security:
+      - bearerAuth: []
+      operationId: obj-cvfinancialclaim-get
+      responses:
+        '200':
+          description: Success in getting a single business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CvFinancialClaim'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_documents
+        description: Inline documents?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_objects
+        description: Inline objects?
+        required: false
+      tags:
+      - CvFinancialClaim
+    delete:
+      summary: Delete a CvFinancialClaim business object record
+      security:
+      - bearerAuth: []
+      operationId: obj-cvfinancialclaim-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+          content:
+            application/json: {}
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - CvFinancialClaim
+    put:
+      summary: Update a CvFinancialClaimbusiness object record
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CvFinancialClaim'
+      operationId: obj-cvfinancialclaim-update
+      responses:
+        '200':
+          description: Success in updating a business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CvFinancialClaim'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - CvFinancialClaim
   /:
     get:
       summary: Get user session information
@@ -311,7 +924,7 @@ paths:
           - SUP
         in: query
         name: cvUserProfile
-        description: Search filter for Cv user profile
+        description: Search filter for Profile
         required: false
       - schema:
           type: string
@@ -372,8 +985,20 @@ paths:
       - schema:
           type: string
         in: query
+        name: CvUser_CvAccount_id
+        description: Search filter for Account
+        required: false
+      - schema:
+          type: string
+        in: query
         name: usr_home_id
         description: Search filter for Home page
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: CvUser_CvAccount_id__cvAccountName
+        description: Search filter for Account Name
         required: false
       - schema:
           type: string
@@ -602,5 +1227,9 @@ info:
   title: Capvital
   version: '0.1'
 tags:
+- name: CvAccount
+  description: Account
+- name: CvFinancialClaim
+  description: Financial claim
 - name: CvUser
-  description: Cv user
+  description: Users
