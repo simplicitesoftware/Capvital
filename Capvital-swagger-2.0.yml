@@ -1206,7 +1206,7 @@ definitions:
         example: yyyy-MM-dd HH:mm:ss
       cvFcClaimImportFile:
         description: File
-        type: string
+        type: object
       row_id:
         description: Unique technical row ID
         type: string

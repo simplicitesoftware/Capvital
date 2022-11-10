@@ -54,7 +54,7 @@
       "usr_menu": true,
       "usr_menu_defcollapsed": false,
       "usr_menu_defdomain_id__obd_name": null,
-      "usr_last_logon": "2022-11-10 16:15:31",
+      "usr_last_logon": "2022-11-10 17:03:13",
       "usr_dateformat": null,
       "usr_lang_pref": "ENU",
       "usr_mfa_method": null,
@@ -121,71 +121,15 @@
     },
     {
      "object": "UserSysParam",
-     "userkey": "FORCE_CHANGE_PASSWORD",
+     "userkey": "admin~FORCE_CHANGE_PASSWORD",
      "item": {
-      "usp_user_id__usr_login": null,
+      "usp_user_id__usr_login": "admin",
       "usp_param_id__sys_code": "FORCE_CHANGE_PASSWORD",
       "usp_value": "yes",
       "usp_param_id__sys_type": "PRV",
       "usp_param_id__sys_value": "empty",
       "usp_param_id__sys_value2": null,
       "usp_param_id__sys_desc": "Force password change (set at user level)",
-      "row_module_id__mdl_name": "Capvital"
-     }
-    },
-    {
-     "object": "UserSysParam",
-     "userkey": "FORCE_CHANGE_PASSWORD",
-     "item": {
-      "usp_user_id__usr_login": null,
-      "usp_param_id__sys_code": "FORCE_CHANGE_PASSWORD",
-      "usp_value": "yes",
-      "usp_param_id__sys_type": "PRV",
-      "usp_param_id__sys_value": "empty",
-      "usp_param_id__sys_value2": null,
-      "usp_param_id__sys_desc": "Force password change (set at user level)",
-      "row_module_id__mdl_name": "Capvital"
-     }
-    },
-    {
-     "object": "UserSysParam",
-     "userkey": "FORCE_CHANGE_PASSWORD",
-     "item": {
-      "usp_user_id__usr_login": null,
-      "usp_param_id__sys_code": "FORCE_CHANGE_PASSWORD",
-      "usp_value": "yes",
-      "usp_param_id__sys_type": "PRV",
-      "usp_param_id__sys_value": "empty",
-      "usp_param_id__sys_value2": null,
-      "usp_param_id__sys_desc": "Force password change (set at user level)",
-      "row_module_id__mdl_name": "Capvital"
-     }
-    },
-    {
-     "object": "UserSysParam",
-     "userkey": "FORCE_CHANGE_PASSWORD",
-     "item": {
-      "usp_user_id__usr_login": null,
-      "usp_param_id__sys_code": "FORCE_CHANGE_PASSWORD",
-      "usp_value": "yes",
-      "usp_param_id__sys_type": "PRV",
-      "usp_param_id__sys_value": "empty",
-      "usp_param_id__sys_value2": null,
-      "usp_param_id__sys_desc": "Force password change (set at user level)",
-      "row_module_id__mdl_name": "Capvital"
-     }
-    },
-    {
-     "object": "UserSysParam",
-     "userkey": "designer~DISPOSITION",
-     "item": {
-      "usp_user_id__usr_login": "designer",
-      "usp_param_id__sys_code": "DISPOSITION",
-      "usp_value": null,
-      "usp_param_id__sys_type": "LFL",
-      "usp_param_id__sys_value": "default",
-      "usp_param_id__sys_value2": null,
-      "usp_param_id__sys_desc": "Webapp disposition, ex: default, myapp, ...",
       "row_module_id__mdl_name": "Capvital"
      }
     },
@@ -228,6 +172,34 @@
       "usp_param_id__sys_value": "empty",
       "usp_param_id__sys_value2": null,
       "usp_param_id__sys_desc": "Technical, do not change/remove, needed in user's parameters",
+      "row_module_id__mdl_name": "Capvital"
+     }
+    },
+    {
+     "object": "UserSysParam",
+     "userkey": "user_enu~FORCE_CHANGE_PASSWORD",
+     "item": {
+      "usp_user_id__usr_login": "user_enu",
+      "usp_param_id__sys_code": "FORCE_CHANGE_PASSWORD",
+      "usp_value": "yes",
+      "usp_param_id__sys_type": "PRV",
+      "usp_param_id__sys_value": "empty",
+      "usp_param_id__sys_value2": null,
+      "usp_param_id__sys_desc": "Force password change (set at user level)",
+      "row_module_id__mdl_name": "Capvital"
+     }
+    },
+    {
+     "object": "UserSysParam",
+     "userkey": "user_fra~FORCE_CHANGE_PASSWORD",
+     "item": {
+      "usp_user_id__usr_login": "user_fra",
+      "usp_param_id__sys_code": "FORCE_CHANGE_PASSWORD",
+      "usp_value": "yes",
+      "usp_param_id__sys_type": "PRV",
+      "usp_param_id__sys_value": "empty",
+      "usp_param_id__sys_value2": null,
+      "usp_param_id__sys_desc": "Force password change (set at user level)",
       "row_module_id__mdl_name": "Capvital"
      }
     }
@@ -1386,11 +1358,11 @@
       "obo_class": null,
       "obo_script_id": {
        "path": "src/com/simplicite/objects/Capvital/CvFinancialClaimImport.java",
-       "size": 328,
+       "size": 845,
        "field": "obo_script_id",
        "mime": "text/plain",
        "name": "CvFinancialClaimImport.java",
-       "id": "6396",
+       "id": "6525",
        "object": "ObjectInternal",
        "rowid": "2007"
       },
@@ -1624,7 +1596,7 @@
          "item": {
           "obf_object_id__obo_name": "CvFinancialClaimImport",
           "obf_field_id__fld_name": "cvFcClaimImportFile",
-          "obf_field_id__fld_type": "19",
+          "obf_field_id__fld_type": "17",
           "obf_order": 20,
           "obf_group_by": null,
           "obf_dfault_order": null,
@@ -1672,11 +1644,11 @@
             "fld_listmore": false,
             "fld_listsum": null,
             "fld_tray": null,
-            "fld_type": "19",
+            "fld_type": "17",
             "fld_type_id__flt_code": null,
             "fld_list_id__lov_name": null,
             "fld_copy": true,
-            "fld_size": 10,
+            "fld_size": 11,
             "fld_minsize": null,
             "fld_precision": null,
             "fld_fromdate_id__fld_name": null,
@@ -3236,6 +3208,73 @@
      },
      "row_module_id__mdl_name": "Capvital"
     }
+   }]
+  },
+  {
+   "object": "DocIndex",
+   "label": "Bookshelf",
+   "icon": "img/system/bookshelf",
+   "field": "row_module_id",
+   "list": [{
+    "object": "DocIndex",
+    "userkey": "B-cvFcClaimImportFile",
+    "item": {
+     "din_name": "B-cvFcClaimImportFile",
+     "din_field_id__fld_name": "cvFcClaimImportFile",
+     "din_path": null,
+     "din_min": null,
+     "din_max": null,
+     "din_grant": false,
+     "row_module_id__mdl_name": "Capvital"
+    },
+    "links": [
+     {
+      "object": "TranslateDocIndex",
+      "label": "Document index translation",
+      "icon": "img/system/translation",
+      "field": "tsl_id",
+      "list": [
+       {
+        "object": "TranslateDocIndex",
+        "userkey": "B~B-cvFcClaimImportFile~ENU",
+        "item": {
+         "tsl_typeDocIndex": "B",
+         "tsl_id__din_name": "B-cvFcClaimImportFile",
+         "tsl_lang": "ENU",
+         "tsl_value": "B-cv fc claim import file",
+         "row_module_id__mdl_name": "Capvital"
+        }
+       },
+       {
+        "object": "TranslateDocIndex",
+        "userkey": "B~B-cvFcClaimImportFile~FRA",
+        "item": {
+         "tsl_typeDocIndex": "B",
+         "tsl_id__din_name": "B-cvFcClaimImportFile",
+         "tsl_lang": "FRA",
+         "tsl_value": "B-cv fc claim import file",
+         "row_module_id__mdl_name": "Capvital"
+        }
+       }
+      ]
+     },
+     {
+      "object": "DocIndexMIME",
+      "label": "Permitted file type",
+      "icon": "object",
+      "field": "dim_docindex_id",
+      "list": [{
+       "object": "DocIndexMIME",
+       "userkey": "B-cvFcClaimImportFile~csv",
+       "item": {
+        "dim_docindex_id__din_name": "B-cvFcClaimImportFile",
+        "dim_mime_id__dmi_name": "text/csv",
+        "dim_mime_id__dmi_ext": "csv",
+        "row_module_id__mdl_name": "Capvital"
+       }
+      }]
+     }
+    ]
    }]
   }
  ]

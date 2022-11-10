@@ -49,7 +49,7 @@
 | Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      |
 |--------------------------------------------------------------|------------------------------------------|----------|-----------|----------|----------------------------------------------------------------------------------|
 | `cvFcClaimImportDate`                                        | datetime                                 | yes      | yes       |          | -                                                                                |
-| `cvFcClaimImportFile`                                        | extfile(10)                              | yes      | yes       |          | -                                                                                |
+| `cvFcClaimImportFile`                                        | document                                 | yes      | yes       |          | -                                                                                |
 
 `CvUser` business object definition
 -----------------------------------
