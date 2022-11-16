@@ -107,20 +107,6 @@
    "list": [
     {
      "object": "UserSysParam",
-     "userkey": "FORCE_CHANGE_PASSWORD",
-     "item": {
-      "usp_user_id__usr_login": null,
-      "usp_param_id__sys_code": "FORCE_CHANGE_PASSWORD",
-      "usp_value": "yes",
-      "usp_param_id__sys_type": "PRV",
-      "usp_param_id__sys_value": "empty",
-      "usp_param_id__sys_value2": null,
-      "usp_param_id__sys_desc": "Force password change (set at user level)",
-      "row_module_id__mdl_name": "Capvital"
-     }
-    },
-    {
-     "object": "UserSysParam",
      "userkey": "admin~FORCE_CHANGE_PASSWORD",
      "item": {
       "usp_user_id__usr_login": "admin",
@@ -130,34 +116,6 @@
       "usp_param_id__sys_value": "empty",
       "usp_param_id__sys_value2": null,
       "usp_param_id__sys_desc": "Force password change (set at user level)",
-      "row_module_id__mdl_name": "Capvital"
-     }
-    },
-    {
-     "object": "UserSysParam",
-     "userkey": "grogalo~CLIENT_ID",
-     "item": {
-      "usp_user_id__usr_login": "grogalo",
-      "usp_param_id__sys_code": "CLIENT_ID",
-      "usp_value": "[{\n \"dt\": \"2022-11-10 12:09:38\",\n \"ag\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:106.0) Gecko/20100101 Firefox/106.0\",\n \"id\": \"rxxapgxZXAuOFcliChkWBjWeP6vD0PA5deN7cWAEFVk6MfXbFIcsJYWEjWmDff471668082156080\"\n}]",
-      "usp_param_id__sys_type": null,
-      "usp_param_id__sys_value": "empty",
-      "usp_param_id__sys_value2": null,
-      "usp_param_id__sys_desc": null,
-      "row_module_id__mdl_name": "Capvital"
-     }
-    },
-    {
-     "object": "UserSysParam",
-     "userkey": "grogalo~DISPOSITION",
-     "item": {
-      "usp_user_id__usr_login": "grogalo",
-      "usp_param_id__sys_code": "DISPOSITION",
-      "usp_value": null,
-      "usp_param_id__sys_type": "LFL",
-      "usp_param_id__sys_value": "default",
-      "usp_param_id__sys_value2": null,
-      "usp_param_id__sys_desc": "Webapp disposition, ex: default, myapp, ...",
       "row_module_id__mdl_name": "Capvital"
      }
     },
