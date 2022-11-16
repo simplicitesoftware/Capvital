@@ -107,20 +107,6 @@
    "list": [
     {
      "object": "UserSysParam",
-     "userkey": "admin~FORCE_CHANGE_PASSWORD",
-     "item": {
-      "usp_user_id__usr_login": "admin",
-      "usp_param_id__sys_code": "FORCE_CHANGE_PASSWORD",
-      "usp_value": "yes",
-      "usp_param_id__sys_type": "PRV",
-      "usp_param_id__sys_value": "empty",
-      "usp_param_id__sys_value2": null,
-      "usp_param_id__sys_desc": "Force password change (set at user level)",
-      "row_module_id__mdl_name": "Capvital"
-     }
-    },
-    {
-     "object": "UserSysParam",
      "userkey": "grogalo~SCOPE_PREFS",
      "item": {
       "usp_user_id__usr_login": "grogalo",
@@ -130,34 +116,6 @@
       "usp_param_id__sys_value": "empty",
       "usp_param_id__sys_value2": null,
       "usp_param_id__sys_desc": "Technical, do not change/remove, needed in user's parameters",
-      "row_module_id__mdl_name": "Capvital"
-     }
-    },
-    {
-     "object": "UserSysParam",
-     "userkey": "user_enu~FORCE_CHANGE_PASSWORD",
-     "item": {
-      "usp_user_id__usr_login": "user_enu",
-      "usp_param_id__sys_code": "FORCE_CHANGE_PASSWORD",
-      "usp_value": "yes",
-      "usp_param_id__sys_type": "PRV",
-      "usp_param_id__sys_value": "empty",
-      "usp_param_id__sys_value2": null,
-      "usp_param_id__sys_desc": "Force password change (set at user level)",
-      "row_module_id__mdl_name": "Capvital"
-     }
-    },
-    {
-     "object": "UserSysParam",
-     "userkey": "user_fra~FORCE_CHANGE_PASSWORD",
-     "item": {
-      "usp_user_id__usr_login": "user_fra",
-      "usp_param_id__sys_code": "FORCE_CHANGE_PASSWORD",
-      "usp_value": "yes",
-      "usp_param_id__sys_type": "PRV",
-      "usp_param_id__sys_value": "empty",
-      "usp_param_id__sys_value2": null,
-      "usp_param_id__sys_desc": "Force password change (set at user level)",
       "row_module_id__mdl_name": "Capvital"
      }
     }
