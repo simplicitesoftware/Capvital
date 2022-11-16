@@ -15,89 +15,42 @@
    "label": "Users",
    "icon": "img/system/user",
    "field": "row_module_id",
-   "list": [
-    {
-     "object": "User",
-     "userkey": "designer",
-     "item": {
-      "usr_image_id": {
-       "path": "files/User/designer.png",
-       "size": 3555,
-       "field": "usr_image_id",
-       "mime": "image/png",
-       "name": "user.png",
-       "id": "5849",
-       "object": "User",
-       "rowid": "1"
-      },
-      "usr_login": "designer",
-      "usr_timezone": null,
-      "usr_minrows": 20,
-      "usr_maxrows": 50,
-      "usr_title": null,
-      "usr_first_name": null,
-      "usr_last_name": "Designer",
-      "usr_lang": "ENU",
-      "usr_email": "no-reply@simplicite.fr",
-      "usr_work_num": null,
-      "usr_home_num": null,
-      "usr_cell_num": null,
-      "usr_active": "1",
-      "usr_home_id__viw_name": "Home",
-      "usr_address1": null,
-      "usr_address2": null,
-      "usr_zipcode": null,
-      "usr_city": null,
-      "usr_state": null,
-      "usr_country": null,
-      "row_module_id__mdl_name": "Capvital",
-      "usr_menu": true,
-      "usr_menu_defcollapsed": false,
-      "usr_menu_defdomain_id__obd_name": null,
-      "usr_last_logon": "2022-11-10 17:03:13",
-      "usr_dateformat": null,
-      "usr_lang_pref": "ENU",
-      "usr_mfa_method": null,
-      "usr_mfa_settings": {}
-     }
-    },
-    {
-     "object": "User",
-     "userkey": "grogalo",
-     "item": {
-      "usr_image_id": null,
-      "usr_login": "grogalo",
-      "usr_timezone": null,
-      "usr_minrows": null,
-      "usr_maxrows": null,
-      "usr_title": null,
-      "usr_first_name": null,
-      "usr_last_name": null,
-      "usr_lang": "ENU",
-      "usr_email": null,
-      "usr_work_num": null,
-      "usr_home_num": null,
-      "usr_cell_num": null,
-      "usr_active": "1",
-      "usr_home_id__viw_name": "CvAdherentHome",
-      "usr_address1": null,
-      "usr_address2": null,
-      "usr_zipcode": null,
-      "usr_city": null,
-      "usr_state": null,
-      "usr_country": null,
-      "row_module_id__mdl_name": "Capvital",
-      "usr_menu": null,
-      "usr_menu_defcollapsed": null,
-      "usr_menu_defdomain_id__obd_name": null,
-      "usr_last_logon": "2022-11-10 12:09:46",
-      "usr_dateformat": null,
-      "usr_lang_pref": "ENU",
-      "usr_mfa_method": null,
-      "usr_mfa_settings": null
-     }
+   "list": [{
+    "object": "User",
+    "userkey": "admin",
+    "item": {
+     "usr_image_id": null,
+     "usr_login": "admin",
+     "usr_timezone": null,
+     "usr_minrows": 20,
+     "usr_maxrows": 50,
+     "usr_title": null,
+     "usr_first_name": null,
+     "usr_last_name": null,
+     "usr_lang": "FRA",
+     "usr_email": null,
+     "usr_work_num": null,
+     "usr_home_num": null,
+     "usr_cell_num": null,
+     "usr_active": "1",
+     "usr_home_id__viw_name": "CapvitalAdminHome",
+     "usr_address1": null,
+     "usr_address2": null,
+     "usr_zipcode": null,
+     "usr_city": null,
+     "usr_state": null,
+     "usr_country": null,
+     "row_module_id__mdl_name": "Capvital",
+     "usr_menu": true,
+     "usr_menu_defcollapsed": false,
+     "usr_menu_defdomain_id__obd_name": null,
+     "usr_last_logon": "2022-11-16 10:03:08",
+     "usr_dateformat": null,
+     "usr_lang_pref": "FRA",
+     "usr_mfa_method": null,
+     "usr_mfa_settings": {}
     }
-   ]
+   }]
   },
   {
    "object": "UserSysParam",
@@ -107,15 +60,43 @@
    "list": [
     {
      "object": "UserSysParam",
-     "userkey": "grogalo~SCOPE_PREFS",
+     "userkey": "admin~CLIENT_ID",
      "item": {
-      "usp_user_id__usr_login": "grogalo",
+      "usp_user_id__usr_login": "admin",
+      "usp_param_id__sys_code": "CLIENT_ID",
+      "usp_value": "[{\n \"dt\": \"2022-11-16 10:03:08\",\n \"ag\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36\",\n \"id\": \"JXGYP8SjThA9PI1fF7UFZndTVFVAL8oQxQci3Io9HH96b7kn8lpC64LrvEPKvM3a1668592888303\"\n}]",
+      "usp_param_id__sys_type": null,
+      "usp_param_id__sys_value": "empty",
+      "usp_param_id__sys_value2": null,
+      "usp_param_id__sys_desc": null,
+      "row_module_id__mdl_name": "Capvital"
+     }
+    },
+    {
+     "object": "UserSysParam",
+     "userkey": "admin~SCOPE_PREFS",
+     "item": {
+      "usp_user_id__usr_login": "admin",
       "usp_param_id__sys_code": "SCOPE_PREFS",
-      "usp_value": "CvAdherentHome",
+      "usp_value": "CapvitalAdminHome",
       "usp_param_id__sys_type": "LFL",
       "usp_param_id__sys_value": "empty",
       "usp_param_id__sys_value2": null,
       "usp_param_id__sys_desc": "Technical, do not change/remove, needed in user's parameters",
+      "row_module_id__mdl_name": "Capvital"
+     }
+    },
+    {
+     "object": "UserSysParam",
+     "userkey": "designer~DISPOSITION",
+     "item": {
+      "usp_user_id__usr_login": "designer",
+      "usp_param_id__sys_code": "DISPOSITION",
+      "usp_value": null,
+      "usp_param_id__sys_type": "LFL",
+      "usp_param_id__sys_value": "default",
+      "usp_param_id__sys_value2": null,
+      "usp_param_id__sys_desc": "Webapp disposition, ex: default, myapp, ...",
       "row_module_id__mdl_name": "Capvital"
      }
     }
@@ -137,25 +118,7 @@
       "grp_parent_id__grp_name": null,
       "grp_home_id__viw_name": "CvAdherentHome",
       "row_module_id__mdl_name": "Capvital"
-     },
-     "links": [{
-      "object": "Responsability",
-      "label": "Responsibilities",
-      "icon": "img/system/responsability",
-      "field": "rsp_group_id",
-      "list": [{
-       "object": "Responsability",
-       "userkey": "grogalo~CV_ADHERENT~2022-11-10",
-       "item": {
-        "rsp_login_id__usr_login": "grogalo",
-        "rsp_group_id__grp_name": "CV_ADHERENT",
-        "rsp_start_dt": "2022-11-10",
-        "rsp_end_dt": null,
-        "rsp_activ": true,
-        "row_module_id__mdl_name": "Capvital"
-       }
-      }]
-     }]
+     }
     },
     {
      "object": "Group",
@@ -168,32 +131,66 @@
       "grp_home_id__viw_name": "CapvitalAdminHome",
       "row_module_id__mdl_name": "Capvital"
      },
-     "links": [{
-      "object": "Profile",
-      "label": "Profiles",
-      "icon": "img/system/profile",
-      "field": "prf_profile_id",
-      "list": [
-       {
-        "object": "Profile",
-        "userkey": "CV_ADMIN~CV_ADHERENT",
-        "item": {
-         "prf_profile_id__grp_name": "CV_ADMIN",
-         "prf_group_id__grp_name": "CV_ADHERENT",
-         "row_module_id__mdl_name": "Capvital"
+     "links": [
+      {
+       "object": "Profile",
+       "label": "Profiles",
+       "icon": "img/system/profile",
+       "field": "prf_profile_id",
+       "list": [
+        {
+         "object": "Profile",
+         "userkey": "CV_ADMIN~CV_ADHERENT",
+         "item": {
+          "prf_profile_id__grp_name": "CV_ADMIN",
+          "prf_group_id__grp_name": "CV_ADHERENT",
+          "row_module_id__mdl_name": "Capvital"
+         }
+        },
+        {
+         "object": "Profile",
+         "userkey": "CV_ADMIN~CV_SUPPLIER",
+         "item": {
+          "prf_profile_id__grp_name": "CV_ADMIN",
+          "prf_group_id__grp_name": "CV_SUPPLIER",
+          "row_module_id__mdl_name": "Capvital"
+         }
         }
-       },
-       {
-        "object": "Profile",
-        "userkey": "CV_ADMIN~CV_SUPPLIER",
-        "item": {
-         "prf_profile_id__grp_name": "CV_ADMIN",
-         "prf_group_id__grp_name": "CV_SUPPLIER",
-         "row_module_id__mdl_name": "Capvital"
+       ]
+      },
+      {
+       "object": "Responsability",
+       "label": "Responsibilities",
+       "icon": "img/system/responsability",
+       "field": "rsp_group_id",
+       "list": [
+        {
+         "object": "Responsability",
+         "userkey": "admin~CV_ADMIN~2022-11-16",
+         "item": {
+          "rsp_login_id__usr_login": "admin",
+          "rsp_group_id__grp_name": "CV_ADMIN",
+          "rsp_start_dt": "2022-11-16",
+          "rsp_end_dt": null,
+          "rsp_activ": true,
+          "row_module_id__mdl_name": "Capvital"
+         }
+        },
+        {
+         "object": "Responsability",
+         "userkey": "designer~CV_ADMIN~2022-11-16",
+         "item": {
+          "rsp_login_id__usr_login": "designer",
+          "rsp_group_id__grp_name": "CV_ADMIN",
+          "rsp_start_dt": "2022-11-16",
+          "rsp_end_dt": null,
+          "rsp_activ": true,
+          "row_module_id__mdl_name": "Capvital"
+         }
         }
-       }
-      ]
-     }]
+       ]
+      }
+     ]
     },
     {
      "object": "Group",
@@ -219,10 +216,7 @@
      "object": "ObjectInternal",
      "userkey": "CvAccount",
      "item": {
-      "obo_name": {
-       "value": "CvAccount",
-       "oldvalue": "cvAccount"
-      },
+      "obo_name": "CvAccount",
       "obo_dbtable": "cv_account",
       "obo_role": "OBJ",
       "obo_class": null,
@@ -585,9 +579,9 @@
        "field": "obo_script_id",
        "mime": "text/plain",
        "name": "CvFinancialClaim.java",
-       "id": "6395",
+       "id": "6076",
        "object": "ObjectInternal",
-       "rowid": "2006"
+       "rowid": "2020"
       },
       "obo_usets": "1",
       "obo_nosearch": "1",
@@ -1278,9 +1272,9 @@
        "field": "obo_script_id",
        "mime": "text/plain",
        "name": "CvFinancialClaimImport.java",
-       "id": "6525",
+       "id": "6077",
        "object": "ObjectInternal",
-       "rowid": "2007"
+       "rowid": "2019"
       },
       "obo_usets": "1",
       "obo_nosearch": "1",
@@ -1554,7 +1548,7 @@
             "fld_required": true,
             "fld_fonctid": false,
             "fld_research": null,
-            "fld_researchreq": null,
+            "fld_researchreq": "0",
             "fld_sort": "C",
             "fld_more": false,
             "fld_listmore": false,
@@ -1698,9 +1692,9 @@
        "field": "obo_script_id",
        "mime": "text/plain",
        "name": "CvUser.java",
-       "id": "6270",
+       "id": "6075",
        "object": "ObjectInternal",
-       "rowid": "2002"
+       "rowid": "2018"
       },
       "obo_usets": "1",
       "obo_nosearch": "1",
@@ -1711,7 +1705,7 @@
       "obo_exportorder": 10,
       "obo_distinct": false,
       "obo_indexable": false,
-      "obo_groupby": null,
+      "obo_groupby": false,
       "obo_dfltref": null,
       "obo_template_id__tpl_name": "CvUser",
       "obo_cache": "D",
@@ -1731,13 +1725,13 @@
       "obo_useform": true,
       "obo_title": null,
       "obo_icon": "img/system/group",
-      "obo_refcount": null,
-      "obo_tree": null,
+      "obo_refcount": false,
+      "obo_tree": false,
       "obo_viewmode": "T",
       "obo_historic": null,
       "obo_printable": true,
       "obo_followlink": true,
-      "obo_mergeable": null,
+      "obo_mergeable": false,
       "obo_social": ["1"],
       "obo_rowid_id__fld_name": null,
       "obo_extend_id__obj_name": "SimpleUser",
@@ -1758,7 +1752,7 @@
       "obo_btn_savenew": true,
       "obo_btn_savecopy": true,
       "obo_btn_close": true,
-      "obo_tray": null,
+      "obo_tray": true,
       "obo_dashboard": true,
       "obo_prefix": "cv_user",
       "obo_search_ts": null,
@@ -3078,10 +3072,10 @@
       "size": 13232,
       "field": "mod_doc",
       "mime": "image/svg+xml",
-      "name": "model.svg",
-      "id": "6267",
+      "name": "CapvitalModel.svg",
+      "id": "6072",
       "object": "Model",
-      "rowid": "9"
+      "rowid": "10"
      },
      "mod_json": null,
      "mod_image": {
@@ -3090,9 +3084,9 @@
       "field": "mod_image",
       "mime": "image/png",
       "name": "CapvitalModel.png",
-      "id": "6268",
+      "id": "6073",
       "object": "Model",
-      "rowid": "9"
+      "rowid": "10"
      },
      "row_module_id__mdl_name": "Capvital"
     }
@@ -3118,9 +3112,9 @@
       "field": "adp_script_id",
       "mime": "text/plain",
       "name": "CvFinancialClaimAdapter.java",
-      "id": "6347",
+      "id": "6078",
       "object": "Adapter",
-      "rowid": "14"
+      "rowid": "15"
      },
      "row_module_id__mdl_name": "Capvital"
     }

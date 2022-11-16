@@ -373,53 +373,6 @@ paths:
                 $ref: '#/components/schemas/Error401'
       tags:
       - session
-  /rest/CvUser/{row_id}/action:resetPassword:
-    get:
-      summary: Call a custom action for a CvUser business object record or for all
-        records
-      security:
-      - bearerAuth: []
-      operationId: obj-cvuser-action-resetpassword
-      responses:
-        '200':
-          description: Success in calling the custom action
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ActionResult'
-        '400':
-          description: Bad request
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error400'
-        '401':
-          description: Unauthorized
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-        '500':
-          description: Internal server error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error500'
-        '404':
-          description: Not found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error404'
-      parameters:
-      - schema:
-          type: string
-        in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        required: true
-      tags:
-      - CvUser
   /rest/CvAccount:
     get:
       summary: Search CvAccount business object records or get contextualized metadata
