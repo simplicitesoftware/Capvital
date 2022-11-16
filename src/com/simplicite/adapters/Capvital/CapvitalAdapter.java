@@ -9,24 +9,20 @@ import com.simplicite.util.tools.*;
 /**
  * Adapter ExampleCsvAdapter
  */
-public class CvFcAdapter extends CSVLineBasedAdapter {
+public class CapvitalAdapter extends CSVLineBasedAdapter {
 	private static final long serialVersionUID = 1L;
-	private ObjectDB exampleObject;
+	private ObjectDB financialClaim;
 
-	// Good practice : use specific exception class
-	private static class CvFcAdapterException extends Exception{
-		public CvFcAdapter(String message){
+	private static class CapvitalAdapterException extends Exception{
+		public CapvitalAdapterException(String message){
 			super(message);
 		}
 	}
 	
 	public String preProcess(){
 		// set CSV separator
-		setSeparator(','); 
-		exampleObject = getGrant().getProcessObject(lgcObject); 
-
-		// to generate a subsequently imported XML, call super.preProcess()
-		// doing so will add a starting <simplicite> tag
+		setSeparator(';'); 
+		financialClaim = getGrant().getTmpObject("CvFinancialClaim"); 
 		return null;
 	}
 	
@@ -38,7 +34,7 @@ public class CvFcAdapter extends CSVLineBasedAdapter {
 			appendLog("=== Processing line #"+lineNumber+" : "+Arrays.toString(values));
 			processWithExceptions(lineNumber, values);
 		}
-		catch(ExampleCsvAdapterException e){
+		catch(CapvitalAdapterException e){
 			// add some logs to the .err file (added in the imports supervisor object)
 			appendError("=== Error with line #"+lineNumber+" : "+Arrays.toString(values));
 			appendError(e);
@@ -59,17 +55,20 @@ public class CvFcAdapter extends CSVLineBasedAdapter {
 		// doing so will add a closing <simplicite> tag
 	}
 
-	public void processWithExceptions(long lineNumber, String[] values) throws ExampleCsvAdapterException{
+	public void processWithExceptions(long lineNumber, String[] values) throws CapvitalAdapterException{
 		String createMsg;
-		synchronized(exampleObject){
-			exampleObject.resetValues(true);
-			exampleObject.setFieldValue("attr1", values[0]);
-			exampleObject.setFieldValue("attr2", values[1]);
-			exampleObject.setFieldValue("attr3", values[2]);
-			createMsg = exampleObject.create();
+		synchronized(financialClaim){
+			financialClaim.resetValues(true);
+			String dbDate = values[0].split("/")[2] +"/"+ values[0].split("/")[1]+ "/"+ values[0].split("/")[0];
+			financialClaim.setFieldValue("cvFcDate", dbDate);
+			financialClaim.setFieldValue("cvFcInvoice", values[1]);
+			financialClaim.setFieldValue("cvFcChiffreAffaireHT", values[2]);
+			financialClaim.setFieldValue("CvFinancialClaim_CvAccount_id", 1);
+			financialClaim.setFieldValue("CvFinancialClaim_CvAccount_id.cvAccountName", values[3]);
+			createMsg = financialClaim.create();
 		}
 		if(!Tool.isEmpty(createMsg)){
-			throw new ExampleCsvAdapterException(createMsg);
+			throw new CapvitalAdapterException(createMsg);
 		}
 	}
 }

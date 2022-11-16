@@ -44,7 +44,7 @@
      "usr_menu": true,
      "usr_menu_defcollapsed": false,
      "usr_menu_defdomain_id__obd_name": null,
-     "usr_last_logon": "2022-11-16 10:03:08",
+     "usr_last_logon": "2022-11-16 15:24:37",
      "usr_dateformat": null,
      "usr_lang_pref": "FRA",
      "usr_mfa_method": null,
@@ -64,25 +64,11 @@
      "item": {
       "usp_user_id__usr_login": "admin",
       "usp_param_id__sys_code": "CLIENT_ID",
-      "usp_value": "[{\n \"dt\": \"2022-11-16 10:03:08\",\n \"ag\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36\",\n \"id\": \"JXGYP8SjThA9PI1fF7UFZndTVFVAL8oQxQci3Io9HH96b7kn8lpC64LrvEPKvM3a1668592888303\"\n}]",
+      "usp_value": "[\n {\n  \"dt\": \"2022-11-16 10:03:08\",\n  \"ag\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36\",\n  \"id\": \"JXGYP8SjThA9PI1fF7UFZndTVFVAL8oQxQci3Io9HH96b7kn8lpC64LrvEPKvM3a1668592888303\"\n },\n {\n  \"dt\": \"2022-11-16 13:42:59\",\n  \"ag\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36\",\n  \"id\": \"XjXnnlewTAIj1Jq3XjbgAtHnUIAacbbqOh9fDbqPh7JOQOblZCJ5YeLh7zzVwgkn1668604124806\"\n },\n {\n  \"dt\": \"2022-11-16 15:24:37\",\n  \"ag\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36\",\n  \"id\": \"Hn1hYOLjWBxFMnO1eZRj4jDJc6LNOZeB8x0hsKUGPbyY9pMAIKs3GR5yKowmTFDK1668612272549\"\n }\n]",
       "usp_param_id__sys_type": null,
       "usp_param_id__sys_value": "empty",
       "usp_param_id__sys_value2": null,
       "usp_param_id__sys_desc": null,
-      "row_module_id__mdl_name": "Capvital"
-     }
-    },
-    {
-     "object": "UserSysParam",
-     "userkey": "admin~FORCE_CHANGE_PASSWORD",
-     "item": {
-      "usp_user_id__usr_login": "admin",
-      "usp_param_id__sys_code": "FORCE_CHANGE_PASSWORD",
-      "usp_value": "yes",
-      "usp_param_id__sys_type": "PRV",
-      "usp_param_id__sys_value": "empty",
-      "usp_param_id__sys_value2": null,
-      "usp_param_id__sys_desc": "Force password change (set at user level)",
       "row_module_id__mdl_name": "Capvital"
      }
     },
@@ -714,7 +700,7 @@
           "obf_fld_listmore": null,
           "obf_fld_researchreq": null,
           "obf_fld_dfault": null,
-          "obf_field_id__fld_dfault": "[NOW]",
+          "obf_field_id__fld_dfault": null,
           "obf_area_id__ofa_name": null,
           "obf_area_id__ofa_position": null,
           "row_module_id__mdl_name": "Capvital"
@@ -749,7 +735,7 @@
             "fld_minsize": null,
             "fld_precision": null,
             "fld_fromdate_id__fld_name": null,
-            "fld_dfault": "[NOW]",
+            "fld_dfault": null,
             "fld_indexable": false,
             "fld_autocomp": "0",
             "fld_groupby": false,
@@ -3099,20 +3085,20 @@
    "field": "row_module_id",
    "list": [{
     "object": "Adapter",
-    "userkey": "CvFcAdapter",
+    "userkey": "CapvitalAdapter",
     "item": {
-     "adp_name": "CvFcAdapter",
-     "adp_atomic": true,
+     "adp_name": "CapvitalAdapter",
+     "adp_atomic": false,
      "adp_type": "JAVA",
      "adp_script": null,
      "adp_class": null,
      "adp_script_id": {
-      "path": "src/com/simplicite/adapters/Capvital/CvFcAdapter.java",
-      "size": 2376,
+      "path": "src/com/simplicite/adapters/Capvital/CapvitalAdapter.java",
+      "size": 2518,
       "field": "adp_script_id",
       "mime": "text/plain",
-      "name": "CvFinancialClaimAdapter.java",
-      "id": "6157",
+      "name": "CvFcAdapter.java",
+      "id": "6291",
       "object": "Adapter",
       "rowid": "15"
      },
