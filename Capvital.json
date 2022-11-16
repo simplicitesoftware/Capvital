@@ -6,7 +6,7 @@
   "mdl_prefix": "cv",
   "mdl_version": "0.1",
   "mdl_type": "A",
-  "mdl_url": null,
+  "mdl_url": "{\n\t\"type\": \"git\",\n\t\"origin\": {\n\t\t\"uri\": \"https://github.com/simplicitesoftware/module-capvital.git\",\n\t}\n}",
   "mdl_comment": null
  },
  "links": [
@@ -74,6 +74,20 @@
     },
     {
      "object": "UserSysParam",
+     "userkey": "admin~FORCE_CHANGE_PASSWORD",
+     "item": {
+      "usp_user_id__usr_login": "admin",
+      "usp_param_id__sys_code": "FORCE_CHANGE_PASSWORD",
+      "usp_value": "yes",
+      "usp_param_id__sys_type": "PRV",
+      "usp_param_id__sys_value": "empty",
+      "usp_param_id__sys_value2": null,
+      "usp_param_id__sys_desc": "Force password change (set at user level)",
+      "row_module_id__mdl_name": "Capvital"
+     }
+    },
+    {
+     "object": "UserSysParam",
      "userkey": "admin~SCOPE_PREFS",
      "item": {
       "usp_user_id__usr_login": "admin",
@@ -83,20 +97,6 @@
       "usp_param_id__sys_value": "empty",
       "usp_param_id__sys_value2": null,
       "usp_param_id__sys_desc": "Technical, do not change/remove, needed in user's parameters",
-      "row_module_id__mdl_name": "Capvital"
-     }
-    },
-    {
-     "object": "UserSysParam",
-     "userkey": "designer~DISPOSITION",
-     "item": {
-      "usp_user_id__usr_login": "designer",
-      "usp_param_id__sys_code": "DISPOSITION",
-      "usp_value": null,
-      "usp_param_id__sys_type": "LFL",
-      "usp_param_id__sys_value": "default",
-      "usp_param_id__sys_value2": null,
-      "usp_param_id__sys_desc": "Webapp disposition, ex: default, myapp, ...",
       "row_module_id__mdl_name": "Capvital"
      }
     }
@@ -453,34 +453,6 @@
        "list": [
         {
          "object": "Link",
-         "userkey": "100~CvUser~CvUser_CvAccount_id",
-         "item": {
-          "obf_ref_object_id__obo_name": "CvAccount",
-          "obf_order": 100,
-          "obf_ref_order": 10,
-          "obf_object_id__obj_name": "CvUser",
-          "obf_field_id__fld_name": "CvUser_CvAccount_id",
-          "obf_field_id__fld_dbname": "cvuser_cvaccount_id",
-          "obf_field_id__fld_updatable": "1",
-          "obf_field_id__fld_required": false,
-          "obf_field_id__fld_fonctid": false,
-          "obf_cascad": "R",
-          "obf_card": "0,n",
-          "obf_query": null,
-          "obf_visible": true,
-          "obf_ref_export": true,
-          "obf_copy": false,
-          "obf_associate": null,
-          "obf_inline": false,
-          "obf_rendering": null,
-          "obf_treedepth": null,
-          "obf_area_id__ofa_name": "CvUser-1",
-          "obf_area_id__ofa_position": 1,
-          "row_module_id__mdl_name": "Capvital"
-         }
-        },
-        {
-         "object": "Link",
          "userkey": "100~CvFinancialClaim~CvFinancialClaim_CvAccount_id",
          "item": {
           "obf_ref_object_id__obo_name": "CvAccount",
@@ -504,6 +476,34 @@
           "obf_treedepth": null,
           "obf_area_id__ofa_name": null,
           "obf_area_id__ofa_position": null,
+          "row_module_id__mdl_name": "Capvital"
+         }
+        },
+        {
+         "object": "Link",
+         "userkey": "100~CvUser~CvUser_CvAccount_id",
+         "item": {
+          "obf_ref_object_id__obo_name": "CvAccount",
+          "obf_order": 100,
+          "obf_ref_order": 10,
+          "obf_object_id__obj_name": "CvUser",
+          "obf_field_id__fld_name": "CvUser_CvAccount_id",
+          "obf_field_id__fld_dbname": "cvuser_cvaccount_id",
+          "obf_field_id__fld_updatable": "1",
+          "obf_field_id__fld_required": false,
+          "obf_field_id__fld_fonctid": false,
+          "obf_cascad": "R",
+          "obf_card": "0,n",
+          "obf_query": null,
+          "obf_visible": true,
+          "obf_ref_export": true,
+          "obf_copy": false,
+          "obf_associate": null,
+          "obf_inline": false,
+          "obf_rendering": null,
+          "obf_treedepth": null,
+          "obf_area_id__ofa_name": "CvUser-1",
+          "obf_area_id__ofa_position": 1,
           "row_module_id__mdl_name": "Capvital"
          }
         }
@@ -579,9 +579,9 @@
        "field": "obo_script_id",
        "mime": "text/plain",
        "name": "CvFinancialClaim.java",
-       "id": "6076",
+       "id": "6136",
        "object": "ObjectInternal",
-       "rowid": "2020"
+       "rowid": "2018"
       },
       "obo_usets": "1",
       "obo_nosearch": "1",
@@ -1268,13 +1268,13 @@
       "obo_class": null,
       "obo_script_id": {
        "path": "src/com/simplicite/objects/Capvital/CvFinancialClaimImport.java",
-       "size": 845,
+       "size": 847,
        "field": "obo_script_id",
        "mime": "text/plain",
        "name": "CvFinancialClaimImport.java",
-       "id": "6077",
+       "id": "6137",
        "object": "ObjectInternal",
-       "rowid": "2019"
+       "rowid": "2020"
       },
       "obo_usets": "1",
       "obo_nosearch": "1",
@@ -1285,7 +1285,7 @@
       "obo_exportorder": null,
       "obo_distinct": false,
       "obo_indexable": false,
-      "obo_groupby": false,
+      "obo_groupby": null,
       "obo_dfltref": null,
       "obo_template_id__tpl_name": "Base",
       "obo_cache": "D",
@@ -1305,13 +1305,13 @@
       "obo_useform": true,
       "obo_title": null,
       "obo_icon": "fas/paperclip",
-      "obo_refcount": false,
-      "obo_tree": false,
+      "obo_refcount": null,
+      "obo_tree": null,
       "obo_viewmode": "T",
       "obo_historic": null,
       "obo_printable": true,
       "obo_followlink": true,
-      "obo_mergeable": false,
+      "obo_mergeable": null,
       "obo_social": ["1"],
       "obo_rowid_id__fld_name": null,
       "obo_extend_id__obj_name": null,
@@ -1692,9 +1692,9 @@
        "field": "obo_script_id",
        "mime": "text/plain",
        "name": "CvUser.java",
-       "id": "6075",
+       "id": "6138",
        "object": "ObjectInternal",
-       "rowid": "2018"
+       "rowid": "2021"
       },
       "obo_usets": "1",
       "obo_nosearch": "1",
@@ -3073,7 +3073,7 @@
       "field": "mod_doc",
       "mime": "image/svg+xml",
       "name": "CapvitalModel.svg",
-      "id": "6072",
+      "id": "6134",
       "object": "Model",
       "rowid": "10"
      },
@@ -3084,7 +3084,7 @@
       "field": "mod_image",
       "mime": "image/png",
       "name": "CapvitalModel.png",
-      "id": "6073",
+      "id": "6135",
       "object": "Model",
       "rowid": "10"
      },
@@ -3099,20 +3099,20 @@
    "field": "row_module_id",
    "list": [{
     "object": "Adapter",
-    "userkey": "CvFinancialClaimAdapter",
+    "userkey": "CvFcAdapter",
     "item": {
-     "adp_name": "CvFinancialClaimAdapter",
+     "adp_name": "CvFcAdapter",
      "adp_atomic": true,
      "adp_type": "JAVA",
      "adp_script": null,
      "adp_class": null,
      "adp_script_id": {
-      "path": "src/com/simplicite/adapters/Capvital/CvFinancialClaimAdapter.java",
-      "size": 882,
+      "path": "src/com/simplicite/adapters/Capvital/CvFcAdapter.java",
+      "size": 2376,
       "field": "adp_script_id",
       "mime": "text/plain",
       "name": "CvFinancialClaimAdapter.java",
-      "id": "6078",
+      "id": "6157",
       "object": "Adapter",
       "rowid": "15"
      },
