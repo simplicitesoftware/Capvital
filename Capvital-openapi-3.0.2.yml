@@ -151,13 +151,19 @@ components:
     CvFinancialClaimImport:
       type: object
       properties:
-        cvFcClaimImportDate:
+        cvFcImportDate:
           description: Date
           type: string
           example: yyyy-MM-dd HH:mm:ss
-        cvFcClaimImportFile:
+        cvFcImportFile:
           description: File
           type: object
+        cvFcImportStatus:
+          description: Status
+          type: string
+          enum:
+          - KO
+          - OK
         row_id:
           description: Unique technical row ID
           type: string
@@ -197,6 +203,9 @@ components:
     CvFinancialClaim:
       type: object
       properties:
+        CvFinancialClaim_CvFinancialClaimImport_id:
+          description: Cv financial claim cv financial claim import id
+          type: string
         cvFcKey:
           description: Cv fc key
           type: string
@@ -216,6 +225,10 @@ components:
         CvFinancialClaim_CvAccount_id__cvAccountName:
           description: Account Name
           type: string
+        CvFinancialClaim_CvFinancialClaimImport_id__cvFcImportDate:
+          description: Cv financial claim cv financial claim import id Date
+          type: string
+          example: yyyy-MM-dd HH:mm:ss
         row_id:
           description: Unique technical row ID
           type: string
@@ -329,6 +342,20 @@ paths:
         in: query
         name: CvFinancialClaim_CvAccount_id__cvAccountName
         description: Search filter for Account Name
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: CvFinancialClaim_CvFinancialClaimImport_id
+        description: Search filter for Cv financial claim cv financial claim import
+          id
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: CvFinancialClaim_CvFinancialClaimImport_id__cvFcImportDate
+        description: Search filter for Cv financial claim cv financial claim import
+          id Date
         required: false
       tags:
       - CvFinancialClaim
@@ -484,13 +511,22 @@ paths:
       - schema:
           type: string
         in: query
-        name: cvFcClaimImportDate
+        name: cvFcImportDate
         description: Search filter for Date
         required: false
       - schema:
           type: string
+          enum:
+          - KO
+          - OK
         in: query
-        name: cvFcClaimImportFile
+        name: cvFcImportStatus
+        description: Search filter for Status
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: cvFcImportFile
         description: Search filter for File
         required: false
       tags:

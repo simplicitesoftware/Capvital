@@ -39,6 +39,8 @@
 | `cvFcGrossSales`                                             | int(11)                                  | yes      | yes       |          | -                                                                                |
 | `CvFinancialClaim_CvAccount_id` link to **`CvAccount`**      | id                                       |          | yes       |          | -                                                                                |
 | _Ref. `CvFinancialClaim_CvAccount_id.cvAccountName`_         | _char(255)_                              |          |           |          | -                                                                                |
+| `CvFinancialClaim_CvFinancialClaimImport_id` link to **`CvFinancialClaimImport`** | id                                       |          | yes       |          | -                                                                                |
+| _Ref. `CvFinancialClaim_CvFinancialClaimImport_id.cvFcImportDate`_ | _datetime_                               |          |           |          | -                                                                                |
 
 `CvFinancialClaimImport` business object definition
 ---------------------------------------------------
@@ -49,8 +51,19 @@
 
 | Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      |
 |--------------------------------------------------------------|------------------------------------------|----------|-----------|----------|----------------------------------------------------------------------------------|
-| `cvFcClaimImportDate`                                        | datetime                                 | yes      | yes       |          | -                                                                                |
-| `cvFcClaimImportFile`                                        | document                                 | yes      | yes       |          | -                                                                                |
+| `cvFcImportDate`                                             | datetime                                 | yes*     | yes       |          | -                                                                                |
+| `cvFcImportStatus`                                           | enum(10) using `CV_FC_IMPORT_STATUS` list | yes      | yes       |          | -                                                                                |
+| `cvFcImportFile`                                             | document                                 | yes      | yes       |          | -                                                                                |
+
+### Lists
+
+* `CV_FC_IMPORT_STATUS`
+    - `KO` KO
+    - `OK` OK
+
+### Custom actions
+
+* `CvImportAction`: 
 
 `CvUser` business object definition
 -----------------------------------

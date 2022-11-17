@@ -1,11 +1,16 @@
 package com.simplicite.objects.Capvital;
 
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 import java.util.*;
 
-import com.lowagie.text.pdf.codec.Base64.InputStream;
 import com.simplicite.util.*;
 import com.simplicite.util.exceptions.*;
 import com.simplicite.util.tools.*;
+import com.simplicite.util.tools.Parameters.DocParam;
+import com.simplicite.util.Integration;
+
+import ch.simschla.minify.cli.App;
 
 /**
  * Business object CvFinancialClaimImport
@@ -13,21 +18,22 @@ import com.simplicite.util.tools.*;
 public class CvFinancialClaimImport extends ObjectDB {
 	private static final long serialVersionUID = 1L;
 
-	@Override
-	public String postSave() {
-		String documentId = getFieldValue("cvFcClaimImportFile");
-		DocumentDB doc = DocumentDB.getDocument(documentId, getGrant());
-		CSVTool tool = new CSVTool(',', '\0');
-		try {
-			java.io.InputStream stream = doc.getInputStream();
-			//CSVTool.parse()
-		} catch(Exception e) {
-			AppLog.error(getClass(), "postSave", "An error occured during csv parsing", e, getGrant());
+	public void importCSV(Action action) {
+		Grant g = getGrant();
+		String lang = g.getLang();
+		ObjectField docField = action.getConfirmField(lang, "cvImportActionFile");
+		String rowId = this.getRowId();
+		HashMap<String, Object> params = new HashMap<String, Object>();
+		params.put("importId", rowId);
+		DocumentDB doc = docField.getDocument();
+		if(doc!=null) {
+			try {
+				byte[] data = doc.getBytes(true);
+				new Integration().importADP(g, "CapvitalAdapter", new ByteArrayInputStream(data), getName(), params);
+			} catch(java.io.IOException e) {
+				AppLog.error(e, g);
+			}
+			
 		}
-		return "";
-	}
-
-	private void parseCsv() {
-		
 	}
 }
