@@ -197,9 +197,9 @@ components:
     CvFinancialClaim:
       type: object
       properties:
-        cvFcChiffreAffaireHT:
-          description: Gross sales
-          type: integer
+        cvFcKey:
+          description: Cv fc key
+          type: string
         cvFcDate:
           description: Date
           type: string
@@ -210,6 +210,9 @@ components:
         cvFcInvoice:
           description: Invoice
           type: string
+        cvFcGrossSales:
+          description: Gross sales
+          type: integer
         CvFinancialClaim_CvAccount_id__cvAccountName:
           description: Account Name
           type: string
@@ -294,6 +297,12 @@ paths:
       - schema:
           type: string
         in: query
+        name: cvFcKey
+        description: Search filter for Cv fc key
+        required: false
+      - schema:
+          type: string
+        in: query
         name: cvFcDate
         description: Search filter for Date
         required: false
@@ -306,7 +315,7 @@ paths:
       - schema:
           type: integer
         in: query
-        name: cvFcChiffreAffaireHT
+        name: cvFcGrossSales
         description: Search filter for Gross sales
         required: false
       - schema:

@@ -44,7 +44,7 @@
      "usr_menu": true,
      "usr_menu_defcollapsed": false,
      "usr_menu_defdomain_id__obd_name": null,
-     "usr_last_logon": "2022-11-16 15:24:37",
+     "usr_last_logon": "2022-11-17 10:09:09",
      "usr_dateformat": null,
      "usr_lang_pref": "FRA",
      "usr_mfa_method": null,
@@ -64,7 +64,21 @@
      "item": {
       "usp_user_id__usr_login": "admin",
       "usp_param_id__sys_code": "CLIENT_ID",
-      "usp_value": "[\n {\n  \"dt\": \"2022-11-16 10:03:08\",\n  \"ag\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36\",\n  \"id\": \"JXGYP8SjThA9PI1fF7UFZndTVFVAL8oQxQci3Io9HH96b7kn8lpC64LrvEPKvM3a1668592888303\"\n },\n {\n  \"dt\": \"2022-11-16 13:42:59\",\n  \"ag\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36\",\n  \"id\": \"XjXnnlewTAIj1Jq3XjbgAtHnUIAacbbqOh9fDbqPh7JOQOblZCJ5YeLh7zzVwgkn1668604124806\"\n },\n {\n  \"dt\": \"2022-11-16 15:24:37\",\n  \"ag\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36\",\n  \"id\": \"Hn1hYOLjWBxFMnO1eZRj4jDJc6LNOZeB8x0hsKUGPbyY9pMAIKs3GR5yKowmTFDK1668612272549\"\n }\n]",
+      "usp_value": "[\n {\n  \"dt\": \"2022-11-16 10:03:08\",\n  \"ag\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36\",\n  \"id\": \"JXGYP8SjThA9PI1fF7UFZndTVFVAL8oQxQci3Io9HH96b7kn8lpC64LrvEPKvM3a1668592888303\"\n },\n {\n  \"dt\": \"2022-11-16 13:42:59\",\n  \"ag\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36\",\n  \"id\": \"XjXnnlewTAIj1Jq3XjbgAtHnUIAacbbqOh9fDbqPh7JOQOblZCJ5YeLh7zzVwgkn1668604124806\"\n },\n {\n  \"dt\": \"2022-11-16 16:33:35\",\n  \"ag\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36\",\n  \"id\": \"Hn1hYOLjWBxFMnO1eZRj4jDJc6LNOZeB8x0hsKUGPbyY9pMAIKs3GR5yKowmTFDK1668612272549\"\n },\n {\n  \"dt\": \"2022-11-17 10:09:09\",\n  \"ag\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36\",\n  \"id\": \"5j8CsRc3VBmDptkrPHmj3qMzOddiZqEFJpV5RMAgKQba76EVABrDnFAgcdHjuZfQ1668677227395\"\n }\n]",
+      "usp_param_id__sys_type": null,
+      "usp_param_id__sys_value": "empty",
+      "usp_param_id__sys_value2": null,
+      "usp_param_id__sys_desc": null,
+      "row_module_id__mdl_name": "Capvital"
+     }
+    },
+    {
+     "object": "UserSysParam",
+     "userkey": "admin~HISTORY CapvitalAdminHome",
+     "item": {
+      "usp_user_id__usr_login": "admin",
+      "usp_param_id__sys_code": "HISTORY CapvitalAdminHome",
+      "usp_value": "[{\"object\":\"CvFinancialClaim\",\"rowId\":\"30\",\"label\":\"Déclaration financière : 1314957445\"},\n{\"object\":\"CvFinancialClaim\",\"rowId\":\"28\",\"label\":\"Déclaration financière : 207896479\"},\n{\"object\":\"CvFinancialClaim\",\"rowId\":\"24\",\"label\":\"Déclaration financière\"},\n{\"object\":\"CvFinancialClaim\",\"rowId\":\"22\",\"label\":\"Déclaration financière\"}]",
       "usp_param_id__sys_type": null,
       "usp_param_id__sys_value": "empty",
       "usp_param_id__sys_value2": null,
@@ -439,10 +453,10 @@
        "list": [
         {
          "object": "Link",
-         "userkey": "100~CvFinancialClaim~CvFinancialClaim_CvAccount_id",
+         "userkey": "50~CvFinancialClaim~CvFinancialClaim_CvAccount_id",
          "item": {
           "obf_ref_object_id__obo_name": "CvAccount",
-          "obf_order": 100,
+          "obf_order": 50,
           "obf_ref_order": 10,
           "obf_object_id__obj_name": "CvFinancialClaim",
           "obf_field_id__fld_name": "CvFinancialClaim_CvAccount_id",
@@ -561,11 +575,11 @@
       "obo_class": null,
       "obo_script_id": {
        "path": "src/com/simplicite/objects/Capvital/CvFinancialClaim.java",
-       "size": 316,
+       "size": 739,
        "field": "obo_script_id",
        "mime": "text/plain",
        "name": "CvFinancialClaim.java",
-       "id": "6136",
+       "id": "6484",
        "object": "ObjectInternal",
        "rowid": "2018"
       },
@@ -578,7 +592,7 @@
       "obo_exportorder": null,
       "obo_distinct": false,
       "obo_indexable": false,
-      "obo_groupby": false,
+      "obo_groupby": null,
       "obo_dfltref": null,
       "obo_template_id__tpl_name": "Base",
       "obo_cache": "D",
@@ -598,13 +612,13 @@
       "obo_useform": true,
       "obo_title": null,
       "obo_icon": "img/system/list_of_values",
-      "obo_refcount": false,
-      "obo_tree": false,
+      "obo_refcount": null,
+      "obo_tree": null,
       "obo_viewmode": "T",
       "obo_historic": null,
       "obo_printable": true,
       "obo_followlink": true,
-      "obo_mergeable": false,
+      "obo_mergeable": null,
       "obo_social": ["1"],
       "obo_rowid_id__fld_name": null,
       "obo_extend_id__obj_name": null,
@@ -675,12 +689,132 @@
        "list": [
         {
          "object": "ObjectFieldSystem",
-         "userkey": "CvFinancialClaim~cvFcDate~10",
+         "userkey": "CvFinancialClaim~cvFcKey~10",
+         "item": {
+          "obf_object_id__obo_name": "CvFinancialClaim",
+          "obf_field_id__fld_name": "cvFcKey",
+          "obf_field_id__fld_type": "3",
+          "obf_order": 10,
+          "obf_group_by": null,
+          "obf_dfault_order": null,
+          "obf_input": null,
+          "obf_ref_field_id__fld_name": null,
+          "obf_ref_object_id__obo_name": null,
+          "obf_cascad": null,
+          "obf_card": null,
+          "obf_visible": null,
+          "obf_ref_export": true,
+          "obf_copy": null,
+          "obf_ref_order": null,
+          "obf_fld_visible": null,
+          "obf_fld_required": null,
+          "obf_fld_updatable": null,
+          "obf_fld_research": null,
+          "obf_fld_more": null,
+          "obf_fld_listmore": null,
+          "obf_fld_researchreq": null,
+          "obf_fld_dfault": null,
+          "obf_field_id__fld_dfault": null,
+          "obf_area_id__ofa_name": null,
+          "obf_area_id__ofa_position": null,
+          "row_module_id__mdl_name": "Capvital"
+         },
+         "links": [{
+          "object": "Field",
+          "label": "Field",
+          "icon": "img/system/field",
+          "field": "",
+          "list": [{
+           "object": "Field",
+           "userkey": "cvFcKey",
+           "item": {
+            "fld_name": "cvFcKey",
+            "fld_dbname": "cv_fc_key",
+            "fld_visible": "0",
+            "fld_updatable": "1",
+            "fld_required": true,
+            "fld_fonctid": true,
+            "fld_research": null,
+            "fld_researchreq": "0",
+            "fld_sort": "C",
+            "fld_more": false,
+            "fld_listmore": false,
+            "fld_listsum": null,
+            "fld_tray": null,
+            "fld_type": "3",
+            "fld_type_id__flt_code": null,
+            "fld_list_id__lov_name": null,
+            "fld_copy": true,
+            "fld_size": 255,
+            "fld_minsize": null,
+            "fld_precision": null,
+            "fld_fromdate_id__fld_name": null,
+            "fld_dfault": null,
+            "fld_indexable": false,
+            "fld_autocomp": "0",
+            "fld_groupby": false,
+            "fld_updall": true,
+            "fld_case": null,
+            "fld_righttoleft": false,
+            "fld_rendering": null,
+            "fld_speech": null,
+            "fld_calc": null,
+            "fld_objlist": null,
+            "fld_comment": null,
+            "fld_classification": null,
+            "row_module_id__mdl_name": "Capvital"
+           },
+           "links": [{
+            "object": "TranslateField",
+            "label": "Field translation",
+            "icon": "img/system/translation",
+            "field": "tsl_id",
+            "list": [
+             {
+              "object": "TranslateField",
+              "userkey": "F~cvFcKey~ENU",
+              "item": {
+               "tsl_typeField": "F",
+               "tsl_id__fld_name": "cvFcKey",
+               "tsl_lang": "ENU",
+               "tsl_value": "Cv fc key",
+               "tsl_simplehelp": null,
+               "tsl_short_value": null,
+               "tsl_placeholder": null,
+               "tsl_listhelp": null,
+               "row_module_id__mdl_name": "Capvital",
+               "tsl_tooltip": null
+              }
+             },
+             {
+              "object": "TranslateField",
+              "userkey": "F~cvFcKey~FRA",
+              "item": {
+               "tsl_typeField": "F",
+               "tsl_id__fld_name": "cvFcKey",
+               "tsl_lang": "FRA",
+               "tsl_value": "Cv fc key",
+               "tsl_simplehelp": null,
+               "tsl_short_value": null,
+               "tsl_placeholder": null,
+               "tsl_listhelp": null,
+               "row_module_id__mdl_name": "Capvital",
+               "tsl_tooltip": null
+              }
+             }
+            ]
+           }]
+          }]
+         }]
+        },
+        {
+         "object": "ObjectFieldSystem",
+         "userkey": "CvFinancialClaim~cvFcDate~20",
          "item": {
           "obf_object_id__obo_name": "CvFinancialClaim",
           "obf_field_id__fld_name": "cvFcDate",
           "obf_field_id__fld_type": "4",
-          "obf_order": 10,
+          "obf_order": 20,
           "obf_group_by": null,
           "obf_dfault_order": null,
           "obf_input": null,
@@ -795,12 +929,12 @@
         },
         {
          "object": "ObjectFieldSystem",
-         "userkey": "CvFinancialClaim~cvFcInvoice~20",
+         "userkey": "CvFinancialClaim~cvFcInvoice~30",
          "item": {
           "obf_object_id__obo_name": "CvFinancialClaim",
           "obf_field_id__fld_name": "cvFcInvoice",
           "obf_field_id__fld_type": "3",
-          "obf_order": 20,
+          "obf_order": 30,
           "obf_group_by": null,
           "obf_dfault_order": null,
           "obf_input": null,
@@ -915,12 +1049,12 @@
         },
         {
          "object": "ObjectFieldSystem",
-         "userkey": "CvFinancialClaim~cvFcChiffreAffaireHT~30",
+         "userkey": "CvFinancialClaim~cvFcGrossSales~40",
          "item": {
           "obf_object_id__obo_name": "CvFinancialClaim",
-          "obf_field_id__fld_name": "cvFcChiffreAffaireHT",
+          "obf_field_id__fld_name": "cvFcGrossSales",
           "obf_field_id__fld_type": "1",
-          "obf_order": 30,
+          "obf_order": 40,
           "obf_group_by": null,
           "obf_dfault_order": null,
           "obf_input": null,
@@ -952,10 +1086,13 @@
           "field": "",
           "list": [{
            "object": "Field",
-           "userkey": "cvFcChiffreAffaireHT",
+           "userkey": "cvFcGrossSales",
            "item": {
-            "fld_name": "cvFcChiffreAffaireHT",
-            "fld_dbname": "cv_fc_chiffre_affaire_ht",
+            "fld_name": {
+             "value": "cvFcGrossSales",
+             "oldvalue": "cvFcChiffreAffaireHT"
+            },
+            "fld_dbname": "cv_fc_gross_sales",
             "fld_visible": "3",
             "fld_updatable": "1",
             "fld_required": true,
@@ -998,10 +1135,10 @@
             "list": [
              {
               "object": "TranslateField",
-              "userkey": "F~cvFcChiffreAffaireHT~ENU",
+              "userkey": "F~cvFcGrossSales~ENU",
               "item": {
                "tsl_typeField": "F",
-               "tsl_id__fld_name": "cvFcChiffreAffaireHT",
+               "tsl_id__fld_name": "cvFcGrossSales",
                "tsl_lang": "ENU",
                "tsl_value": "Gross sales",
                "tsl_simplehelp": null,
@@ -1014,10 +1151,10 @@
              },
              {
               "object": "TranslateField",
-              "userkey": "F~cvFcChiffreAffaireHT~FRA",
+              "userkey": "F~cvFcGrossSales~FRA",
               "item": {
                "tsl_typeField": "F",
-               "tsl_id__fld_name": "cvFcChiffreAffaireHT",
+               "tsl_id__fld_name": "cvFcGrossSales",
                "tsl_lang": "FRA",
                "tsl_value": "Chiffre d'affaire HT",
                "tsl_simplehelp": null,
@@ -1035,12 +1172,12 @@
         },
         {
          "object": "ObjectFieldSystem",
-         "userkey": "CvFinancialClaim~CvFinancialClaim_CvAccount_id~100",
+         "userkey": "CvFinancialClaim~CvFinancialClaim_CvAccount_id~50",
          "item": {
           "obf_object_id__obo_name": "CvFinancialClaim",
           "obf_field_id__fld_name": "CvFinancialClaim_CvAccount_id",
           "obf_field_id__fld_type": "0",
-          "obf_order": 100,
+          "obf_order": 50,
           "obf_group_by": null,
           "obf_dfault_order": null,
           "obf_input": null,
@@ -3088,17 +3225,17 @@
     "userkey": "CapvitalAdapter",
     "item": {
      "adp_name": "CapvitalAdapter",
-     "adp_atomic": false,
+     "adp_atomic": true,
      "adp_type": "JAVA",
      "adp_script": null,
      "adp_class": null,
      "adp_script_id": {
       "path": "src/com/simplicite/adapters/Capvital/CapvitalAdapter.java",
-      "size": 2518,
+      "size": 2545,
       "field": "adp_script_id",
       "mime": "text/plain",
       "name": "CvFcAdapter.java",
-      "id": "6291",
+      "id": "6474",
       "object": "Adapter",
       "rowid": "15"
      },

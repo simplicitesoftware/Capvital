@@ -33,9 +33,10 @@
 
 | Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      |
 |--------------------------------------------------------------|------------------------------------------|----------|-----------|----------|----------------------------------------------------------------------------------|
+| `cvFcKey`                                                    | char(255)                                | yes*     | yes       |          | -                                                                                |
 | `cvFcDate`                                                   | date                                     | yes      | yes       |          | -                                                                                |
 | `cvFcInvoice`                                                | char(255)                                | yes      | yes       |          | -                                                                                |
-| `cvFcChiffreAffaireHT`                                       | int(11)                                  | yes      | yes       |          | -                                                                                |
+| `cvFcGrossSales`                                             | int(11)                                  | yes      | yes       |          | -                                                                                |
 | `CvFinancialClaim_CvAccount_id` link to **`CvAccount`**      | id                                       |          | yes       |          | -                                                                                |
 | _Ref. `CvFinancialClaim_CvAccount_id.cvAccountName`_         | _char(255)_                              |          |           |          | -                                                                                |
 

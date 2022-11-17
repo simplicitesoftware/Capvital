@@ -44,6 +44,11 @@ paths:
         type: boolean
         required: false
       - in: query
+        name: cvFcKey
+        description: Search filter for Cv fc key
+        type: string
+        required: false
+      - in: query
         name: cvFcDate
         description: Search filter for Date
         type: string
@@ -54,7 +59,7 @@ paths:
         type: string
         required: false
       - in: query
-        name: cvFcChiffreAffaireHT
+        name: cvFcGrossSales
         description: Search filter for Gross sales
         type: integer
         required: false
@@ -1208,9 +1213,9 @@ definitions:
   CvFinancialClaim:
     type: object
     properties:
-      cvFcChiffreAffaireHT:
-        description: Gross sales
-        type: integer
+      cvFcKey:
+        description: Cv fc key
+        type: string
       cvFcDate:
         description: Date
         type: string
@@ -1221,6 +1226,9 @@ definitions:
       cvFcInvoice:
         description: Invoice
         type: string
+      cvFcGrossSales:
+        description: Gross sales
+        type: integer
       CvFinancialClaim_CvAccount_id__cvAccountName:
         description: Account Name
         type: string

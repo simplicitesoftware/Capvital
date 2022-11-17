@@ -19,10 +19,11 @@ public class CapvitalAdapter extends CSVLineBasedAdapter {
 		}
 	}
 	
+	@Override
 	public String preProcess(){
 		// set CSV separator
-		setSeparator(';'); 
-		financialClaim = getGrant().getTmpObject("CvFinancialClaim"); 
+		setSeparator(';');
+		financialClaim = getGrant().getTmpObject("CvFinancialClaim");
 		return null;
 	}
 	
@@ -30,6 +31,7 @@ public class CapvitalAdapter extends CSVLineBasedAdapter {
 	public String processValues(long lineNumber, String[] values){	
 		// Good practice: handle errors with exceptions		
 		try{
+
 			// add some logs to the .log file (added in the imports supervisor object)
 			appendLog("=== Processing line #"+lineNumber+" : "+Arrays.toString(values));
 			processWithExceptions(lineNumber, values);
@@ -49,6 +51,7 @@ public class CapvitalAdapter extends CSVLineBasedAdapter {
 		return null; 
 	}
 
+	@Override
 	public void postProcess(){
 		appendLog("End Process with status "+getStatus());
 		// to generate a subsequently imported XML, call super.postProcess()
@@ -59,10 +62,10 @@ public class CapvitalAdapter extends CSVLineBasedAdapter {
 		String createMsg;
 		synchronized(financialClaim){
 			financialClaim.resetValues(true);
-			String dbDate = values[0].split("/")[2] +"/"+ values[0].split("/")[1]+ "/"+ values[0].split("/")[0];
+			String dbDate = values[0].split("/", -1)[2] +"-"+ values[0].split("/", -1)[1]+ "-"+ values[0].split("/", -1)[0];
 			financialClaim.setFieldValue("cvFcDate", dbDate);
 			financialClaim.setFieldValue("cvFcInvoice", values[1]);
-			financialClaim.setFieldValue("cvFcChiffreAffaireHT", values[2]);
+			financialClaim.setFieldValue("cvFcGrossSales", values[2]);
 			financialClaim.setFieldValue("CvFinancialClaim_CvAccount_id", 1);
 			financialClaim.setFieldValue("CvFinancialClaim_CvAccount_id.cvAccountName", values[3]);
 			createMsg = financialClaim.create();
