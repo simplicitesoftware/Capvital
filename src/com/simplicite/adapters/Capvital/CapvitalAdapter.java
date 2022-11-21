@@ -70,6 +70,7 @@ public class CapvitalAdapter extends CSVLineBasedAdapter {
 			financialClaim.setFieldValue("CvFinancialClaim_CvAccount_id.cvAccountName", values[3]);
 			financialClaim.setFieldValue("CvFinancialClaim_CvFinancialClaimImport_id", getParameter("importId"));
 			createMsg = financialClaim.create();
+			if(createMsg != null) AppLog.info(createMsg, getGrant());
 		}
 		if(!Tool.isEmpty(createMsg)){
 			throw new CapvitalAdapterException(createMsg);
