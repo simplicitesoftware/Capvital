@@ -30,10 +30,48 @@ public class CvFinancialClaimImport extends ObjectDB {
 			try {
 				byte[] data = doc.getBytes(true);
 				new Integration().importADP(g, "CapvitalAdapter", new ByteArrayInputStream(data), getName(), params);
+				importSuccess(doc);
 			} catch(java.io.IOException e) {
 				AppLog.error(e, g);
 			}
-			
+		}
+	}
+
+	@Override
+	public void initAction(Action action) {
+		if ("CvImportAction".equals(action.getName())) {
+			ObjectField f = action.getConfirmField(getGrant().getLang(), "cvImportActionFile");
+			DocumentDB doc =  getField("cvFcImportFile").getDocument();
+			f.setDocument(doc);
+		}
+}
+
+	private void importSuccess(DocumentDB doc) {
+		getField("cvFcImportFile").setDocument(doc);
+		setFieldValue("cvFcImportStatus", "OK");
+		save();
+	}
+
+	@Override 
+	public void initCreate() {
+		getField("cvFcImportFile").setVisibility(ObjectField.VIS_HIDDEN);
+	}
+
+	@Override
+	public void initList(ObjectDB parent) {
+		getField("cvFcImportFile").setVisibility(ObjectField.VIS_HIDDEN);
+	}
+
+	@Override
+	public void initUpdate() {
+		// hide field on update
+		DocumentDB docField = getField("cvFcImportFile").getDocument();
+		// display field when a file has been uploaded
+		if(docField != null) {
+			getField("cvFcImportFile").setVisibility(ObjectField.VIS_FORM);
+		// or hide field
+		} else {
+			getField("cvFcImportFile").setVisibility(ObjectField.VIS_HIDDEN);
 		}
 	}
 }
