@@ -53,7 +53,7 @@
 |--------------------------------------------------------------|------------------------------------------|----------|-----------|----------|----------------------------------------------------------------------------------|
 | `cvFcImportDate`                                             | datetime                                 | yes*     | yes       |          | -                                                                                |
 | `cvFcImportStatus`                                           | enum(10) using `CV_FC_IMPORT_STATUS` list | yes      | yes       |          | -                                                                                |
-| `cvFcImportFile`                                             | document                                 | yes      | yes       |          | -                                                                                |
+| `cvFcImportFile`                                             | document                                 |          | yes       |          | -                                                                                |
 
 ### Lists
 
@@ -74,15 +74,28 @@
 
 | Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      |
 |--------------------------------------------------------------|------------------------------------------|----------|-----------|----------|----------------------------------------------------------------------------------|
-| `cvUserProfile`                                              | enum(10) using `CV_USER_PROFILE` list    | yes      | yes       |          | -                                                                                |
 | `CvUser_CvAccount_id` link to **`CvAccount`**                | id                                       |          | yes       |          | -                                                                                |
 | _Ref. `CvUser_CvAccount_id.cvAccountName`_                   | _char(255)_                              |          |           |          | -                                                                                |
 
-### Lists
+`CvUserSupplier` business object definition
+-------------------------------------------
 
-* `CV_USER_PROFILE`
-    - `ADH` Adherent
-    - `SUP` Supplier
+
+
+### Fields
+
+| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      |
+|--------------------------------------------------------------|------------------------------------------|----------|-----------|----------|----------------------------------------------------------------------------------|
+
+`CvUserAdherent` business object definition
+-------------------------------------------
+
+
+
+### Fields
+
+| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      |
+|--------------------------------------------------------------|------------------------------------------|----------|-----------|----------|----------------------------------------------------------------------------------|
 
 ### Custom actions
 

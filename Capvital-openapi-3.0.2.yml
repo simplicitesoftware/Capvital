@@ -16,6 +16,72 @@ components:
           type: integer
           enum:
           - 404
+    ArrayOfCvUserSupplier:
+      type: array
+      items:
+        $ref: '#/components/schemas/CvUserSupplier'
+    CvUserAdherent:
+      type: object
+      properties:
+        row_module_id__mdl_name:
+          description: Module name
+          type: string
+        usr_image_id:
+          description: Picture
+          type: object
+        usr_email:
+          description: Email address
+          type: string
+        usr_active:
+          description: Active
+          type: string
+          enum:
+          - '0'
+          - '1'
+          - '2'
+          - '3'
+        row_module_id:
+          description: Module
+          type: string
+        usr_login:
+          description: Login
+          type: string
+        usr_home_id__viw_name:
+          description: Home page Name
+          type: string
+        cvUserProfile:
+          description: Profile
+          type: string
+          enum:
+          - Adherent
+          - Supplier
+        usr_last_name:
+          description: Last name
+          type: string
+        CvUser_CvAccount_id__cvAccountName:
+          description: Account Name
+          type: string
+        usr_cell_num:
+          description: Mobile/cellular phone number
+          type: string
+        CvUser_CvAccount_id:
+          description: Account
+          type: string
+        usr_lang:
+          description: Language
+          type: string
+          enum:
+          - ENU
+          - FRA
+        row_id:
+          description: Unique technical row ID
+          type: string
+        usr_home_id:
+          description: Home page
+          type: string
+        usr_first_name:
+          description: First name
+          type: string
     CvAccount:
       type: object
       properties:
@@ -58,8 +124,8 @@ components:
           description: Profile
           type: string
           enum:
-          - ADH
-          - SUP
+          - Adherent
+          - Supplier
         usr_last_name:
           description: Last name
           type: string
@@ -167,6 +233,68 @@ components:
         row_id:
           description: Unique technical row ID
           type: string
+    CvUserSupplier:
+      type: object
+      properties:
+        row_module_id__mdl_name:
+          description: Module name
+          type: string
+        usr_image_id:
+          description: Picture
+          type: object
+        usr_email:
+          description: Email address
+          type: string
+        usr_active:
+          description: Active
+          type: string
+          enum:
+          - '0'
+          - '1'
+          - '2'
+          - '3'
+        row_module_id:
+          description: Module
+          type: string
+        usr_login:
+          description: Login
+          type: string
+        usr_home_id__viw_name:
+          description: Home page Name
+          type: string
+        cvUserProfile:
+          description: Profile
+          type: string
+          enum:
+          - Adherent
+          - Supplier
+        usr_last_name:
+          description: Last name
+          type: string
+        CvUser_CvAccount_id__cvAccountName:
+          description: Account Name
+          type: string
+        usr_cell_num:
+          description: Mobile/cellular phone number
+          type: string
+        CvUser_CvAccount_id:
+          description: Account
+          type: string
+        usr_lang:
+          description: Language
+          type: string
+          enum:
+          - ENU
+          - FRA
+        row_id:
+          description: Unique technical row ID
+          type: string
+        usr_home_id:
+          description: Home page
+          type: string
+        usr_first_name:
+          description: First name
+          type: string
     Error400:
       type: object
       properties:
@@ -178,6 +306,10 @@ components:
           type: integer
           enum:
           - 400
+    ArrayOfCvUserAdherent:
+      type: array
+      items:
+        $ref: '#/components/schemas/CvUserAdherent'
     Error401:
       type: object
       properties:
@@ -462,13 +594,13 @@ paths:
         required: false
       tags:
       - CvAccount
-  /rest/CvFinancialClaimImport:
+  /rest/CvUserAdherent:
     get:
-      summary: Search CvFinancialClaimImport business object records or get contextualized
+      summary: Search CvUserAdherent business object records or get contextualized
         metadata
       security:
       - bearerAuth: []
-      operationId: obj-cvfinancialclaimimport-search
+      operationId: obj-cvuseradherent-search
       responses:
         '200':
           description: Success in searching business object records (or in getting
@@ -476,7 +608,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ArrayOfCvFinancialClaimImport'
+                $ref: '#/components/schemas/ArrayOfCvUserAdherent'
         '401':
           description: Unauthorized
           content:
@@ -510,27 +642,107 @@ paths:
         required: false
       - schema:
           type: string
+          enum:
+          - Adherent
+          - Supplier
         in: query
-        name: cvFcImportDate
-        description: Search filter for Date
+        name: cvUserProfile
+        description: Search filter for Profile
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_image_id
+        description: Search filter for Picture
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_login
+        description: Search filter for Login
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_first_name
+        description: Search filter for First name
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_last_name
+        description: Search filter for Last name
         required: false
       - schema:
           type: string
           enum:
-          - KO
-          - OK
+          - ENU
+          - FRA
         in: query
-        name: cvFcImportStatus
-        description: Search filter for Status
+        name: usr_lang
+        description: Search filter for Language
         required: false
       - schema:
           type: string
         in: query
-        name: cvFcImportFile
-        description: Search filter for File
+        name: usr_email
+        description: Search filter for Email address
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_cell_num
+        description: Search filter for Mobile/cellular phone number
+        required: false
+      - schema:
+          type: string
+          enum:
+          - '0'
+          - '1'
+          - '2'
+          - '3'
+        in: query
+        name: usr_active
+        description: Search filter for Active
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: CvUser_CvAccount_id
+        description: Search filter for Account
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_home_id
+        description: Search filter for Home page
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: CvUser_CvAccount_id__cvAccountName
+        description: Search filter for Account Name
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_home_id__viw_name
+        description: Search filter for Home page Name
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: row_module_id
+        description: Search filter for Module
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: row_module_id__mdl_name
+        description: Search filter for Module name
         required: false
       tags:
-      - CvFinancialClaimImport
+      - CvUserAdherent
   /rest/CvAccount/{row_id}:
     post:
       summary: Create a new CvAccountbusiness object record
@@ -921,6 +1133,640 @@ paths:
         required: true
       tags:
       - CvFinancialClaimImport
+  /rest/CvUserSupplier/{row_id}:
+    post:
+      summary: Create a new CvUserSupplierbusiness object record
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CvUserSupplier'
+      operationId: obj-cvusersupplier-create
+      responses:
+        '200':
+          description: Success in creating a new business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CvUserSupplier'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - CvUserSupplier
+    get:
+      summary: Get a CvUserSupplier business object record
+      security:
+      - bearerAuth: []
+      operationId: obj-cvusersupplier-get
+      responses:
+        '200':
+          description: Success in getting a single business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CvUserSupplier'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_documents
+        description: Inline documents?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_objects
+        description: Inline objects?
+        required: false
+      tags:
+      - CvUserSupplier
+    delete:
+      summary: Delete a CvUserSupplier business object record
+      security:
+      - bearerAuth: []
+      operationId: obj-cvusersupplier-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+          content:
+            application/json: {}
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - CvUserSupplier
+    put:
+      summary: Update a CvUserSupplierbusiness object record
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CvUserSupplier'
+      operationId: obj-cvusersupplier-update
+      responses:
+        '200':
+          description: Success in updating a business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CvUserSupplier'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - CvUserSupplier
+  /:
+    get:
+      summary: Get user session information
+      security:
+      - bearerAuth: []
+      operationId: info
+      responses:
+        '200':
+          description: Success in getting user session information
+          content:
+            application/json: {}
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+      parameters:
+      - schema:
+          type: boolean
+        in: query
+        name: texts
+        description: Texts?
+        required: false
+      tags:
+      - session
+  /rest/CvUserSupplier:
+    get:
+      summary: Search CvUserSupplier business object records or get contextualized
+        metadata
+      security:
+      - bearerAuth: []
+      operationId: obj-cvusersupplier-search
+      responses:
+        '200':
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArrayOfCvUserSupplier'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: boolean
+        in: query
+        name: _metadata
+        description: Metadata?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _count
+        description: Count?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _doc
+        description: Documentation?
+        required: false
+      - schema:
+          type: string
+          enum:
+          - Adherent
+          - Supplier
+        in: query
+        name: cvUserProfile
+        description: Search filter for Profile
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_image_id
+        description: Search filter for Picture
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_login
+        description: Search filter for Login
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_first_name
+        description: Search filter for First name
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_last_name
+        description: Search filter for Last name
+        required: false
+      - schema:
+          type: string
+          enum:
+          - ENU
+          - FRA
+        in: query
+        name: usr_lang
+        description: Search filter for Language
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_email
+        description: Search filter for Email address
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_cell_num
+        description: Search filter for Mobile/cellular phone number
+        required: false
+      - schema:
+          type: string
+          enum:
+          - '0'
+          - '1'
+          - '2'
+          - '3'
+        in: query
+        name: usr_active
+        description: Search filter for Active
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: CvUser_CvAccount_id
+        description: Search filter for Account
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_home_id
+        description: Search filter for Home page
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: CvUser_CvAccount_id__cvAccountName
+        description: Search filter for Account Name
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_home_id__viw_name
+        description: Search filter for Home page Name
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: row_module_id
+        description: Search filter for Module
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: row_module_id__mdl_name
+        description: Search filter for Module name
+        required: false
+      tags:
+      - CvUserSupplier
+  /rest/CvUserAdherent/{row_id}:
+    post:
+      summary: Create a new CvUserAdherentbusiness object record
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CvUserAdherent'
+      operationId: obj-cvuseradherent-create
+      responses:
+        '200':
+          description: Success in creating a new business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CvUserAdherent'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - CvUserAdherent
+    get:
+      summary: Get a CvUserAdherent business object record
+      security:
+      - bearerAuth: []
+      operationId: obj-cvuseradherent-get
+      responses:
+        '200':
+          description: Success in getting a single business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CvUserAdherent'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_documents
+        description: Inline documents?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_objects
+        description: Inline objects?
+        required: false
+      tags:
+      - CvUserAdherent
+    delete:
+      summary: Delete a CvUserAdherent business object record
+      security:
+      - bearerAuth: []
+      operationId: obj-cvuseradherent-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+          content:
+            application/json: {}
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - CvUserAdherent
+    put:
+      summary: Update a CvUserAdherentbusiness object record
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CvUserAdherent'
+      operationId: obj-cvuseradherent-update
+      responses:
+        '200':
+          description: Success in updating a business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CvUserAdherent'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - CvUserAdherent
+  /rest/CvFinancialClaimImport:
+    get:
+      summary: Search CvFinancialClaimImport business object records or get contextualized
+        metadata
+      security:
+      - bearerAuth: []
+      operationId: obj-cvfinancialclaimimport-search
+      responses:
+        '200':
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArrayOfCvFinancialClaimImport'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: boolean
+        in: query
+        name: _metadata
+        description: Metadata?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _count
+        description: Count?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _doc
+        description: Documentation?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: cvFcImportDate
+        description: Search filter for Date
+        required: false
+      - schema:
+          type: string
+          enum:
+          - KO
+          - OK
+        in: query
+        name: cvFcImportStatus
+        description: Search filter for Status
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: cvFcImportFile
+        description: Search filter for File
+        required: false
+      tags:
+      - CvFinancialClaimImport
   /rest/CvFinancialClaim/{row_id}:
     post:
       summary: Create a new CvFinancialClaimbusiness object record
@@ -1116,32 +1962,6 @@ paths:
         required: true
       tags:
       - CvFinancialClaim
-  /:
-    get:
-      summary: Get user session information
-      security:
-      - bearerAuth: []
-      operationId: info
-      responses:
-        '200':
-          description: Success in getting user session information
-          content:
-            application/json: {}
-        '401':
-          description: Unauthorized
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-      parameters:
-      - schema:
-          type: boolean
-        in: query
-        name: texts
-        description: Texts?
-        required: false
-      tags:
-      - session
   /rest/CvUser:
     get:
       summary: Search CvUser business object records or get contextualized metadata
@@ -1190,8 +2010,8 @@ paths:
       - schema:
           type: string
           enum:
-          - ADH
-          - SUP
+          - Adherent
+          - Supplier
         in: query
         name: cvUserProfile
         description: Search filter for Profile
@@ -1504,4 +2324,8 @@ tags:
 - name: CvFinancialClaimImport
   description: Financial claim import
 - name: CvUser
-  description: Users
+  description: User
+- name: CvUserAdherent
+  description: Adherent
+- name: CvUserSupplier
+  description: Suppliers
