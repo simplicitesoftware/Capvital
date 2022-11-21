@@ -222,8 +222,8 @@ paths:
         type: string
         required: false
         enum:
-        - Adherent
         - Supplier
+        - Adherent
       - in: query
         name: usr_image_id
         description: Search filter for Picture
@@ -858,8 +858,8 @@ paths:
         type: string
         required: false
         enum:
-        - Adherent
         - Supplier
+        - Adherent
       - in: query
         name: usr_image_id
         description: Search filter for Picture
@@ -1367,8 +1367,8 @@ paths:
         type: string
         required: false
         enum:
-        - Adherent
         - Supplier
+        - Adherent
       - in: query
         name: usr_image_id
         description: Search filter for Picture
@@ -1667,8 +1667,8 @@ definitions:
         description: Profile
         type: string
         enum:
-        - Adherent
         - Supplier
+        - Adherent
       usr_last_name:
         description: Last name
         type: string
@@ -1738,8 +1738,8 @@ definitions:
         description: Profile
         type: string
         enum:
-        - Adherent
         - Supplier
+        - Adherent
       usr_last_name:
         description: Last name
         type: string
@@ -1880,8 +1880,8 @@ definitions:
         description: Profile
         type: string
         enum:
-        - Adherent
         - Supplier
+        - Adherent
       usr_last_name:
         description: Last name
         type: string

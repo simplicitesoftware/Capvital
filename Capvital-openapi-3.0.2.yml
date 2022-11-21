@@ -53,8 +53,8 @@ components:
           description: Profile
           type: string
           enum:
-          - Adherent
           - Supplier
+          - Adherent
         usr_last_name:
           description: Last name
           type: string
@@ -124,8 +124,8 @@ components:
           description: Profile
           type: string
           enum:
-          - Adherent
           - Supplier
+          - Adherent
         usr_last_name:
           description: Last name
           type: string
@@ -266,8 +266,8 @@ components:
           description: Profile
           type: string
           enum:
-          - Adherent
           - Supplier
+          - Adherent
         usr_last_name:
           description: Last name
           type: string
@@ -643,8 +643,8 @@ paths:
       - schema:
           type: string
           enum:
-          - Adherent
           - Supplier
+          - Adherent
         in: query
         name: cvUserProfile
         description: Search filter for Profile
@@ -1403,8 +1403,8 @@ paths:
       - schema:
           type: string
           enum:
-          - Adherent
           - Supplier
+          - Adherent
         in: query
         name: cvUserProfile
         description: Search filter for Profile
@@ -2010,8 +2010,8 @@ paths:
       - schema:
           type: string
           enum:
-          - Adherent
           - Supplier
+          - Adherent
         in: query
         name: cvUserProfile
         description: Search filter for Profile

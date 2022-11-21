@@ -1,9 +1,9 @@
 {
-    "date": "2022-11-21 14:07:14",
+    "date": "2022-11-21 15:31:01",
     "name": "Capvital",
     "format": "json",
     "files": ["Capvital.json"],
     "repository": {"origin": {"uri": "https://github.com/simplicitesoftware/module-capvital.git"}},
     "version": "0.1",
-    "platform": "5.2.14"
+    "platform": "5.2.23"
 }
