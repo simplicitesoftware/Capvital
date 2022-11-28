@@ -75,14 +75,12 @@ paths:
         required: false
       - in: query
         name: CvFinancialClaim_CvFinancialClaimImport_id
-        description: Search filter for Cv financial claim cv financial claim import
-          id
+        description: Search filter for Date
         type: string
         required: false
       - in: query
         name: CvFinancialClaim_CvFinancialClaimImport_id__cvFcImportDate
-        description: Search filter for Cv financial claim cv financial claim import
-          id Date
+        description: Search filter for Date Date
         type: string
         required: false
       tags:
@@ -222,8 +220,8 @@ paths:
         type: string
         required: false
         enum:
-        - Supplier
         - Adherent
+        - Supplier
       - in: query
         name: usr_image_id
         description: Search filter for Picture
@@ -858,8 +856,8 @@ paths:
         type: string
         required: false
         enum:
-        - Supplier
         - Adherent
+        - Supplier
       - in: query
         name: usr_image_id
         description: Search filter for Picture
@@ -1367,8 +1365,8 @@ paths:
         type: string
         required: false
         enum:
-        - Supplier
         - Adherent
+        - Supplier
       - in: query
         name: usr_image_id
         description: Search filter for Picture
@@ -1667,8 +1665,8 @@ definitions:
         description: Profile
         type: string
         enum:
-        - Supplier
         - Adherent
+        - Supplier
       usr_last_name:
         description: Last name
         type: string
@@ -1738,8 +1736,8 @@ definitions:
         description: Profile
         type: string
         enum:
-        - Supplier
         - Adherent
+        - Supplier
       usr_last_name:
         description: Last name
         type: string
@@ -1880,8 +1878,8 @@ definitions:
         description: Profile
         type: string
         enum:
-        - Supplier
         - Adherent
+        - Supplier
       usr_last_name:
         description: Last name
         type: string
@@ -1950,7 +1948,7 @@ definitions:
     type: object
     properties:
       CvFinancialClaim_CvFinancialClaimImport_id:
-        description: Cv financial claim cv financial claim import id
+        description: Date
         type: string
       cvFcKey:
         description: Cv fc key
@@ -1972,7 +1970,7 @@ definitions:
         description: Account Name
         type: string
       CvFinancialClaim_CvFinancialClaimImport_id__cvFcImportDate:
-        description: Cv financial claim cv financial claim import id Date
+        description: Date Date
         type: string
         example: yyyy-MM-dd HH:mm:ss
       row_id:

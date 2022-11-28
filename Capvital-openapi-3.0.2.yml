@@ -53,8 +53,8 @@ components:
           description: Profile
           type: string
           enum:
-          - Supplier
           - Adherent
+          - Supplier
         usr_last_name:
           description: Last name
           type: string
@@ -124,8 +124,8 @@ components:
           description: Profile
           type: string
           enum:
-          - Supplier
           - Adherent
+          - Supplier
         usr_last_name:
           description: Last name
           type: string
@@ -266,8 +266,8 @@ components:
           description: Profile
           type: string
           enum:
-          - Supplier
           - Adherent
+          - Supplier
         usr_last_name:
           description: Last name
           type: string
@@ -336,7 +336,7 @@ components:
       type: object
       properties:
         CvFinancialClaim_CvFinancialClaimImport_id:
-          description: Cv financial claim cv financial claim import id
+          description: Date
           type: string
         cvFcKey:
           description: Cv fc key
@@ -358,7 +358,7 @@ components:
           description: Account Name
           type: string
         CvFinancialClaim_CvFinancialClaimImport_id__cvFcImportDate:
-          description: Cv financial claim cv financial claim import id Date
+          description: Date Date
           type: string
           example: yyyy-MM-dd HH:mm:ss
         row_id:
@@ -479,15 +479,13 @@ paths:
           type: string
         in: query
         name: CvFinancialClaim_CvFinancialClaimImport_id
-        description: Search filter for Cv financial claim cv financial claim import
-          id
+        description: Search filter for Date
         required: false
       - schema:
           type: string
         in: query
         name: CvFinancialClaim_CvFinancialClaimImport_id__cvFcImportDate
-        description: Search filter for Cv financial claim cv financial claim import
-          id Date
+        description: Search filter for Date Date
         required: false
       tags:
       - CvFinancialClaim
@@ -643,8 +641,8 @@ paths:
       - schema:
           type: string
           enum:
-          - Supplier
           - Adherent
+          - Supplier
         in: query
         name: cvUserProfile
         description: Search filter for Profile
@@ -1403,8 +1401,8 @@ paths:
       - schema:
           type: string
           enum:
-          - Supplier
           - Adherent
+          - Supplier
         in: query
         name: cvUserProfile
         description: Search filter for Profile
@@ -2010,8 +2008,8 @@ paths:
       - schema:
           type: string
           enum:
-          - Supplier
           - Adherent
+          - Supplier
         in: query
         name: cvUserProfile
         description: Search filter for Profile

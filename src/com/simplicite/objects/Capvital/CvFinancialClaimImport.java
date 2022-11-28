@@ -18,6 +18,12 @@ import ch.simschla.minify.cli.App;
 public class CvFinancialClaimImport extends ObjectDB {
 	private static final long serialVersionUID = 1L;
 
+	private class CSVConformityException extends Exception{
+		public CSVConformityException(String msg){
+			super(msg);
+		}
+	}
+
 	public void importCSV(Action action) {
 		Grant g = getGrant();
 		String lang = g.getLang();
@@ -29,12 +35,19 @@ public class CvFinancialClaimImport extends ObjectDB {
 		if(doc!=null) {
 			try {
 				byte[] data = doc.getBytes(true);
+				checkCSVConformity();
 				new Integration().importADP(g, "CapvitalAdapter", new ByteArrayInputStream(data), getName(), params);
 				importSuccess(doc);
+			} catch(CSVConformityException e) {
+				AppLog.error("Document content is not conform", e, g);
 			} catch(java.io.IOException e) {
-				AppLog.error(e, g);
-			}
+				AppLog.error("Unable to read document content", e, g);
+			} 
 		}
+	}
+	
+	private void checkCSVConformity() throws CSVConformityException {
+		
 	}
 
 	@Override

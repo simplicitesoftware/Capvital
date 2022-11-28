@@ -39,52 +39,24 @@
       "grp_home_id__viw_name": "CapvitalAdminHome",
       "row_module_id__mdl_name": "Capvital"
      },
-     "links": [
-      {
-       "object": "Profile",
-       "label": "Profiles",
-       "icon": "img/system/profile",
-       "field": "prf_profile_id",
-       "list": [
-        {
-         "object": "Profile",
-         "userkey": "CV_ADMIN~CV_ADHERENT",
-         "item": {
-          "prf_profile_id__grp_name": "CV_ADMIN",
-          "prf_group_id__grp_name": "CV_ADHERENT",
-          "row_module_id__mdl_name": "Capvital"
-         }
-        },
-        {
-         "object": "Profile",
-         "userkey": "CV_ADMIN~CV_SUPPLIER",
-         "item": {
-          "prf_profile_id__grp_name": "CV_ADMIN",
-          "prf_group_id__grp_name": "CV_SUPPLIER",
-          "row_module_id__mdl_name": "Capvital"
-         }
-        }
-       ]
-      },
-      {
+     "links": [{
+      "object": "Responsability",
+      "label": "Responsibilities",
+      "icon": "img/system/responsability",
+      "field": "rsp_group_id",
+      "list": [{
        "object": "Responsability",
-       "label": "Responsibilities",
-       "icon": "img/system/responsability",
-       "field": "rsp_group_id",
-       "list": [{
-        "object": "Responsability",
-        "userkey": "designer~CV_ADMIN~2022-11-16",
-        "item": {
-         "rsp_login_id__usr_login": "designer",
-         "rsp_group_id__grp_name": "CV_ADMIN",
-         "rsp_start_dt": "2022-11-16",
-         "rsp_end_dt": null,
-         "rsp_activ": true,
-         "row_module_id__mdl_name": "Capvital"
-        }
-       }]
-      }
-     ]
+       "userkey": "designer~CV_ADMIN~2022-11-16",
+       "item": {
+        "rsp_login_id__usr_login": "designer",
+        "rsp_group_id__grp_name": "CV_ADMIN",
+        "rsp_start_dt": "2022-11-16",
+        "rsp_end_dt": null,
+        "rsp_activ": true,
+        "row_module_id__mdl_name": "Capvital"
+       }
+      }]
+     }]
     },
     {
      "object": "Group",
@@ -473,9 +445,9 @@
        "field": "obo_script_id",
        "mime": "text/plain",
        "name": "CvFinancialClaim.java",
-       "id": "7113",
+       "id": "7486",
        "object": "ObjectInternal",
-       "rowid": "2007"
+       "rowid": "2021"
       },
       "obo_usets": "1",
       "obo_nosearch": "1",
@@ -1304,7 +1276,7 @@
                "tsl_typeField": "F",
                "tsl_id__fld_name": "CvFinancialClaim_CvFinancialClaimImport_id",
                "tsl_lang": "ENU",
-               "tsl_value": "Cv financial claim cv financial claim import id",
+               "tsl_value": "Date",
                "tsl_simplehelp": null,
                "tsl_short_value": null,
                "tsl_placeholder": null,
@@ -1320,7 +1292,7 @@
                "tsl_typeField": "F",
                "tsl_id__fld_name": "CvFinancialClaim_CvFinancialClaimImport_id",
                "tsl_lang": "FRA",
-               "tsl_value": "Cv financial claim cv financial claim import id",
+               "tsl_value": "Date",
                "tsl_simplehelp": null,
                "tsl_short_value": null,
                "tsl_placeholder": null,
@@ -1353,7 +1325,7 @@
           "obf_ref_export": true,
           "obf_copy": null,
           "obf_ref_order": null,
-          "obf_fld_visible": null,
+          "obf_fld_visible": "0",
           "obf_fld_required": null,
           "obf_fld_updatable": null,
           "obf_fld_research": null,
@@ -1522,13 +1494,13 @@
       "obo_class": null,
       "obo_script_id": {
        "path": "src/com/simplicite/objects/Capvital/CvFinancialClaimImport.java",
-       "size": 2185,
+       "size": 2545,
        "field": "obo_script_id",
        "mime": "text/plain",
        "name": "CvFinancialClaimImport.java",
-       "id": "7193",
+       "id": "7575",
        "object": "ObjectInternal",
-       "rowid": "2004"
+       "rowid": "2020"
       },
       "obo_usets": "1",
       "obo_nosearch": "1",
@@ -2216,9 +2188,9 @@
        "field": "obo_script_id",
        "mime": "text/plain",
        "name": "CvUser.java",
-       "id": "7114",
+       "id": "7487",
        "object": "ObjectInternal",
-       "rowid": "2008"
+       "rowid": "2022"
       },
       "obo_usets": "1",
       "obo_nosearch": "1",
@@ -2615,9 +2587,9 @@
        "field": "obo_script_id",
        "mime": "text/plain",
        "name": "CvUserAdherent.java",
-       "id": "7190",
+       "id": "7489",
        "object": "ObjectInternal",
-       "rowid": "2009"
+       "rowid": "2024"
       },
       "obo_usets": "1",
       "obo_nosearch": "1",
@@ -2787,9 +2759,9 @@
        "field": "obo_script_id",
        "mime": "text/plain",
        "name": "CvUserSupplier.java",
-       "id": "7115",
+       "id": "7490",
        "object": "ObjectInternal",
-       "rowid": "2005"
+       "rowid": "2023"
       },
       "obo_usets": "1",
       "obo_nosearch": "1",
@@ -3745,7 +3717,7 @@
       "viw_order": 10,
       "viw_icon": null,
       "viw_disp_id__dis_code": null,
-      "viw_scope": null,
+      "viw_scope": "Capvital",
       "row_module_id__mdl_name": "Capvital",
       "viw_theme_id__thm_name": null,
       "viw_lang": null
@@ -3782,6 +3754,22 @@
          }
         }
        ]
+      },
+      {
+       "object": "ViewGroup",
+       "label": "Active group",
+       "icon": "object",
+       "field": "vig_view_id",
+       "list": [{
+        "object": "ViewGroup",
+        "userkey": "CapvitalAdminHome~CV_ADMIN",
+        "item": {
+         "vig_view_id__viw_name": "CapvitalAdminHome",
+         "vig_group_id__grp_name": "CV_ADMIN",
+         "vig_group_id__grp_comment": null,
+         "row_module_id__mdl_name": "Capvital"
+        }
+       }]
       },
       {
        "object": "Function",
@@ -4121,9 +4109,9 @@
       "field": "mod_doc",
       "mime": "image/svg+xml",
       "name": "CapvitalModel.svg",
-      "id": "7109",
+      "id": "7483",
       "object": "Model",
-      "rowid": "9"
+      "rowid": "10"
      },
      "mod_json": null,
      "mod_image": {
@@ -4132,9 +4120,9 @@
       "field": "mod_image",
       "mime": "image/png",
       "name": "CapvitalModel.png",
-      "id": "7110",
+      "id": "7484",
       "object": "Model",
-      "rowid": "9"
+      "rowid": "10"
      },
      "row_module_id__mdl_name": "Capvital"
     }
@@ -4160,9 +4148,9 @@
       "field": "adp_script_id",
       "mime": "text/plain",
       "name": "CapvitalAdapter.java",
-      "id": "7116",
+      "id": "7491",
       "object": "Adapter",
-      "rowid": "14"
+      "rowid": "15"
      },
      "row_module_id__mdl_name": "Capvital"
     }
