@@ -13,8 +13,8 @@
 
 
 
-`CvAccount` business object definition
---------------------------------------
+`CvAdherent` business object definition
+---------------------------------------
 
 
 
@@ -22,7 +22,7 @@
 
 | Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      |
 |--------------------------------------------------------------|------------------------------------------|----------|-----------|----------|----------------------------------------------------------------------------------|
-| `cvAccountName`                                              | char(255)                                | yes*     | yes       |          | -                                                                                |
+| `cvAdherentName`                                             | char(255)                                | yes*     | yes       |          | -                                                                                |
 
 `CvFinancialClaim` business object definition
 ---------------------------------------------
@@ -37,10 +37,17 @@
 | `cvFcDate`                                                   | date                                     | yes      | yes       |          | -                                                                                |
 | `cvFcInvoice`                                                | char(255)                                | yes      | yes       |          | -                                                                                |
 | `cvFcGrossSales`                                             | int(11)                                  | yes      | yes       |          | -                                                                                |
-| `CvFinancialClaim_CvAccount_id` link to **`CvAccount`**      | id                                       |          | yes       |          | -                                                                                |
-| _Ref. `CvFinancialClaim_CvAccount_id.cvAccountName`_         | _char(255)_                              |          |           |          | -                                                                                |
 | `CvFinancialClaim_CvFinancialClaimImport_id` link to **`CvFinancialClaimImport`** | id                                       |          | yes       |          | -                                                                                |
 | _Ref. `CvFinancialClaim_CvFinancialClaimImport_id.cvFcImportDate`_ | _datetime_                               |          |           |          | -                                                                                |
+| _Ref. `CvFinancialClaim_CvFinancialClaimImport_id.CvFinancialClaimImport_CvSupplier_id`_ | _id_                                     |          |           |          | -                                                                                |
+| _Ref. `CvFinancialClaimImport_CvSupplier_id.cvSupplierName`_ | _char(255)_                              |          |           |          | -                                                                                |
+| _Ref. `CvFinancialClaim_CvFinancialClaimImport_id.cvFcImportStatus`_ | _enum(10) using `CV_FC_IMPORT_STATUS` list_ |          |           |          | -                                                                                |
+
+### Lists
+
+* `CV_FC_IMPORT_STATUS`
+    - `KO` KO
+    - `OK` OK
 
 `CvFinancialClaimImport` business object definition
 ---------------------------------------------------
@@ -54,6 +61,8 @@
 | `cvFcImportDate`                                             | datetime                                 | yes*     | yes       |          | -                                                                                |
 | `cvFcImportStatus`                                           | enum(10) using `CV_FC_IMPORT_STATUS` list | yes      | yes       |          | -                                                                                |
 | `cvFcImportFile`                                             | document                                 |          | yes       |          | -                                                                                |
+| `CvFinancialClaimImport_CvSupplier_id` link to **`CvSupplier`** | id                                       |          | yes       |          | -                                                                                |
+| _Ref. `CvFinancialClaimImport_CvSupplier_id.cvSupplierName`_ | _char(255)_                              |          |           |          | -                                                                                |
 
 ### Lists
 
@@ -65,6 +74,18 @@
 
 * `CvImportAction`: 
 
+`CvSupplier` business object definition
+---------------------------------------
+
+
+
+### Fields
+
+| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      |
+|--------------------------------------------------------------|------------------------------------------|----------|-----------|----------|----------------------------------------------------------------------------------|
+| `cvSupplierName`                                             | char(255)                                | yes*     | yes       |          | -                                                                                |
+| `cvSupplierRfa`                                              | int(11)                                  | yes      | yes       |          | -                                                                                |
+
 `CvUser` business object definition
 -----------------------------------
 
@@ -74,8 +95,6 @@
 
 | Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      |
 |--------------------------------------------------------------|------------------------------------------|----------|-----------|----------|----------------------------------------------------------------------------------|
-| `CvUser_CvAccount_id` link to **`CvAccount`**                | id                                       |          | yes       |          | -                                                                                |
-| _Ref. `CvUser_CvAccount_id.cvAccountName`_                   | _char(255)_                              |          |           |          | -                                                                                |
 
 `CvUserAdherent` business object definition
 -------------------------------------------
@@ -86,6 +105,8 @@
 
 | Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      |
 |--------------------------------------------------------------|------------------------------------------|----------|-----------|----------|----------------------------------------------------------------------------------|
+| `CvUserAdherent_CvAdherent_id` link to **`CvAdherent`**      | id                                       |          | yes       |          | -                                                                                |
+| _Ref. `CvUserAdherent_CvAdherent_id.cvAdherentName`_         | _char(255)_                              |          |           |          | -                                                                                |
 
 `CvUserSupplier` business object definition
 -------------------------------------------
@@ -96,4 +117,6 @@
 
 | Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      |
 |--------------------------------------------------------------|------------------------------------------|----------|-----------|----------|----------------------------------------------------------------------------------|
+| `CvUserSupplier_CvSupplier_id` link to **`CvSupplier`**      | id                                       |          | yes       |          | -                                                                                |
+| _Ref. `CvUserSupplier_CvSupplier_id.cvSupplierName`_         | _char(255)_                              |          |           |          | -                                                                                |
 

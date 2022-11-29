@@ -64,25 +64,33 @@ paths:
         type: integer
         required: false
       - in: query
-        name: CvFinancialClaim_CvAccount_id
-        description: Search filter for Account
-        type: string
-        required: false
-      - in: query
-        name: CvFinancialClaim_CvAccount_id__cvAccountName
-        description: Search filter for Account Name
-        type: string
-        required: false
-      - in: query
         name: CvFinancialClaim_CvFinancialClaimImport_id
-        description: Search filter for Date
+        description: Search filter for Financial claim import
         type: string
         required: false
       - in: query
         name: CvFinancialClaim_CvFinancialClaimImport_id__cvFcImportDate
-        description: Search filter for Date Date
+        description: Search filter for Financial claim import Date
         type: string
         required: false
+      - in: query
+        name: CvFinancialClaim_CvFinancialClaimImport_id__CvFinancialClaimImport_CvSupplier_id
+        description: Search filter for Financial claim import Supplier
+        type: string
+        required: false
+      - in: query
+        name: CvFinancialClaim_CvFinancialClaimImport_id__CvFinancialClaimImport_CvSupplier_id__cvSupplierName
+        description: Search filter for Financial claim import Supplier Name
+        type: string
+        required: false
+      - in: query
+        name: CvFinancialClaim_CvFinancialClaimImport_id__cvFcImportStatus
+        description: Search filter for Financial claim import Status
+        type: string
+        required: false
+        enum:
+        - KO
+        - OK
       tags:
       - CvFinancialClaim
   /login:
@@ -113,35 +121,18 @@ paths:
         - token
       tags:
       - session
-  /logout:
+  /rest/CvSupplier:
     get:
-      summary: Logout (revoke bearer token)
+      summary: Search CvSupplier business object records or get contextualized metadata
       security:
       - bearerAuth: []
       produces:
       - application/json
-      operationId: logout
-      responses:
-        '200':
-          description: Successfull logout
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-      tags:
-      - session
-  /rest/CvAccount:
-    get:
-      summary: Search CvAccount business object records or get contextualized metadata
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-cvaccount-search
+      operationId: obj-cvsupplier-search
       responses:
         '200':
           schema:
-            $ref: '#/definitions/ArrayOfCvAccount'
+            $ref: '#/definitions/ArrayOfCvSupplier'
           description: Success in searching business object records (or in getting
             contextualized business object metadata, documentation, ...)
         '401':
@@ -169,12 +160,79 @@ paths:
         type: boolean
         required: false
       - in: query
-        name: cvAccountName
+        name: cvSupplierName
+        description: Search filter for Name
+        type: string
+        required: false
+      - in: query
+        name: cvSupplierRfa
+        description: Search filter for Rebate point
+        type: integer
+        required: false
+      tags:
+      - CvSupplier
+  /logout:
+    get:
+      summary: Logout (revoke bearer token)
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: logout
+      responses:
+        '200':
+          description: Successfull logout
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+      tags:
+      - session
+  /rest/CvAdherent:
+    get:
+      summary: Search CvAdherent business object records or get contextualized metadata
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-cvadherent-search
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/ArrayOfCvAdherent'
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: query
+        name: _metadata
+        description: Metadata?
+        type: boolean
+        required: false
+      - in: query
+        name: _count
+        description: Count?
+        type: boolean
+        required: false
+      - in: query
+        name: _doc
+        description: Documentation?
+        type: boolean
+        required: false
+      - in: query
+        name: cvAdherentName
         description: Search filter for Name
         type: string
         required: false
       tags:
-      - CvAccount
+      - CvAdherent
   /rest/CvUserAdherent:
     get:
       summary: Search CvUserAdherent business object records or get contextualized
@@ -220,8 +278,8 @@ paths:
         type: string
         required: false
         enum:
-        - Adherent
         - Supplier
+        - Adherent
       - in: query
         name: usr_image_id
         description: Search filter for Picture
@@ -271,8 +329,8 @@ paths:
         - '2'
         - '3'
       - in: query
-        name: CvUser_CvAccount_id
-        description: Search filter for Account
+        name: CvUserAdherent_CvAdherent_id
+        description: Search filter for Adherent
         type: string
         required: false
       - in: query
@@ -281,8 +339,8 @@ paths:
         type: string
         required: false
       - in: query
-        name: CvUser_CvAccount_id__cvAccountName
-        description: Search filter for Account Name
+        name: CvUserAdherent_CvAdherent_id__cvAdherentName
+        description: Search filter for Adherent Name
         type: string
         required: false
       - in: query
@@ -302,18 +360,18 @@ paths:
         required: false
       tags:
       - CvUserAdherent
-  /rest/CvAccount/{row_id}:
+  /rest/CvAdherent/{row_id}:
     post:
-      summary: Create a new CvAccountbusiness object record
+      summary: Create a new CvAdherentbusiness object record
       security:
       - bearerAuth: []
       produces:
       - application/json
-      operationId: obj-cvaccount-create
+      operationId: obj-cvadherent-create
       responses:
         '200':
           schema:
-            $ref: '#/definitions/CvAccount'
+            $ref: '#/definitions/CvAdherent'
           description: Success in creating a new business object record
         '400':
           schema:
@@ -334,24 +392,24 @@ paths:
         type: string
         required: true
       - schema:
-          $ref: '#/definitions/CvAccount'
+          $ref: '#/definitions/CvAdherent'
         in: body
         name: body
       tags:
-      - CvAccount
+      - CvAdherent
       consumes:
       - application/json
     get:
-      summary: Get a CvAccount business object record
+      summary: Get a CvAdherent business object record
       security:
       - bearerAuth: []
       produces:
       - application/json
-      operationId: obj-cvaccount-get
+      operationId: obj-cvadherent-get
       responses:
         '200':
           schema:
-            $ref: '#/definitions/CvAccount'
+            $ref: '#/definitions/CvAdherent'
           description: Success in getting a single business object record
         '401':
           schema:
@@ -387,14 +445,14 @@ paths:
         type: boolean
         required: false
       tags:
-      - CvAccount
+      - CvAdherent
     delete:
-      summary: Delete a CvAccount business object record
+      summary: Delete a CvAdherent business object record
       security:
       - bearerAuth: []
       produces:
       - application/json
-      operationId: obj-cvaccount-delete
+      operationId: obj-cvadherent-delete
       responses:
         '200':
           description: Success in deleting a business object record
@@ -421,18 +479,18 @@ paths:
         type: string
         required: true
       tags:
-      - CvAccount
+      - CvAdherent
     put:
-      summary: Update a CvAccountbusiness object record
+      summary: Update a CvAdherentbusiness object record
       security:
       - bearerAuth: []
       produces:
       - application/json
-      operationId: obj-cvaccount-update
+      operationId: obj-cvadherent-update
       responses:
         '200':
           schema:
-            $ref: '#/definitions/CvAccount'
+            $ref: '#/definitions/CvAdherent'
           description: Success in updating a business object record
         '400':
           schema:
@@ -457,11 +515,11 @@ paths:
         type: string
         required: true
       - schema:
-          $ref: '#/definitions/CvAccount'
+          $ref: '#/definitions/CvAdherent'
         in: body
         name: body
       tags:
-      - CvAccount
+      - CvAdherent
       consumes:
       - application/json
   /rest/CvFinancialClaimImport/{row_id}:
@@ -856,8 +914,8 @@ paths:
         type: string
         required: false
         enum:
-        - Adherent
         - Supplier
+        - Adherent
       - in: query
         name: usr_image_id
         description: Search filter for Picture
@@ -907,8 +965,8 @@ paths:
         - '2'
         - '3'
       - in: query
-        name: CvUser_CvAccount_id
-        description: Search filter for Account
+        name: CvUserSupplier_CvSupplier_id
+        description: Search filter for Supplier
         type: string
         required: false
       - in: query
@@ -917,8 +975,8 @@ paths:
         type: string
         required: false
       - in: query
-        name: CvUser_CvAccount_id__cvAccountName
-        description: Search filter for Account Name
+        name: CvUserSupplier_CvSupplier_id__cvSupplierName
+        description: Search filter for Supplier Name
         type: string
         required: false
       - in: query
@@ -938,6 +996,168 @@ paths:
         required: false
       tags:
       - CvUserSupplier
+  /rest/CvSupplier/{row_id}:
+    post:
+      summary: Create a new CvSupplierbusiness object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-cvsupplier-create
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/CvSupplier'
+          description: Success in creating a new business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/CvSupplier'
+        in: body
+        name: body
+      tags:
+      - CvSupplier
+      consumes:
+      - application/json
+    get:
+      summary: Get a CvSupplier business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-cvsupplier-get
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/CvSupplier'
+          description: Success in getting a single business object record
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - in: query
+        name: _inline_documents
+        description: Inline documents?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_objects
+        description: Inline objects?
+        type: boolean
+        required: false
+      tags:
+      - CvSupplier
+    delete:
+      summary: Delete a CvSupplier business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-cvsupplier-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      tags:
+      - CvSupplier
+    put:
+      summary: Update a CvSupplierbusiness object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-cvsupplier-update
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/CvSupplier'
+          description: Success in updating a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/CvSupplier'
+        in: body
+        name: body
+      tags:
+      - CvSupplier
+      consumes:
+      - application/json
   /rest/CvUserAdherent/{row_id}:
     post:
       summary: Create a new CvUserAdherentbusiness object record
@@ -1157,6 +1377,16 @@ paths:
         description: Search filter for File
         type: string
         required: false
+      - in: query
+        name: CvFinancialClaimImport_CvSupplier_id
+        description: Search filter for Supplier
+        type: string
+        required: false
+      - in: query
+        name: CvFinancialClaimImport_CvSupplier_id__cvSupplierName
+        description: Search filter for Supplier Name
+        type: string
+        required: false
       tags:
       - CvFinancialClaimImport
   /rest/CvFinancialClaim/{row_id}:
@@ -1365,8 +1595,8 @@ paths:
         type: string
         required: false
         enum:
-        - Adherent
         - Supplier
+        - Adherent
       - in: query
         name: usr_image_id
         description: Search filter for Picture
@@ -1416,18 +1646,8 @@ paths:
         - '2'
         - '3'
       - in: query
-        name: CvUser_CvAccount_id
-        description: Search filter for Account
-        type: string
-        required: false
-      - in: query
         name: usr_home_id
         description: Search filter for Home page
-        type: string
-        required: false
-      - in: query
-        name: CvUser_CvAccount_id__cvAccountName
-        description: Search filter for Account Name
         type: string
         required: false
       - in: query
@@ -1632,9 +1852,19 @@ definitions:
     type: array
     items:
       $ref: '#/definitions/CvUserSupplier'
+  ArrayOfCvSupplier:
+    type: array
+    items:
+      $ref: '#/definitions/CvSupplier'
   CvUserAdherent:
     type: object
     properties:
+      CvUserAdherent_CvAdherent_id:
+        description: Adherent
+        type: string
+      CvUserAdherent_CvAdherent_id__cvAdherentName:
+        description: Adherent Name
+        type: string
       row_module_id__mdl_name:
         description: Module name
         type: string
@@ -1665,19 +1895,13 @@ definitions:
         description: Profile
         type: string
         enum:
-        - Adherent
         - Supplier
+        - Adherent
       usr_last_name:
         description: Last name
         type: string
-      CvUser_CvAccount_id__cvAccountName:
-        description: Account Name
-        type: string
       usr_cell_num:
         description: Mobile/cellular phone number
-        type: string
-      CvUser_CvAccount_id:
-        description: Account
         type: string
       usr_lang:
         description: Language
@@ -1694,10 +1918,13 @@ definitions:
       usr_first_name:
         description: First name
         type: string
-  CvAccount:
+  CvSupplier:
     type: object
     properties:
-      cvAccountName:
+      cvSupplierRfa:
+        description: Rebate point
+        type: integer
+      cvSupplierName:
         description: Name
         type: string
       row_id:
@@ -1736,19 +1963,13 @@ definitions:
         description: Profile
         type: string
         enum:
-        - Adherent
         - Supplier
+        - Adherent
       usr_last_name:
         description: Last name
         type: string
-      CvUser_CvAccount_id__cvAccountName:
-        description: Account Name
-        type: string
       usr_cell_num:
         description: Mobile/cellular phone number
-        type: string
-      CvUser_CvAccount_id:
-        description: Account
         type: string
       usr_lang:
         description: Language
@@ -1795,6 +2016,10 @@ definitions:
       label3:
         description: 'Label #3'
         type: string
+  ArrayOfCvAdherent:
+    type: array
+    items:
+      $ref: '#/definitions/CvAdherent'
   ArrayOfCvFinancialClaimImport:
     type: array
     items:
@@ -1826,6 +2051,15 @@ definitions:
     type: array
     items:
       $ref: '#/definitions/CvUser'
+  CvAdherent:
+    type: object
+    properties:
+      row_id:
+        description: Unique technical row ID
+        type: string
+      cvAdherentName:
+        description: Name
+        type: string
   CvFinancialClaimImport:
     type: object
     properties:
@@ -1836,6 +2070,9 @@ definitions:
       cvFcImportFile:
         description: File
         type: object
+      CvFinancialClaimImport_CvSupplier_id:
+        description: Supplier
+        type: string
       cvFcImportStatus:
         description: Status
         type: string
@@ -1844,6 +2081,9 @@ definitions:
         - OK
       row_id:
         description: Unique technical row ID
+        type: string
+      CvFinancialClaimImport_CvSupplier_id__cvSupplierName:
+        description: Supplier Name
         type: string
   CvUserSupplier:
     type: object
@@ -1871,6 +2111,12 @@ definitions:
       usr_login:
         description: Login
         type: string
+      CvUserSupplier_CvSupplier_id:
+        description: Supplier
+        type: string
+      CvUserSupplier_CvSupplier_id__cvSupplierName:
+        description: Supplier Name
+        type: string
       usr_home_id__viw_name:
         description: Home page Name
         type: string
@@ -1878,19 +2124,13 @@ definitions:
         description: Profile
         type: string
         enum:
-        - Adherent
         - Supplier
+        - Adherent
       usr_last_name:
         description: Last name
         type: string
-      CvUser_CvAccount_id__cvAccountName:
-        description: Account Name
-        type: string
       usr_cell_num:
         description: Mobile/cellular phone number
-        type: string
-      CvUser_CvAccount_id:
-        description: Account
         type: string
       usr_lang:
         description: Language
@@ -1948,7 +2188,7 @@ definitions:
     type: object
     properties:
       CvFinancialClaim_CvFinancialClaimImport_id:
-        description: Date
+        description: Financial claim import
         type: string
       cvFcKey:
         description: Cv fc key
@@ -1957,24 +2197,30 @@ definitions:
         description: Date
         type: string
         example: yyyy-MM-dd
-      CvFinancialClaim_CvAccount_id:
-        description: Account
-        type: string
       cvFcInvoice:
         description: Invoice
         type: string
       cvFcGrossSales:
         description: Gross sales
         type: integer
-      CvFinancialClaim_CvAccount_id__cvAccountName:
-        description: Account Name
-        type: string
       CvFinancialClaim_CvFinancialClaimImport_id__cvFcImportDate:
-        description: Date Date
+        description: Financial claim import Date
         type: string
         example: yyyy-MM-dd HH:mm:ss
       row_id:
         description: Unique technical row ID
+        type: string
+      CvFinancialClaim_CvFinancialClaimImport_id__cvFcImportStatus:
+        description: Financial claim import Status
+        type: string
+        enum:
+        - KO
+        - OK
+      CvFinancialClaim_CvFinancialClaimImport_id__CvFinancialClaimImport_CvSupplier_id:
+        description: Financial claim import Supplier
+        type: string
+      CvFinancialClaim_CvFinancialClaimImport_id__CvFinancialClaimImport_CvSupplier_id__cvSupplierName:
+        description: Financial claim import Supplier Name
         type: string
   ArrayOfCvFinancialClaim:
     type: array
@@ -1991,10 +2237,6 @@ definitions:
         type: integer
         enum:
         - 403
-  ArrayOfCvAccount:
-    type: array
-    items:
-      $ref: '#/definitions/CvAccount'
 swagger: '2.0'
 info:
   license:
@@ -2008,15 +2250,17 @@ info:
   title: Capvital
   version: '0.1'
 tags:
-- name: CvAccount
-  description: Account
+- name: CvAdherent
+  description: Adherents
 - name: CvFinancialClaim
   description: Financial claim
 - name: CvFinancialClaimImport
-  description: Financial claim import
+  description: Financial claims
+- name: CvSupplier
+  description: Suppliers
 - name: CvUser
   description: User
 - name: CvUserAdherent
-  description: Adherent
+  description: Adherents
 - name: CvUserSupplier
   description: Suppliers

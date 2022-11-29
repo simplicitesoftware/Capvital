@@ -11,6 +11,172 @@
  },
  "links": [
   {
+   "object": "User",
+   "label": "Users",
+   "icon": "img/system/user",
+   "field": "row_module_id",
+   "list": [
+    {
+     "object": "User",
+     "userkey": "dzqdzqdzq",
+     "item": {
+      "usr_image_id": null,
+      "usr_login": "dzqdzqdzq",
+      "usr_timezone": null,
+      "usr_minrows": null,
+      "usr_maxrows": null,
+      "usr_title": null,
+      "usr_first_name": null,
+      "usr_last_name": null,
+      "usr_lang": "ENU",
+      "usr_email": null,
+      "usr_work_num": null,
+      "usr_home_num": null,
+      "usr_cell_num": null,
+      "usr_active": "1",
+      "usr_home_id__viw_name": null,
+      "usr_address1": null,
+      "usr_address2": null,
+      "usr_zipcode": null,
+      "usr_city": null,
+      "usr_state": null,
+      "usr_country": null,
+      "row_module_id__mdl_name": "Capvital",
+      "usr_menu": null,
+      "usr_menu_defcollapsed": null,
+      "usr_menu_defdomain_id__obd_name": null,
+      "usr_last_logon": null,
+      "usr_dateformat": null,
+      "usr_lang_pref": null,
+      "usr_mfa_method": null,
+      "usr_mfa_settings": null
+     }
+    },
+    {
+     "object": "User",
+     "userkey": "fdqvcxvcx",
+     "item": {
+      "usr_image_id": null,
+      "usr_login": "fdqvcxvcx",
+      "usr_timezone": null,
+      "usr_minrows": null,
+      "usr_maxrows": null,
+      "usr_title": null,
+      "usr_first_name": null,
+      "usr_last_name": null,
+      "usr_lang": "ENU",
+      "usr_email": null,
+      "usr_work_num": null,
+      "usr_home_num": null,
+      "usr_cell_num": null,
+      "usr_active": "1",
+      "usr_home_id__viw_name": null,
+      "usr_address1": null,
+      "usr_address2": null,
+      "usr_zipcode": null,
+      "usr_city": null,
+      "usr_state": null,
+      "usr_country": null,
+      "row_module_id__mdl_name": "Capvital",
+      "usr_menu": null,
+      "usr_menu_defcollapsed": null,
+      "usr_menu_defdomain_id__obd_name": null,
+      "usr_last_logon": null,
+      "usr_dateformat": null,
+      "usr_lang_pref": null,
+      "usr_mfa_method": null,
+      "usr_mfa_settings": null
+     }
+    },
+    {
+     "object": "User",
+     "userkey": "ftkhjionoi",
+     "item": {
+      "usr_image_id": null,
+      "usr_login": "ftkhjionoi",
+      "usr_timezone": null,
+      "usr_minrows": null,
+      "usr_maxrows": null,
+      "usr_title": null,
+      "usr_first_name": null,
+      "usr_last_name": null,
+      "usr_lang": "ENU",
+      "usr_email": null,
+      "usr_work_num": null,
+      "usr_home_num": null,
+      "usr_cell_num": null,
+      "usr_active": "1",
+      "usr_home_id__viw_name": null,
+      "usr_address1": null,
+      "usr_address2": null,
+      "usr_zipcode": null,
+      "usr_city": null,
+      "usr_state": null,
+      "usr_country": null,
+      "row_module_id__mdl_name": "Capvital",
+      "usr_menu": null,
+      "usr_menu_defcollapsed": null,
+      "usr_menu_defdomain_id__obd_name": null,
+      "usr_last_logon": null,
+      "usr_dateformat": null,
+      "usr_lang_pref": null,
+      "usr_mfa_method": null,
+      "usr_mfa_settings": null
+     }
+    }
+   ]
+  },
+  {
+   "object": "UserSysParam",
+   "label": "User parameter",
+   "icon": "img/system/system_param",
+   "field": "row_module_id",
+   "list": [
+    {
+     "object": "UserSysParam",
+     "userkey": "dzqdzqdzq~FORCE_CHANGE_PASSWORD",
+     "item": {
+      "usp_user_id__usr_login": "dzqdzqdzq",
+      "usp_param_id__sys_code": "FORCE_CHANGE_PASSWORD",
+      "usp_value": "yes",
+      "usp_param_id__sys_type": "PRV",
+      "usp_param_id__sys_value": "empty",
+      "usp_param_id__sys_value2": null,
+      "usp_param_id__sys_desc": "Force password change (set at user level)",
+      "row_module_id__mdl_name": "Capvital"
+     }
+    },
+    {
+     "object": "UserSysParam",
+     "userkey": "fdqvcxvcx~FORCE_CHANGE_PASSWORD",
+     "item": {
+      "usp_user_id__usr_login": "fdqvcxvcx",
+      "usp_param_id__sys_code": "FORCE_CHANGE_PASSWORD",
+      "usp_value": "yes",
+      "usp_param_id__sys_type": "PRV",
+      "usp_param_id__sys_value": "empty",
+      "usp_param_id__sys_value2": null,
+      "usp_param_id__sys_desc": "Force password change (set at user level)",
+      "row_module_id__mdl_name": "Capvital"
+     }
+    },
+    {
+     "object": "UserSysParam",
+     "userkey": "ftkhjionoi~FORCE_CHANGE_PASSWORD",
+     "item": {
+      "usp_user_id__usr_login": "ftkhjionoi",
+      "usp_param_id__sys_code": "FORCE_CHANGE_PASSWORD",
+      "usp_value": "yes",
+      "usp_param_id__sys_type": "PRV",
+      "usp_param_id__sys_value": "empty",
+      "usp_param_id__sys_value2": null,
+      "usp_param_id__sys_desc": "Force password change (set at user level)",
+      "row_module_id__mdl_name": "Capvital"
+     }
+    }
+   ]
+  },
+  {
    "object": "Group",
    "label": "Groups",
    "icon": "img/system/group",
@@ -39,24 +205,52 @@
       "grp_home_id__viw_name": "CapvitalAdminHome",
       "row_module_id__mdl_name": "Capvital"
      },
-     "links": [{
-      "object": "Responsability",
-      "label": "Responsibilities",
-      "icon": "img/system/responsability",
-      "field": "rsp_group_id",
-      "list": [{
+     "links": [
+      {
+       "object": "Profile",
+       "label": "Profiles",
+       "icon": "img/system/profile",
+       "field": "prf_profile_id",
+       "list": [
+        {
+         "object": "Profile",
+         "userkey": "CV_ADMIN~CV_ADHERENT",
+         "item": {
+          "prf_profile_id__grp_name": "CV_ADMIN",
+          "prf_group_id__grp_name": "CV_ADHERENT",
+          "row_module_id__mdl_name": "Capvital"
+         }
+        },
+        {
+         "object": "Profile",
+         "userkey": "CV_ADMIN~CV_SUPPLIER",
+         "item": {
+          "prf_profile_id__grp_name": "CV_ADMIN",
+          "prf_group_id__grp_name": "CV_SUPPLIER",
+          "row_module_id__mdl_name": "Capvital"
+         }
+        }
+       ]
+      },
+      {
        "object": "Responsability",
-       "userkey": "designer~CV_ADMIN~2022-11-16",
-       "item": {
-        "rsp_login_id__usr_login": "designer",
-        "rsp_group_id__grp_name": "CV_ADMIN",
-        "rsp_start_dt": "2022-11-16",
-        "rsp_end_dt": null,
-        "rsp_activ": true,
-        "row_module_id__mdl_name": "Capvital"
-       }
-      }]
-     }]
+       "label": "Responsibilities",
+       "icon": "img/system/responsability",
+       "field": "rsp_group_id",
+       "list": [{
+        "object": "Responsability",
+        "userkey": "designer~CV_ADMIN~2022-11-16",
+        "item": {
+         "rsp_login_id__usr_login": "designer",
+         "rsp_group_id__grp_name": "CV_ADMIN",
+         "rsp_start_dt": "2022-11-16",
+         "rsp_end_dt": null,
+         "rsp_activ": true,
+         "row_module_id__mdl_name": "Capvital"
+        }
+       }]
+      }
+     ]
     },
     {
      "object": "Group",
@@ -80,10 +274,10 @@
    "list": [
     {
      "object": "ObjectInternal",
-     "userkey": "CvAccount",
+     "userkey": "CvAdherent",
      "item": {
-      "obo_name": "CvAccount",
-      "obo_dbtable": "cv_account",
+      "obo_name": "CvAdherent",
+      "obo_dbtable": "cv_adherent",
       "obo_role": "OBJ",
       "obo_class": null,
       "obo_script_id": null,
@@ -115,7 +309,7 @@
       ],
       "obo_useform": true,
       "obo_title": null,
-      "obo_icon": "building",
+      "obo_icon": "shop",
       "obo_refcount": false,
       "obo_tree": false,
       "obo_viewmode": "T",
@@ -161,24 +355,24 @@
        "list": [
         {
          "object": "TranslateObject",
-         "userkey": "O~CvAccount~ENU",
+         "userkey": "O~CvAdherent~ENU",
          "item": {
           "tsl_typeObject": "O",
-          "tsl_id__obo_name": "CvAccount",
+          "tsl_id__obo_name": "CvAdherent",
           "tsl_lang": "ENU",
-          "tsl_value": "Account",
+          "tsl_value": "Adherents",
           "tsl_help": null,
           "row_module_id__mdl_name": "Capvital"
          }
         },
         {
          "object": "TranslateObject",
-         "userkey": "O~CvAccount~FRA",
+         "userkey": "O~CvAdherent~FRA",
          "item": {
           "tsl_typeObject": "O",
-          "tsl_id__obo_name": "CvAccount",
+          "tsl_id__obo_name": "CvAdherent",
           "tsl_lang": "FRA",
-          "tsl_value": "Account",
+          "tsl_value": "Adhérents",
           "tsl_help": null,
           "row_module_id__mdl_name": "Capvital"
          }
@@ -192,10 +386,10 @@
        "field": "obf_object_id",
        "list": [{
         "object": "ObjectFieldSystem",
-        "userkey": "CvAccount~cvAccountName~10",
+        "userkey": "CvAdherent~cvAdherentName~10",
         "item": {
-         "obf_object_id__obo_name": "CvAccount",
-         "obf_field_id__fld_name": "cvAccountName",
+         "obf_object_id__obo_name": "CvAdherent",
+         "obf_field_id__fld_name": "cvAdherentName",
          "obf_field_id__fld_type": "3",
          "obf_order": 10,
          "obf_group_by": null,
@@ -229,10 +423,10 @@
          "field": "",
          "list": [{
           "object": "Field",
-          "userkey": "cvAccountName",
+          "userkey": "cvAdherentName",
           "item": {
-           "fld_name": "cvAccountName",
-           "fld_dbname": "cv_account_name",
+           "fld_name": "cvAdherentName",
+           "fld_dbname": "cv_adherent_name",
            "fld_visible": "3",
            "fld_updatable": "1",
            "fld_required": true,
@@ -275,10 +469,10 @@
            "list": [
             {
              "object": "TranslateField",
-             "userkey": "F~cvAccountName~ENU",
+             "userkey": "F~cvAdherentName~ENU",
              "item": {
               "tsl_typeField": "F",
-              "tsl_id__fld_name": "cvAccountName",
+              "tsl_id__fld_name": "cvAdherentName",
               "tsl_lang": "ENU",
               "tsl_value": "Name",
               "tsl_simplehelp": null,
@@ -291,10 +485,10 @@
             },
             {
              "object": "TranslateField",
-             "userkey": "F~cvAccountName~FRA",
+             "userkey": "F~cvAdherentName~FRA",
              "item": {
               "tsl_typeField": "F",
-              "tsl_id__fld_name": "cvAccountName",
+              "tsl_id__fld_name": "cvAdherentName",
               "tsl_lang": "FRA",
               "tsl_value": "Nom",
               "tsl_simplehelp": null,
@@ -316,64 +510,70 @@
        "label": "Links",
        "icon": "img/system/link",
        "field": "obf_ref_object_id",
-       "list": [
-        {
-         "object": "Link",
-         "userkey": "100~CvFinancialClaim~CvFinancialClaim_CvAccount_id",
-         "item": {
-          "obf_ref_object_id__obo_name": "CvAccount",
-          "obf_order": 100,
-          "obf_ref_order": 10,
-          "obf_object_id__obj_name": "CvFinancialClaim",
-          "obf_field_id__fld_name": "CvFinancialClaim_CvAccount_id",
-          "obf_field_id__fld_dbname": "cvfinancialclaim_cvaccount_id",
-          "obf_field_id__fld_updatable": "1",
-          "obf_field_id__fld_required": false,
-          "obf_field_id__fld_fonctid": false,
-          "obf_cascad": "R",
-          "obf_card": "0,n",
-          "obf_query": null,
-          "obf_visible": true,
-          "obf_ref_export": true,
-          "obf_copy": false,
-          "obf_associate": null,
-          "obf_inline": false,
-          "obf_rendering": null,
-          "obf_treedepth": null,
-          "obf_area_id__ofa_name": "CvFinancialClaim-1",
-          "obf_area_id__ofa_position": 1,
-          "row_module_id__mdl_name": "Capvital"
-         }
+       "list": [{
+        "object": "Link",
+        "userkey": "100~CvUserAdherent~CvUserAdherent_CvAdherent_id",
+        "item": {
+         "obf_ref_object_id__obo_name": "CvAdherent",
+         "obf_order": 100,
+         "obf_ref_order": null,
+         "obf_object_id__obj_name": "CvUserAdherent",
+         "obf_field_id__fld_name": "CvUserAdherent_CvAdherent_id",
+         "obf_field_id__fld_dbname": "cvuseradherent_cvadherent_id",
+         "obf_field_id__fld_updatable": "1",
+         "obf_field_id__fld_required": false,
+         "obf_field_id__fld_fonctid": false,
+         "obf_cascad": "R",
+         "obf_card": "0,n",
+         "obf_query": null,
+         "obf_visible": true,
+         "obf_ref_export": true,
+         "obf_copy": false,
+         "obf_associate": null,
+         "obf_inline": false,
+         "obf_rendering": null,
+         "obf_treedepth": null,
+         "obf_area_id__ofa_name": null,
+         "obf_area_id__ofa_position": null,
+         "row_module_id__mdl_name": "Capvital"
         },
-        {
-         "object": "Link",
-         "userkey": "100~CvUser~CvUser_CvAccount_id",
-         "item": {
-          "obf_ref_object_id__obo_name": "CvAccount",
-          "obf_order": 100,
-          "obf_ref_order": 20,
-          "obf_object_id__obj_name": "CvUser",
-          "obf_field_id__fld_name": "CvUser_CvAccount_id",
-          "obf_field_id__fld_dbname": "cvuser_cvaccount_id",
-          "obf_field_id__fld_updatable": "1",
-          "obf_field_id__fld_required": false,
-          "obf_field_id__fld_fonctid": false,
-          "obf_cascad": "R",
-          "obf_card": "0,n",
-          "obf_query": null,
-          "obf_visible": true,
-          "obf_ref_export": true,
-          "obf_copy": false,
-          "obf_associate": null,
-          "obf_inline": false,
-          "obf_rendering": null,
-          "obf_treedepth": null,
-          "obf_area_id__ofa_name": null,
-          "obf_area_id__ofa_position": null,
-          "row_module_id__mdl_name": "Capvital"
-         }
-        }
-       ]
+        "links": [{
+         "object": "TranslateLink",
+         "label": "Object link translation",
+         "icon": "img/system/translation",
+         "field": "tsl_id",
+         "list": [
+          {
+           "object": "TranslateLink",
+           "userkey": "K~CvUserAdherent~CvUserAdherent_CvAdherent_id~100~ENU",
+           "item": {
+            "tsl_typeLink": "K",
+            "tsl_id__obf_object_id__obj_name": "CvUserAdherent",
+            "tsl_id__obf_field_id__fld_name": "CvUserAdherent_CvAdherent_id",
+            "tsl_id__obf_order": 100,
+            "tsl_lang": "ENU",
+            "tsl_value": "Users",
+            "tsl_simplehelp": null,
+            "row_module_id__mdl_name": "Capvital"
+           }
+          },
+          {
+           "object": "TranslateLink",
+           "userkey": "K~CvUserAdherent~CvUserAdherent_CvAdherent_id~100~FRA",
+           "item": {
+            "tsl_typeLink": "K",
+            "tsl_id__obf_object_id__obj_name": "CvUserAdherent",
+            "tsl_id__obf_field_id__fld_name": "CvUserAdherent_CvAdherent_id",
+            "tsl_id__obf_order": 100,
+            "tsl_lang": "FRA",
+            "tsl_value": "Utilisateurs",
+            "tsl_simplehelp": null,
+            "row_module_id__mdl_name": "Capvital"
+           }
+          }
+         ]
+        }]
+       }]
       },
       {
        "object": "Function",
@@ -383,11 +583,11 @@
        "list": [
         {
          "object": "Function",
-         "userkey": "CV_ACCOUNT_CRUD",
+         "userkey": "CV_ADHERENT_CRUD",
          "item": {
-          "fct_name": "CV_ACCOUNT_CRUD",
+          "fct_name": "CV_ADHERENT_CRUD",
           "fct_object_id__obj_type": "O",
-          "fct_object_id__obj_name": "CvAccount",
+          "fct_object_id__obj_name": "CvAdherent",
           "fct_function": "CMS",
           "fct_action_id__act_name": null,
           "fct_view_id__viw_name": null,
@@ -400,12 +600,12 @@
           "field": "grt_function_id",
           "list": [{
            "object": "Grant",
-           "userkey": "CV_ADMIN~CV_ACCOUNT_CRUD~CvAccount~",
+           "userkey": "CV_ADMIN~CV_ADHERENT_CRUD~CvAdherent~",
            "item": {
             "grt_group_id__grp_name": "CV_ADMIN",
-            "grt_function_id__fct_name": "CV_ACCOUNT_CRUD",
+            "grt_function_id__fct_name": "CV_ADHERENT_CRUD",
             "grt_function_id__fct_object_id__obj_type": "O",
-            "grt_function_id__fct_object_id__obj_name": "CvAccount",
+            "grt_function_id__fct_object_id__obj_name": "CvAdherent",
             "grt_function_id__fct_action_id__act_name": null,
             "grt_function_id__fct_function": "CMS",
             "grt_activ": true,
@@ -416,11 +616,11 @@
         },
         {
          "object": "Function",
-         "userkey": "CV_ACCOUNT_R",
+         "userkey": "CV_ADHERENT_R",
          "item": {
-          "fct_name": "CV_ACCOUNT_R",
+          "fct_name": "CV_ADHERENT_R",
           "fct_object_id__obj_type": "O",
-          "fct_object_id__obj_name": "CvAccount",
+          "fct_object_id__obj_name": "CvAdherent",
           "fct_function": "L",
           "fct_action_id__act_name": null,
           "fct_view_id__viw_name": null,
@@ -445,9 +645,9 @@
        "field": "obo_script_id",
        "mime": "text/plain",
        "name": "CvFinancialClaim.java",
-       "id": "7486",
+       "id": "7062",
        "object": "ObjectInternal",
-       "rowid": "2021"
+       "rowid": "2004"
       },
       "obo_usets": "1",
       "obo_nosearch": "1",
@@ -1035,176 +1235,23 @@
         },
         {
          "object": "ObjectFieldSystem",
-         "userkey": "CvFinancialClaim~CvFinancialClaim_CvAccount_id~100",
+         "userkey": "CvFinancialClaim~CvFinancialClaim_CvFinancialClaimImport_id~100",
          "item": {
           "obf_object_id__obo_name": "CvFinancialClaim",
-          "obf_field_id__fld_name": "CvFinancialClaim_CvAccount_id",
+          "obf_field_id__fld_name": "CvFinancialClaim_CvFinancialClaimImport_id",
           "obf_field_id__fld_type": "0",
           "obf_order": 100,
           "obf_group_by": null,
           "obf_dfault_order": null,
           "obf_input": null,
           "obf_ref_field_id__fld_name": null,
-          "obf_ref_object_id__obo_name": "CvAccount",
+          "obf_ref_object_id__obo_name": "CvFinancialClaimImport",
           "obf_cascad": "R",
           "obf_card": "0,n",
           "obf_visible": true,
           "obf_ref_export": true,
           "obf_copy": false,
-          "obf_ref_order": 10,
-          "obf_fld_visible": null,
-          "obf_fld_required": null,
-          "obf_fld_updatable": null,
-          "obf_fld_research": null,
-          "obf_fld_more": null,
-          "obf_fld_listmore": null,
-          "obf_fld_researchreq": null,
-          "obf_fld_dfault": null,
-          "obf_field_id__fld_dfault": null,
-          "obf_area_id__ofa_name": "CvFinancialClaim-1",
-          "obf_area_id__ofa_position": 1,
-          "row_module_id__mdl_name": "Capvital"
-         },
-         "links": [{
-          "object": "Field",
-          "label": "Field",
-          "icon": "img/system/field",
-          "field": "",
-          "list": [{
-           "object": "Field",
-           "userkey": "CvFinancialClaim_CvAccount_id",
-           "item": {
-            "fld_name": "CvFinancialClaim_CvAccount_id",
-            "fld_dbname": "cvfinancialclaim_cvaccount_id",
-            "fld_visible": "3",
-            "fld_updatable": "1",
-            "fld_required": false,
-            "fld_fonctid": false,
-            "fld_research": null,
-            "fld_researchreq": "0",
-            "fld_sort": "C",
-            "fld_more": false,
-            "fld_listmore": false,
-            "fld_listsum": null,
-            "fld_tray": null,
-            "fld_type": "0",
-            "fld_type_id__flt_code": null,
-            "fld_list_id__lov_name": null,
-            "fld_copy": true,
-            "fld_size": 11,
-            "fld_minsize": null,
-            "fld_precision": null,
-            "fld_fromdate_id__fld_name": null,
-            "fld_dfault": null,
-            "fld_indexable": false,
-            "fld_autocomp": "0",
-            "fld_groupby": false,
-            "fld_updall": true,
-            "fld_case": null,
-            "fld_righttoleft": false,
-            "fld_rendering": null,
-            "fld_speech": null,
-            "fld_calc": null,
-            "fld_objlist": null,
-            "fld_comment": null,
-            "fld_classification": null,
-            "row_module_id__mdl_name": "Capvital"
-           },
-           "links": [{
-            "object": "TranslateField",
-            "label": "Field translation",
-            "icon": "img/system/translation",
-            "field": "tsl_id",
-            "list": [
-             {
-              "object": "TranslateField",
-              "userkey": "F~CvFinancialClaim_CvAccount_id~ENU",
-              "item": {
-               "tsl_typeField": "F",
-               "tsl_id__fld_name": "CvFinancialClaim_CvAccount_id",
-               "tsl_lang": "ENU",
-               "tsl_value": "Account",
-               "tsl_simplehelp": null,
-               "tsl_short_value": null,
-               "tsl_placeholder": null,
-               "tsl_listhelp": null,
-               "row_module_id__mdl_name": "Capvital",
-               "tsl_tooltip": null
-              }
-             },
-             {
-              "object": "TranslateField",
-              "userkey": "F~CvFinancialClaim_CvAccount_id~FRA",
-              "item": {
-               "tsl_typeField": "F",
-               "tsl_id__fld_name": "CvFinancialClaim_CvAccount_id",
-               "tsl_lang": "FRA",
-               "tsl_value": "Account",
-               "tsl_simplehelp": null,
-               "tsl_short_value": null,
-               "tsl_placeholder": null,
-               "tsl_listhelp": null,
-               "row_module_id__mdl_name": "Capvital",
-               "tsl_tooltip": null
-              }
-             }
-            ]
-           }]
-          }]
-         }]
-        },
-        {
-         "object": "ObjectFieldSystem",
-         "userkey": "CvFinancialClaim~cvAccountName~110",
-         "item": {
-          "obf_object_id__obo_name": "CvFinancialClaim",
-          "obf_field_id__fld_name": "cvAccountName",
-          "obf_field_id__fld_type": "3",
-          "obf_order": 110,
-          "obf_group_by": null,
-          "obf_dfault_order": null,
-          "obf_input": null,
-          "obf_ref_field_id__fld_name": "CvFinancialClaim_CvAccount_id",
-          "obf_ref_object_id__obo_name": "CvAccount",
-          "obf_cascad": null,
-          "obf_card": null,
-          "obf_visible": null,
-          "obf_ref_export": true,
-          "obf_copy": null,
           "obf_ref_order": null,
-          "obf_fld_visible": null,
-          "obf_fld_required": null,
-          "obf_fld_updatable": null,
-          "obf_fld_research": null,
-          "obf_fld_more": null,
-          "obf_fld_listmore": null,
-          "obf_fld_researchreq": null,
-          "obf_fld_dfault": null,
-          "obf_field_id__fld_dfault": null,
-          "obf_area_id__ofa_name": "CvFinancialClaim-1",
-          "obf_area_id__ofa_position": 1,
-          "row_module_id__mdl_name": "Capvital"
-         }
-        },
-        {
-         "object": "ObjectFieldSystem",
-         "userkey": "CvFinancialClaim~CvFinancialClaim_CvFinancialClaimImport_id~200",
-         "item": {
-          "obf_object_id__obo_name": "CvFinancialClaim",
-          "obf_field_id__fld_name": "CvFinancialClaim_CvFinancialClaimImport_id",
-          "obf_field_id__fld_type": "0",
-          "obf_order": 200,
-          "obf_group_by": null,
-          "obf_dfault_order": null,
-          "obf_input": null,
-          "obf_ref_field_id__fld_name": null,
-          "obf_ref_object_id__obo_name": "CvFinancialClaimImport",
-          "obf_cascad": "C",
-          "obf_card": "0,n",
-          "obf_visible": true,
-          "obf_ref_export": true,
-          "obf_copy": false,
-          "obf_ref_order": 10,
           "obf_fld_visible": null,
           "obf_fld_required": null,
           "obf_fld_updatable": null,
@@ -1276,7 +1323,7 @@
                "tsl_typeField": "F",
                "tsl_id__fld_name": "CvFinancialClaim_CvFinancialClaimImport_id",
                "tsl_lang": "ENU",
-               "tsl_value": "Date",
+               "tsl_value": "Financial claim import",
                "tsl_simplehelp": null,
                "tsl_short_value": null,
                "tsl_placeholder": null,
@@ -1292,7 +1339,7 @@
                "tsl_typeField": "F",
                "tsl_id__fld_name": "CvFinancialClaim_CvFinancialClaimImport_id",
                "tsl_lang": "FRA",
-               "tsl_value": "Date",
+               "tsl_value": "Financial claim import",
                "tsl_simplehelp": null,
                "tsl_short_value": null,
                "tsl_placeholder": null,
@@ -1308,12 +1355,12 @@
         },
         {
          "object": "ObjectFieldSystem",
-         "userkey": "CvFinancialClaim~cvFcImportDate~210",
+         "userkey": "CvFinancialClaim~cvFcImportDate~110",
          "item": {
           "obf_object_id__obo_name": "CvFinancialClaim",
           "obf_field_id__fld_name": "cvFcImportDate",
           "obf_field_id__fld_type": "5",
-          "obf_order": 210,
+          "obf_order": 110,
           "obf_group_by": null,
           "obf_dfault_order": null,
           "obf_input": null,
@@ -1325,7 +1372,7 @@
           "obf_ref_export": true,
           "obf_copy": null,
           "obf_ref_order": null,
-          "obf_fld_visible": "0",
+          "obf_fld_visible": null,
           "obf_fld_required": null,
           "obf_fld_updatable": null,
           "obf_fld_research": null,
@@ -1425,200 +1472,20 @@
            }]
           }]
          }]
-        }
-       ]
-      },
-      {
-       "object": "Function",
-       "label": "Function",
-       "icon": "img/system/function",
-       "field": "fct_object_id",
-       "list": [
-        {
-         "object": "Function",
-         "userkey": "CV_FINANCIAL_CLAIM_CRUD",
-         "item": {
-          "fct_name": "CV_FINANCIAL_CLAIM_CRUD",
-          "fct_object_id__obj_type": "O",
-          "fct_object_id__obj_name": "CvFinancialClaim",
-          "fct_function": "CMS",
-          "fct_action_id__act_name": null,
-          "fct_view_id__viw_name": null,
-          "row_module_id__mdl_name": "Capvital"
-         },
-         "links": [{
-          "object": "Grant",
-          "label": "Grant",
-          "icon": "img/system/grant",
-          "field": "grt_function_id",
-          "list": [{
-           "object": "Grant",
-           "userkey": "CV_ADMIN~CV_FINANCIAL_CLAIM_CRUD~CvFinancialClaim~",
-           "item": {
-            "grt_group_id__grp_name": "CV_ADMIN",
-            "grt_function_id__fct_name": "CV_FINANCIAL_CLAIM_CRUD",
-            "grt_function_id__fct_object_id__obj_type": "O",
-            "grt_function_id__fct_object_id__obj_name": "CvFinancialClaim",
-            "grt_function_id__fct_action_id__act_name": null,
-            "grt_function_id__fct_function": "CMS",
-            "grt_activ": true,
-            "row_module_id__mdl_name": "Capvital"
-           }
-          }]
-         }]
         },
-        {
-         "object": "Function",
-         "userkey": "CV_FINANCIAL_CLAIM_R",
-         "item": {
-          "fct_name": "CV_FINANCIAL_CLAIM_R",
-          "fct_object_id__obj_type": "O",
-          "fct_object_id__obj_name": "CvFinancialClaim",
-          "fct_function": "L",
-          "fct_action_id__act_name": null,
-          "fct_view_id__viw_name": null,
-          "row_module_id__mdl_name": "Capvital"
-         }
-        }
-       ]
-      }
-     ]
-    },
-    {
-     "object": "ObjectInternal",
-     "userkey": "CvFinancialClaimImport",
-     "item": {
-      "obo_name": "CvFinancialClaimImport",
-      "obo_dbtable": "cv_financial_claim_import",
-      "obo_role": "OBJ",
-      "obo_class": null,
-      "obo_script_id": {
-       "path": "src/com/simplicite/objects/Capvital/CvFinancialClaimImport.java",
-       "size": 2545,
-       "field": "obo_script_id",
-       "mime": "text/plain",
-       "name": "CvFinancialClaimImport.java",
-       "id": "7575",
-       "object": "ObjectInternal",
-       "rowid": "2020"
-      },
-      "obo_usets": "1",
-      "obo_nosearch": "1",
-      "obo_comment": null,
-      "obo_type": "O",
-      "obo_searchspec": null,
-      "obo_delspec": null,
-      "obo_exportorder": null,
-      "obo_distinct": false,
-      "obo_indexable": false,
-      "obo_groupby": null,
-      "obo_dfltref": null,
-      "obo_template_id__tpl_name": "Base",
-      "obo_cache": "D",
-      "obo_copy": true,
-      "obo_export": true,
-      "obo_pagine": true,
-      "obo_srh_predef": ["1"],
-      "obo_selrow": true,
-      "obo_updall": true,
-      "obo_delall": true,
-      "obo_listsearch": true,
-      "obo_list_edit": [
-       "N",
-       "L",
-       "E"
-      ],
-      "obo_useform": true,
-      "obo_title": null,
-      "obo_icon": "fas/paperclip",
-      "obo_refcount": null,
-      "obo_tree": null,
-      "obo_viewmode": "T",
-      "obo_historic": null,
-      "obo_printable": true,
-      "obo_followlink": true,
-      "obo_mergeable": null,
-      "obo_social": ["1"],
-      "obo_rowid_id__fld_name": null,
-      "obo_extend_id__obj_name": null,
-      "row_module_id__mdl_name": "Capvital",
-      "obo_btn_reload": "P",
-      "obo_btn_prefs": "P",
-      "obo_btn_del": "P",
-      "obo_btn_copy": "P",
-      "obo_btn_export": "P",
-      "obo_btn_listadd": "1",
-      "obo_btn_listedit": "1",
-      "obo_btn_listupsert": "1",
-      "obo_btn_updall": "P",
-      "obo_btn_delall": "P",
-      "obo_btn_merge": "P",
-      "obo_btn_save": true,
-      "obo_btn_saveclose": true,
-      "obo_btn_savenew": true,
-      "obo_btn_savecopy": true,
-      "obo_btn_close": true,
-      "obo_tray": true,
-      "obo_dashboard": true,
-      "obo_prefix": null,
-      "obo_search_ts": null,
-      "obo_minrows": null,
-      "obo_maxrows": null,
-      "obo_sortable": true,
-      "obo_list_areas": null
-     },
-     "links": [
-      {
-       "object": "TranslateObject",
-       "label": "Object translation",
-       "icon": "img/system/translation",
-       "field": "tsl_id",
-       "list": [
-        {
-         "object": "TranslateObject",
-         "userkey": "O~CvFinancialClaimImport~ENU",
-         "item": {
-          "tsl_typeObject": "O",
-          "tsl_id__obo_name": "CvFinancialClaimImport",
-          "tsl_lang": "ENU",
-          "tsl_value": "Financial claim import",
-          "tsl_help": null,
-          "row_module_id__mdl_name": "Capvital"
-         }
-        },
-        {
-         "object": "TranslateObject",
-         "userkey": "O~CvFinancialClaimImport~FRA",
-         "item": {
-          "tsl_typeObject": "O",
-          "tsl_id__obo_name": "CvFinancialClaimImport",
-          "tsl_lang": "FRA",
-          "tsl_value": "Financial claim import",
-          "tsl_help": null,
-          "row_module_id__mdl_name": "Capvital"
-         }
-        }
-       ]
-      },
-      {
-       "object": "ObjectFieldSystem",
-       "label": "Object fields",
-       "icon": "img/system/object_field",
-       "field": "obf_object_id",
-       "list": [
         {
          "object": "ObjectFieldSystem",
-         "userkey": "CvFinancialClaimImport~cvFcImportDate~10",
+         "userkey": "CvFinancialClaim~CvFinancialClaimImport_CvSupplier_id~120",
          "item": {
-          "obf_object_id__obo_name": "CvFinancialClaimImport",
-          "obf_field_id__fld_name": "cvFcImportDate",
-          "obf_field_id__fld_type": "5",
-          "obf_order": 10,
+          "obf_object_id__obo_name": "CvFinancialClaim",
+          "obf_field_id__fld_name": "CvFinancialClaimImport_CvSupplier_id",
+          "obf_field_id__fld_type": "0",
+          "obf_order": 120,
           "obf_group_by": null,
           "obf_dfault_order": null,
           "obf_input": null,
-          "obf_ref_field_id__fld_name": null,
-          "obf_ref_object_id__obo_name": null,
+          "obf_ref_field_id__fld_name": "CvFinancialClaim_CvFinancialClaimImport_id",
+          "obf_ref_object_id__obo_name": "CvFinancialClaimImport",
           "obf_cascad": null,
           "obf_card": null,
           "obf_visible": null,
@@ -1633,25 +1500,235 @@
           "obf_fld_listmore": null,
           "obf_fld_researchreq": null,
           "obf_fld_dfault": null,
-          "obf_field_id__fld_dfault": "[DATETIME]",
-          "obf_area_id__ofa_name": null,
-          "obf_area_id__ofa_position": null,
+          "obf_field_id__fld_dfault": null,
+          "obf_area_id__ofa_name": "CvFinancialClaim-1",
+          "obf_area_id__ofa_position": 1,
           "row_module_id__mdl_name": "Capvital"
-         }
+         },
+         "links": [{
+          "object": "Field",
+          "label": "Field",
+          "icon": "img/system/field",
+          "field": "",
+          "list": [{
+           "object": "Field",
+           "userkey": "CvFinancialClaimImport_CvSupplier_id",
+           "item": {
+            "fld_name": "CvFinancialClaimImport_CvSupplier_id",
+            "fld_dbname": "cvfinancialclaimimport_cvsupplier_id",
+            "fld_visible": "3",
+            "fld_updatable": "1",
+            "fld_required": false,
+            "fld_fonctid": false,
+            "fld_research": null,
+            "fld_researchreq": "0",
+            "fld_sort": "C",
+            "fld_more": false,
+            "fld_listmore": false,
+            "fld_listsum": null,
+            "fld_tray": null,
+            "fld_type": "0",
+            "fld_type_id__flt_code": null,
+            "fld_list_id__lov_name": null,
+            "fld_copy": true,
+            "fld_size": 11,
+            "fld_minsize": null,
+            "fld_precision": null,
+            "fld_fromdate_id__fld_name": null,
+            "fld_dfault": null,
+            "fld_indexable": false,
+            "fld_autocomp": "0",
+            "fld_groupby": false,
+            "fld_updall": true,
+            "fld_case": null,
+            "fld_righttoleft": false,
+            "fld_rendering": null,
+            "fld_speech": null,
+            "fld_calc": null,
+            "fld_objlist": null,
+            "fld_comment": null,
+            "fld_classification": null,
+            "row_module_id__mdl_name": "Capvital"
+           },
+           "links": [{
+            "object": "TranslateField",
+            "label": "Field translation",
+            "icon": "img/system/translation",
+            "field": "tsl_id",
+            "list": [
+             {
+              "object": "TranslateField",
+              "userkey": "F~CvFinancialClaimImport_CvSupplier_id~ENU",
+              "item": {
+               "tsl_typeField": "F",
+               "tsl_id__fld_name": "CvFinancialClaimImport_CvSupplier_id",
+               "tsl_lang": "ENU",
+               "tsl_value": "Supplier",
+               "tsl_simplehelp": null,
+               "tsl_short_value": null,
+               "tsl_placeholder": null,
+               "tsl_listhelp": null,
+               "row_module_id__mdl_name": "Capvital",
+               "tsl_tooltip": null
+              }
+             },
+             {
+              "object": "TranslateField",
+              "userkey": "F~CvFinancialClaimImport_CvSupplier_id~FRA",
+              "item": {
+               "tsl_typeField": "F",
+               "tsl_id__fld_name": "CvFinancialClaimImport_CvSupplier_id",
+               "tsl_lang": "FRA",
+               "tsl_value": "Fournisseur",
+               "tsl_simplehelp": null,
+               "tsl_short_value": null,
+               "tsl_placeholder": null,
+               "tsl_listhelp": null,
+               "row_module_id__mdl_name": "Capvital",
+               "tsl_tooltip": null
+              }
+             }
+            ]
+           }]
+          }]
+         }]
         },
         {
          "object": "ObjectFieldSystem",
-         "userkey": "CvFinancialClaimImport~cvFcImportStatus~20",
+         "userkey": "CvFinancialClaim~cvSupplierName~130",
          "item": {
-          "obf_object_id__obo_name": "CvFinancialClaimImport",
-          "obf_field_id__fld_name": "cvFcImportStatus",
-          "obf_field_id__fld_type": "7",
-          "obf_order": 20,
+          "obf_object_id__obo_name": "CvFinancialClaim",
+          "obf_field_id__fld_name": "cvSupplierName",
+          "obf_field_id__fld_type": "3",
+          "obf_order": 130,
           "obf_group_by": null,
           "obf_dfault_order": null,
           "obf_input": null,
-          "obf_ref_field_id__fld_name": null,
-          "obf_ref_object_id__obo_name": null,
+          "obf_ref_field_id__fld_name": "CvFinancialClaimImport_CvSupplier_id",
+          "obf_ref_object_id__obo_name": "CvSupplier",
+          "obf_cascad": null,
+          "obf_card": null,
+          "obf_visible": null,
+          "obf_ref_export": true,
+          "obf_copy": null,
+          "obf_ref_order": null,
+          "obf_fld_visible": null,
+          "obf_fld_required": null,
+          "obf_fld_updatable": null,
+          "obf_fld_research": null,
+          "obf_fld_more": null,
+          "obf_fld_listmore": null,
+          "obf_fld_researchreq": null,
+          "obf_fld_dfault": null,
+          "obf_field_id__fld_dfault": null,
+          "obf_area_id__ofa_name": "CvFinancialClaim-1",
+          "obf_area_id__ofa_position": 1,
+          "row_module_id__mdl_name": "Capvital"
+         },
+         "links": [{
+          "object": "Field",
+          "label": "Field",
+          "icon": "img/system/field",
+          "field": "",
+          "list": [{
+           "object": "Field",
+           "userkey": "cvSupplierName",
+           "item": {
+            "fld_name": {
+             "value": "cvSupplierName",
+             "oldvalue": "cvAccountName"
+            },
+            "fld_dbname": "cv_supplier_name",
+            "fld_visible": "3",
+            "fld_updatable": "1",
+            "fld_required": true,
+            "fld_fonctid": true,
+            "fld_research": null,
+            "fld_researchreq": "0",
+            "fld_sort": "C",
+            "fld_more": false,
+            "fld_listmore": false,
+            "fld_listsum": null,
+            "fld_tray": null,
+            "fld_type": "3",
+            "fld_type_id__flt_code": null,
+            "fld_list_id__lov_name": null,
+            "fld_copy": true,
+            "fld_size": 255,
+            "fld_minsize": null,
+            "fld_precision": null,
+            "fld_fromdate_id__fld_name": null,
+            "fld_dfault": null,
+            "fld_indexable": false,
+            "fld_autocomp": "0",
+            "fld_groupby": false,
+            "fld_updall": true,
+            "fld_case": null,
+            "fld_righttoleft": false,
+            "fld_rendering": null,
+            "fld_speech": null,
+            "fld_calc": null,
+            "fld_objlist": null,
+            "fld_comment": null,
+            "fld_classification": null,
+            "row_module_id__mdl_name": "Capvital"
+           },
+           "links": [{
+            "object": "TranslateField",
+            "label": "Field translation",
+            "icon": "img/system/translation",
+            "field": "tsl_id",
+            "list": [
+             {
+              "object": "TranslateField",
+              "userkey": "F~cvSupplierName~ENU",
+              "item": {
+               "tsl_typeField": "F",
+               "tsl_id__fld_name": "cvSupplierName",
+               "tsl_lang": "ENU",
+               "tsl_value": "Name",
+               "tsl_simplehelp": null,
+               "tsl_short_value": null,
+               "tsl_placeholder": null,
+               "tsl_listhelp": null,
+               "row_module_id__mdl_name": "Capvital",
+               "tsl_tooltip": null
+              }
+             },
+             {
+              "object": "TranslateField",
+              "userkey": "F~cvSupplierName~FRA",
+              "item": {
+               "tsl_typeField": "F",
+               "tsl_id__fld_name": "cvSupplierName",
+               "tsl_lang": "FRA",
+               "tsl_value": "Nom",
+               "tsl_simplehelp": null,
+               "tsl_short_value": null,
+               "tsl_placeholder": null,
+               "tsl_listhelp": null,
+               "row_module_id__mdl_name": "Capvital",
+               "tsl_tooltip": null
+              }
+             }
+            ]
+           }]
+          }]
+         }]
+        },
+        {
+         "object": "ObjectFieldSystem",
+         "userkey": "CvFinancialClaim~cvFcImportStatus~140",
+         "item": {
+          "obf_object_id__obo_name": "CvFinancialClaim",
+          "obf_field_id__fld_name": "cvFcImportStatus",
+          "obf_field_id__fld_type": "7",
+          "obf_order": 140,
+          "obf_group_by": null,
+          "obf_dfault_order": null,
+          "obf_input": null,
+          "obf_ref_field_id__fld_name": "CvFinancialClaim_CvFinancialClaimImport_id",
+          "obf_ref_object_id__obo_name": "CvFinancialClaimImport",
           "obf_cascad": null,
           "obf_card": null,
           "obf_visible": null,
@@ -1667,8 +1744,8 @@
           "obf_fld_researchreq": null,
           "obf_fld_dfault": null,
           "obf_field_id__fld_dfault": "KO",
-          "obf_area_id__ofa_name": null,
-          "obf_area_id__ofa_position": null,
+          "obf_area_id__ofa_name": "CvFinancialClaim-1",
+          "obf_area_id__ofa_position": 1,
           "row_module_id__mdl_name": "Capvital"
          },
          "links": [{
@@ -1758,6 +1835,252 @@
            }]
           }]
          }]
+        }
+       ]
+      },
+      {
+       "object": "Function",
+       "label": "Function",
+       "icon": "img/system/function",
+       "field": "fct_object_id",
+       "list": [
+        {
+         "object": "Function",
+         "userkey": "CV_FINANCIAL_CLAIM_CRUD",
+         "item": {
+          "fct_name": "CV_FINANCIAL_CLAIM_CRUD",
+          "fct_object_id__obj_type": "O",
+          "fct_object_id__obj_name": "CvFinancialClaim",
+          "fct_function": "CMS",
+          "fct_action_id__act_name": null,
+          "fct_view_id__viw_name": null,
+          "row_module_id__mdl_name": "Capvital"
+         },
+         "links": [{
+          "object": "Grant",
+          "label": "Grant",
+          "icon": "img/system/grant",
+          "field": "grt_function_id",
+          "list": [{
+           "object": "Grant",
+           "userkey": "CV_ADMIN~CV_FINANCIAL_CLAIM_CRUD~CvFinancialClaim~",
+           "item": {
+            "grt_group_id__grp_name": "CV_ADMIN",
+            "grt_function_id__fct_name": "CV_FINANCIAL_CLAIM_CRUD",
+            "grt_function_id__fct_object_id__obj_type": "O",
+            "grt_function_id__fct_object_id__obj_name": "CvFinancialClaim",
+            "grt_function_id__fct_action_id__act_name": null,
+            "grt_function_id__fct_function": "CMS",
+            "grt_activ": true,
+            "row_module_id__mdl_name": "Capvital"
+           }
+          }]
+         }]
+        },
+        {
+         "object": "Function",
+         "userkey": "CV_FINANCIAL_CLAIM_R",
+         "item": {
+          "fct_name": "CV_FINANCIAL_CLAIM_R",
+          "fct_object_id__obj_type": "O",
+          "fct_object_id__obj_name": "CvFinancialClaim",
+          "fct_function": "L",
+          "fct_action_id__act_name": null,
+          "fct_view_id__viw_name": null,
+          "row_module_id__mdl_name": "Capvital"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "object": "ObjectInternal",
+     "userkey": "CvFinancialClaimImport",
+     "item": {
+      "obo_name": "CvFinancialClaimImport",
+      "obo_dbtable": "cv_financial_claim_import",
+      "obo_role": "OBJ",
+      "obo_class": null,
+      "obo_script_id": {
+       "path": "src/com/simplicite/objects/Capvital/CvFinancialClaimImport.java",
+       "size": 3069,
+       "field": "obo_script_id",
+       "mime": "text/plain",
+       "name": "CvFinancialClaimImport.java",
+       "id": "7106",
+       "object": "ObjectInternal",
+       "rowid": "2005"
+      },
+      "obo_usets": "1",
+      "obo_nosearch": "1",
+      "obo_comment": null,
+      "obo_type": "O",
+      "obo_searchspec": null,
+      "obo_delspec": null,
+      "obo_exportorder": null,
+      "obo_distinct": false,
+      "obo_indexable": false,
+      "obo_groupby": false,
+      "obo_dfltref": null,
+      "obo_template_id__tpl_name": "Base",
+      "obo_cache": "D",
+      "obo_copy": true,
+      "obo_export": true,
+      "obo_pagine": true,
+      "obo_srh_predef": ["1"],
+      "obo_selrow": true,
+      "obo_updall": true,
+      "obo_delall": true,
+      "obo_listsearch": true,
+      "obo_list_edit": [
+       "N",
+       "L",
+       "E"
+      ],
+      "obo_useform": true,
+      "obo_title": null,
+      "obo_icon": "fas/paperclip",
+      "obo_refcount": false,
+      "obo_tree": false,
+      "obo_viewmode": "T",
+      "obo_historic": null,
+      "obo_printable": true,
+      "obo_followlink": true,
+      "obo_mergeable": false,
+      "obo_social": ["1"],
+      "obo_rowid_id__fld_name": null,
+      "obo_extend_id__obj_name": null,
+      "row_module_id__mdl_name": "Capvital",
+      "obo_btn_reload": "P",
+      "obo_btn_prefs": "P",
+      "obo_btn_del": "P",
+      "obo_btn_copy": "P",
+      "obo_btn_export": "P",
+      "obo_btn_listadd": "1",
+      "obo_btn_listedit": "1",
+      "obo_btn_listupsert": "1",
+      "obo_btn_updall": "P",
+      "obo_btn_delall": "P",
+      "obo_btn_merge": "P",
+      "obo_btn_save": true,
+      "obo_btn_saveclose": true,
+      "obo_btn_savenew": true,
+      "obo_btn_savecopy": true,
+      "obo_btn_close": true,
+      "obo_tray": true,
+      "obo_dashboard": true,
+      "obo_prefix": null,
+      "obo_search_ts": null,
+      "obo_minrows": null,
+      "obo_maxrows": null,
+      "obo_sortable": true,
+      "obo_list_areas": null
+     },
+     "links": [
+      {
+       "object": "TranslateObject",
+       "label": "Object translation",
+       "icon": "img/system/translation",
+       "field": "tsl_id",
+       "list": [
+        {
+         "object": "TranslateObject",
+         "userkey": "O~CvFinancialClaimImport~ENU",
+         "item": {
+          "tsl_typeObject": "O",
+          "tsl_id__obo_name": "CvFinancialClaimImport",
+          "tsl_lang": "ENU",
+          "tsl_value": "Financial claims",
+          "tsl_help": null,
+          "row_module_id__mdl_name": "Capvital"
+         }
+        },
+        {
+         "object": "TranslateObject",
+         "userkey": "O~CvFinancialClaimImport~FRA",
+         "item": {
+          "tsl_typeObject": "O",
+          "tsl_id__obo_name": "CvFinancialClaimImport",
+          "tsl_lang": "FRA",
+          "tsl_value": "Déclarations financières",
+          "tsl_help": null,
+          "row_module_id__mdl_name": "Capvital"
+         }
+        }
+       ]
+      },
+      {
+       "object": "ObjectFieldSystem",
+       "label": "Object fields",
+       "icon": "img/system/object_field",
+       "field": "obf_object_id",
+       "list": [
+        {
+         "object": "ObjectFieldSystem",
+         "userkey": "CvFinancialClaimImport~cvFcImportDate~10",
+         "item": {
+          "obf_object_id__obo_name": "CvFinancialClaimImport",
+          "obf_field_id__fld_name": "cvFcImportDate",
+          "obf_field_id__fld_type": "5",
+          "obf_order": 10,
+          "obf_group_by": null,
+          "obf_dfault_order": null,
+          "obf_input": null,
+          "obf_ref_field_id__fld_name": null,
+          "obf_ref_object_id__obo_name": null,
+          "obf_cascad": null,
+          "obf_card": null,
+          "obf_visible": null,
+          "obf_ref_export": true,
+          "obf_copy": null,
+          "obf_ref_order": null,
+          "obf_fld_visible": null,
+          "obf_fld_required": null,
+          "obf_fld_updatable": null,
+          "obf_fld_research": null,
+          "obf_fld_more": null,
+          "obf_fld_listmore": null,
+          "obf_fld_researchreq": null,
+          "obf_fld_dfault": null,
+          "obf_field_id__fld_dfault": "[DATETIME]",
+          "obf_area_id__ofa_name": null,
+          "obf_area_id__ofa_position": null,
+          "row_module_id__mdl_name": "Capvital"
+         }
+        },
+        {
+         "object": "ObjectFieldSystem",
+         "userkey": "CvFinancialClaimImport~cvFcImportStatus~20",
+         "item": {
+          "obf_object_id__obo_name": "CvFinancialClaimImport",
+          "obf_field_id__fld_name": "cvFcImportStatus",
+          "obf_field_id__fld_type": "7",
+          "obf_order": 20,
+          "obf_group_by": null,
+          "obf_dfault_order": null,
+          "obf_input": null,
+          "obf_ref_field_id__fld_name": null,
+          "obf_ref_object_id__obo_name": null,
+          "obf_cascad": null,
+          "obf_card": null,
+          "obf_visible": null,
+          "obf_ref_export": true,
+          "obf_copy": null,
+          "obf_ref_order": null,
+          "obf_fld_visible": null,
+          "obf_fld_required": null,
+          "obf_fld_updatable": null,
+          "obf_fld_research": null,
+          "obf_fld_more": null,
+          "obf_fld_listmore": null,
+          "obf_fld_researchreq": null,
+          "obf_fld_dfault": null,
+          "obf_field_id__fld_dfault": "KO",
+          "obf_area_id__ofa_name": null,
+          "obf_area_id__ofa_position": null,
+          "row_module_id__mdl_name": "Capvital"
+         }
         },
         {
          "object": "ObjectFieldSystem",
@@ -1878,6 +2201,72 @@
            }]
           }]
          }]
+        },
+        {
+         "object": "ObjectFieldSystem",
+         "userkey": "CvFinancialClaimImport~CvFinancialClaimImport_CvSupplier_id~100",
+         "item": {
+          "obf_object_id__obo_name": "CvFinancialClaimImport",
+          "obf_field_id__fld_name": "CvFinancialClaimImport_CvSupplier_id",
+          "obf_field_id__fld_type": "0",
+          "obf_order": 100,
+          "obf_group_by": null,
+          "obf_dfault_order": null,
+          "obf_input": null,
+          "obf_ref_field_id__fld_name": null,
+          "obf_ref_object_id__obo_name": "CvSupplier",
+          "obf_cascad": "R",
+          "obf_card": "0,n",
+          "obf_visible": true,
+          "obf_ref_export": true,
+          "obf_copy": false,
+          "obf_ref_order": null,
+          "obf_fld_visible": null,
+          "obf_fld_required": null,
+          "obf_fld_updatable": null,
+          "obf_fld_research": null,
+          "obf_fld_more": null,
+          "obf_fld_listmore": null,
+          "obf_fld_researchreq": null,
+          "obf_fld_dfault": null,
+          "obf_field_id__fld_dfault": null,
+          "obf_area_id__ofa_name": null,
+          "obf_area_id__ofa_position": null,
+          "row_module_id__mdl_name": "Capvital"
+         }
+        },
+        {
+         "object": "ObjectFieldSystem",
+         "userkey": "CvFinancialClaimImport~cvSupplierName~110",
+         "item": {
+          "obf_object_id__obo_name": "CvFinancialClaimImport",
+          "obf_field_id__fld_name": "cvSupplierName",
+          "obf_field_id__fld_type": "3",
+          "obf_order": 110,
+          "obf_group_by": null,
+          "obf_dfault_order": null,
+          "obf_input": null,
+          "obf_ref_field_id__fld_name": "CvFinancialClaimImport_CvSupplier_id",
+          "obf_ref_object_id__obo_name": "CvSupplier",
+          "obf_cascad": null,
+          "obf_card": null,
+          "obf_visible": null,
+          "obf_ref_export": true,
+          "obf_copy": null,
+          "obf_ref_order": null,
+          "obf_fld_visible": null,
+          "obf_fld_required": null,
+          "obf_fld_updatable": null,
+          "obf_fld_research": null,
+          "obf_fld_more": null,
+          "obf_fld_listmore": null,
+          "obf_fld_researchreq": null,
+          "obf_fld_dfault": null,
+          "obf_field_id__fld_dfault": null,
+          "obf_area_id__ofa_name": null,
+          "obf_area_id__ofa_position": null,
+          "row_module_id__mdl_name": "Capvital"
+         }
         }
        ]
       },
@@ -1888,18 +2277,18 @@
        "field": "obf_ref_object_id",
        "list": [{
         "object": "Link",
-        "userkey": "200~CvFinancialClaim~CvFinancialClaim_CvFinancialClaimImport_id",
+        "userkey": "100~CvFinancialClaim~CvFinancialClaim_CvFinancialClaimImport_id",
         "item": {
          "obf_ref_object_id__obo_name": "CvFinancialClaimImport",
-         "obf_order": 200,
-         "obf_ref_order": 10,
+         "obf_order": 100,
+         "obf_ref_order": null,
          "obf_object_id__obj_name": "CvFinancialClaim",
          "obf_field_id__fld_name": "CvFinancialClaim_CvFinancialClaimImport_id",
          "obf_field_id__fld_dbname": "cvfinancialclaim_cvfinancialclaimimport_id",
          "obf_field_id__fld_updatable": "1",
          "obf_field_id__fld_required": false,
          "obf_field_id__fld_fonctid": false,
-         "obf_cascad": "C",
+         "obf_cascad": "R",
          "obf_card": "0,n",
          "obf_query": null,
          "obf_visible": true,
@@ -2088,7 +2477,7 @@
                      "tsl_typeField": "F",
                      "tsl_id__fld_name": "cvImportActionFile",
                      "tsl_lang": "ENU",
-                     "tsl_value": "Cv import action file",
+                     "tsl_value": "Import your CSV file",
                      "tsl_simplehelp": null,
                      "tsl_short_value": null,
                      "tsl_placeholder": null,
@@ -2104,7 +2493,7 @@
                      "tsl_typeField": "F",
                      "tsl_id__fld_name": "cvImportActionFile",
                      "tsl_lang": "FRA",
-                     "tsl_value": "Cv import action file",
+                     "tsl_value": "Importez votre fichier CSV",
                      "tsl_simplehelp": null,
                      "tsl_short_value": null,
                      "tsl_placeholder": null,
@@ -2176,6 +2565,436 @@
     },
     {
      "object": "ObjectInternal",
+     "userkey": "CvSupplier",
+     "item": {
+      "obo_name": {
+       "value": "CvSupplier",
+       "oldvalue": "CvAccount"
+      },
+      "obo_dbtable": "cv_supplier",
+      "obo_role": "OBJ",
+      "obo_class": null,
+      "obo_script_id": null,
+      "obo_usets": "1",
+      "obo_nosearch": "1",
+      "obo_comment": null,
+      "obo_type": "O",
+      "obo_searchspec": null,
+      "obo_delspec": null,
+      "obo_exportorder": null,
+      "obo_distinct": false,
+      "obo_indexable": false,
+      "obo_groupby": false,
+      "obo_dfltref": null,
+      "obo_template_id__tpl_name": "Base",
+      "obo_cache": "D",
+      "obo_copy": true,
+      "obo_export": true,
+      "obo_pagine": true,
+      "obo_srh_predef": ["1"],
+      "obo_selrow": true,
+      "obo_updall": true,
+      "obo_delall": true,
+      "obo_listsearch": true,
+      "obo_list_edit": [
+       "N",
+       "L",
+       "E"
+      ],
+      "obo_useform": true,
+      "obo_title": null,
+      "obo_icon": "building",
+      "obo_refcount": false,
+      "obo_tree": false,
+      "obo_viewmode": "T",
+      "obo_historic": null,
+      "obo_printable": true,
+      "obo_followlink": true,
+      "obo_mergeable": false,
+      "obo_social": ["1"],
+      "obo_rowid_id__fld_name": null,
+      "obo_extend_id__obj_name": null,
+      "row_module_id__mdl_name": "Capvital",
+      "obo_btn_reload": "P",
+      "obo_btn_prefs": "P",
+      "obo_btn_del": "P",
+      "obo_btn_copy": "P",
+      "obo_btn_export": "P",
+      "obo_btn_listadd": "1",
+      "obo_btn_listedit": "1",
+      "obo_btn_listupsert": "1",
+      "obo_btn_updall": "P",
+      "obo_btn_delall": "P",
+      "obo_btn_merge": "P",
+      "obo_btn_save": true,
+      "obo_btn_saveclose": true,
+      "obo_btn_savenew": true,
+      "obo_btn_savecopy": true,
+      "obo_btn_close": true,
+      "obo_tray": true,
+      "obo_dashboard": true,
+      "obo_prefix": null,
+      "obo_search_ts": null,
+      "obo_minrows": null,
+      "obo_maxrows": null,
+      "obo_sortable": true,
+      "obo_list_areas": null
+     },
+     "links": [
+      {
+       "object": "TranslateObject",
+       "label": "Object translation",
+       "icon": "img/system/translation",
+       "field": "tsl_id",
+       "list": [
+        {
+         "object": "TranslateObject",
+         "userkey": "O~CvSupplier~ENU",
+         "item": {
+          "tsl_typeObject": "O",
+          "tsl_id__obo_name": "CvSupplier",
+          "tsl_lang": "ENU",
+          "tsl_value": "Suppliers",
+          "tsl_help": null,
+          "row_module_id__mdl_name": "Capvital"
+         }
+        },
+        {
+         "object": "TranslateObject",
+         "userkey": "O~CvSupplier~FRA",
+         "item": {
+          "tsl_typeObject": "O",
+          "tsl_id__obo_name": "CvSupplier",
+          "tsl_lang": "FRA",
+          "tsl_value": "Fournisseurs",
+          "tsl_help": null,
+          "row_module_id__mdl_name": "Capvital"
+         }
+        }
+       ]
+      },
+      {
+       "object": "ObjectFieldSystem",
+       "label": "Object fields",
+       "icon": "img/system/object_field",
+       "field": "obf_object_id",
+       "list": [
+        {
+         "object": "ObjectFieldSystem",
+         "userkey": "CvSupplier~cvSupplierName~10",
+         "item": {
+          "obf_object_id__obo_name": "CvSupplier",
+          "obf_field_id__fld_name": "cvSupplierName",
+          "obf_field_id__fld_type": "3",
+          "obf_order": 10,
+          "obf_group_by": null,
+          "obf_dfault_order": null,
+          "obf_input": null,
+          "obf_ref_field_id__fld_name": null,
+          "obf_ref_object_id__obo_name": null,
+          "obf_cascad": null,
+          "obf_card": null,
+          "obf_visible": null,
+          "obf_ref_export": true,
+          "obf_copy": null,
+          "obf_ref_order": null,
+          "obf_fld_visible": null,
+          "obf_fld_required": null,
+          "obf_fld_updatable": null,
+          "obf_fld_research": null,
+          "obf_fld_more": null,
+          "obf_fld_listmore": null,
+          "obf_fld_researchreq": null,
+          "obf_fld_dfault": null,
+          "obf_field_id__fld_dfault": null,
+          "obf_area_id__ofa_name": null,
+          "obf_area_id__ofa_position": null,
+          "row_module_id__mdl_name": "Capvital"
+         }
+        },
+        {
+         "object": "ObjectFieldSystem",
+         "userkey": "CvSupplier~cvSupplierRfa~20",
+         "item": {
+          "obf_object_id__obo_name": "CvSupplier",
+          "obf_field_id__fld_name": "cvSupplierRfa",
+          "obf_field_id__fld_type": "1",
+          "obf_order": 20,
+          "obf_group_by": null,
+          "obf_dfault_order": null,
+          "obf_input": null,
+          "obf_ref_field_id__fld_name": null,
+          "obf_ref_object_id__obo_name": null,
+          "obf_cascad": null,
+          "obf_card": null,
+          "obf_visible": null,
+          "obf_ref_export": true,
+          "obf_copy": null,
+          "obf_ref_order": null,
+          "obf_fld_visible": null,
+          "obf_fld_required": null,
+          "obf_fld_updatable": null,
+          "obf_fld_research": null,
+          "obf_fld_more": null,
+          "obf_fld_listmore": null,
+          "obf_fld_researchreq": null,
+          "obf_fld_dfault": null,
+          "obf_field_id__fld_dfault": null,
+          "obf_area_id__ofa_name": null,
+          "obf_area_id__ofa_position": null,
+          "row_module_id__mdl_name": "Capvital"
+         },
+         "links": [{
+          "object": "Field",
+          "label": "Field",
+          "icon": "img/system/field",
+          "field": "",
+          "list": [{
+           "object": "Field",
+           "userkey": "cvSupplierRfa",
+           "item": {
+            "fld_name": {
+             "value": "cvSupplierRfa",
+             "oldvalue": "cvSupplierRFA"
+            },
+            "fld_dbname": "cv_supplier_rfa",
+            "fld_visible": "3",
+            "fld_updatable": "1",
+            "fld_required": true,
+            "fld_fonctid": false,
+            "fld_research": null,
+            "fld_researchreq": "0",
+            "fld_sort": "C",
+            "fld_more": false,
+            "fld_listmore": false,
+            "fld_listsum": null,
+            "fld_tray": null,
+            "fld_type": "1",
+            "fld_type_id__flt_code": null,
+            "fld_list_id__lov_name": null,
+            "fld_copy": true,
+            "fld_size": 11,
+            "fld_minsize": null,
+            "fld_precision": null,
+            "fld_fromdate_id__fld_name": null,
+            "fld_dfault": null,
+            "fld_indexable": false,
+            "fld_autocomp": "0",
+            "fld_groupby": false,
+            "fld_updall": true,
+            "fld_case": null,
+            "fld_righttoleft": false,
+            "fld_rendering": "EURO",
+            "fld_speech": null,
+            "fld_calc": null,
+            "fld_objlist": null,
+            "fld_comment": null,
+            "fld_classification": null,
+            "row_module_id__mdl_name": "Capvital"
+           },
+           "links": [{
+            "object": "TranslateField",
+            "label": "Field translation",
+            "icon": "img/system/translation",
+            "field": "tsl_id",
+            "list": [
+             {
+              "object": "TranslateField",
+              "userkey": "F~cvSupplierRfa~ENU",
+              "item": {
+               "tsl_typeField": "F",
+               "tsl_id__fld_name": "cvSupplierRfa",
+               "tsl_lang": "ENU",
+               "tsl_value": "Rebate point",
+               "tsl_simplehelp": null,
+               "tsl_short_value": null,
+               "tsl_placeholder": null,
+               "tsl_listhelp": null,
+               "row_module_id__mdl_name": "Capvital",
+               "tsl_tooltip": null
+              }
+             },
+             {
+              "object": "TranslateField",
+              "userkey": "F~cvSupplierRfa~FRA",
+              "item": {
+               "tsl_typeField": "F",
+               "tsl_id__fld_name": "cvSupplierRfa",
+               "tsl_lang": "FRA",
+               "tsl_value": "Pallier RFA",
+               "tsl_simplehelp": null,
+               "tsl_short_value": null,
+               "tsl_placeholder": null,
+               "tsl_listhelp": null,
+               "row_module_id__mdl_name": "Capvital",
+               "tsl_tooltip": null
+              }
+             }
+            ]
+           }]
+          }]
+         }]
+        }
+       ]
+      },
+      {
+       "object": "Link",
+       "label": "Links",
+       "icon": "img/system/link",
+       "field": "obf_ref_object_id",
+       "list": [
+        {
+         "object": "Link",
+         "userkey": "100~CvUserSupplier~CvUserSupplier_CvSupplier_id",
+         "item": {
+          "obf_ref_object_id__obo_name": "CvSupplier",
+          "obf_order": 100,
+          "obf_ref_order": null,
+          "obf_object_id__obj_name": "CvUserSupplier",
+          "obf_field_id__fld_name": "CvUserSupplier_CvSupplier_id",
+          "obf_field_id__fld_dbname": "cvusersupplier_cvsupplier_id",
+          "obf_field_id__fld_updatable": "1",
+          "obf_field_id__fld_required": false,
+          "obf_field_id__fld_fonctid": false,
+          "obf_cascad": "R",
+          "obf_card": "0,n",
+          "obf_query": null,
+          "obf_visible": true,
+          "obf_ref_export": true,
+          "obf_copy": false,
+          "obf_associate": null,
+          "obf_inline": false,
+          "obf_rendering": null,
+          "obf_treedepth": null,
+          "obf_area_id__ofa_name": null,
+          "obf_area_id__ofa_position": null,
+          "row_module_id__mdl_name": "Capvital"
+         },
+         "links": [{
+          "object": "TranslateLink",
+          "label": "Object link translation",
+          "icon": "img/system/translation",
+          "field": "tsl_id",
+          "list": [
+           {
+            "object": "TranslateLink",
+            "userkey": "K~CvUserSupplier~CvUserSupplier_CvSupplier_id~100~ENU",
+            "item": {
+             "tsl_typeLink": "K",
+             "tsl_id__obf_object_id__obj_name": "CvUserSupplier",
+             "tsl_id__obf_field_id__fld_name": "CvUserSupplier_CvSupplier_id",
+             "tsl_id__obf_order": 100,
+             "tsl_lang": "ENU",
+             "tsl_value": "Users",
+             "tsl_simplehelp": null,
+             "row_module_id__mdl_name": "Capvital"
+            }
+           },
+           {
+            "object": "TranslateLink",
+            "userkey": "K~CvUserSupplier~CvUserSupplier_CvSupplier_id~100~FRA",
+            "item": {
+             "tsl_typeLink": "K",
+             "tsl_id__obf_object_id__obj_name": "CvUserSupplier",
+             "tsl_id__obf_field_id__fld_name": "CvUserSupplier_CvSupplier_id",
+             "tsl_id__obf_order": 100,
+             "tsl_lang": "FRA",
+             "tsl_value": "Utilisateurs",
+             "tsl_simplehelp": null,
+             "row_module_id__mdl_name": "Capvital"
+            }
+           }
+          ]
+         }]
+        },
+        {
+         "object": "Link",
+         "userkey": "100~CvFinancialClaimImport~CvFinancialClaimImport_CvSupplier_id",
+         "item": {
+          "obf_ref_object_id__obo_name": "CvSupplier",
+          "obf_order": 100,
+          "obf_ref_order": null,
+          "obf_object_id__obj_name": "CvFinancialClaimImport",
+          "obf_field_id__fld_name": "CvFinancialClaimImport_CvSupplier_id",
+          "obf_field_id__fld_dbname": "cvfinancialclaimimport_cvsupplier_id",
+          "obf_field_id__fld_updatable": "1",
+          "obf_field_id__fld_required": false,
+          "obf_field_id__fld_fonctid": false,
+          "obf_cascad": "R",
+          "obf_card": "0,n",
+          "obf_query": null,
+          "obf_visible": true,
+          "obf_ref_export": true,
+          "obf_copy": false,
+          "obf_associate": null,
+          "obf_inline": false,
+          "obf_rendering": null,
+          "obf_treedepth": null,
+          "obf_area_id__ofa_name": null,
+          "obf_area_id__ofa_position": null,
+          "row_module_id__mdl_name": "Capvital"
+         }
+        }
+       ]
+      },
+      {
+       "object": "Function",
+       "label": "Function",
+       "icon": "img/system/function",
+       "field": "fct_object_id",
+       "list": [
+        {
+         "object": "Function",
+         "userkey": "CV_SUPPLIER_CRUD",
+         "item": {
+          "fct_name": "CV_SUPPLIER_CRUD",
+          "fct_object_id__obj_type": "O",
+          "fct_object_id__obj_name": "CvSupplier",
+          "fct_function": "CMS",
+          "fct_action_id__act_name": null,
+          "fct_view_id__viw_name": null,
+          "row_module_id__mdl_name": "Capvital"
+         },
+         "links": [{
+          "object": "Grant",
+          "label": "Grant",
+          "icon": "img/system/grant",
+          "field": "grt_function_id",
+          "list": [{
+           "object": "Grant",
+           "userkey": "CV_ADMIN~CV_SUPPLIER_CRUD~CvSupplier~",
+           "item": {
+            "grt_group_id__grp_name": "CV_ADMIN",
+            "grt_function_id__fct_name": "CV_SUPPLIER_CRUD",
+            "grt_function_id__fct_object_id__obj_type": "O",
+            "grt_function_id__fct_object_id__obj_name": "CvSupplier",
+            "grt_function_id__fct_action_id__act_name": null,
+            "grt_function_id__fct_function": "CMS",
+            "grt_activ": true,
+            "row_module_id__mdl_name": "Capvital"
+           }
+          }]
+         }]
+        },
+        {
+         "object": "Function",
+         "userkey": "CV_SUPPLIER_R",
+         "item": {
+          "fct_name": "CV_SUPPLIER_R",
+          "fct_object_id__obj_type": "O",
+          "fct_object_id__obj_name": "CvSupplier",
+          "fct_function": "L",
+          "fct_action_id__act_name": null,
+          "fct_view_id__viw_name": null,
+          "row_module_id__mdl_name": "Capvital"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "object": "ObjectInternal",
      "userkey": "CvUser",
      "item": {
       "obo_name": "CvUser",
@@ -2188,9 +3007,9 @@
        "field": "obo_script_id",
        "mime": "text/plain",
        "name": "CvUser.java",
-       "id": "7487",
+       "id": "7064",
        "object": "ObjectInternal",
-       "rowid": "2022"
+       "rowid": "2007"
       },
       "obo_usets": "1",
       "obo_nosearch": "1",
@@ -2295,281 +3114,126 @@
        "label": "Object fields",
        "icon": "img/system/object_field",
        "field": "obf_object_id",
-       "list": [
-        {
-         "object": "ObjectFieldSystem",
-         "userkey": "CvUser~cvUserProfile~10",
-         "item": {
-          "obf_object_id__obo_name": "CvUser",
-          "obf_field_id__fld_name": "cvUserProfile",
-          "obf_field_id__fld_type": "7",
-          "obf_order": 10,
-          "obf_group_by": null,
-          "obf_dfault_order": null,
-          "obf_input": null,
-          "obf_ref_field_id__fld_name": null,
-          "obf_ref_object_id__obo_name": null,
-          "obf_cascad": null,
-          "obf_card": null,
-          "obf_visible": null,
-          "obf_ref_export": true,
-          "obf_copy": null,
-          "obf_ref_order": null,
-          "obf_fld_visible": null,
-          "obf_fld_required": null,
-          "obf_fld_updatable": null,
-          "obf_fld_research": null,
-          "obf_fld_more": null,
-          "obf_fld_listmore": null,
-          "obf_fld_researchreq": null,
-          "obf_fld_dfault": null,
-          "obf_field_id__fld_dfault": null,
-          "obf_area_id__ofa_name": null,
-          "obf_area_id__ofa_position": null,
-          "row_module_id__mdl_name": "Capvital"
-         },
-         "links": [{
+       "list": [{
+        "object": "ObjectFieldSystem",
+        "userkey": "CvUser~cvUserProfile~10",
+        "item": {
+         "obf_object_id__obo_name": "CvUser",
+         "obf_field_id__fld_name": "cvUserProfile",
+         "obf_field_id__fld_type": "7",
+         "obf_order": 10,
+         "obf_group_by": null,
+         "obf_dfault_order": null,
+         "obf_input": null,
+         "obf_ref_field_id__fld_name": null,
+         "obf_ref_object_id__obo_name": null,
+         "obf_cascad": null,
+         "obf_card": null,
+         "obf_visible": null,
+         "obf_ref_export": true,
+         "obf_copy": null,
+         "obf_ref_order": null,
+         "obf_fld_visible": null,
+         "obf_fld_required": null,
+         "obf_fld_updatable": null,
+         "obf_fld_research": null,
+         "obf_fld_more": null,
+         "obf_fld_listmore": null,
+         "obf_fld_researchreq": null,
+         "obf_fld_dfault": null,
+         "obf_field_id__fld_dfault": null,
+         "obf_area_id__ofa_name": null,
+         "obf_area_id__ofa_position": null,
+         "row_module_id__mdl_name": "Capvital"
+        },
+        "links": [{
+         "object": "Field",
+         "label": "Field",
+         "icon": "img/system/field",
+         "field": "",
+         "list": [{
           "object": "Field",
-          "label": "Field",
-          "icon": "img/system/field",
-          "field": "",
-          "list": [{
-           "object": "Field",
-           "userkey": "cvUserProfile",
-           "item": {
-            "fld_name": "cvUserProfile",
-            "fld_dbname": "cv_user_profile",
-            "fld_visible": "4",
-            "fld_updatable": "1",
-            "fld_required": true,
-            "fld_fonctid": false,
-            "fld_research": null,
-            "fld_researchreq": "0",
-            "fld_sort": "C",
-            "fld_more": false,
-            "fld_listmore": false,
-            "fld_listsum": null,
-            "fld_tray": null,
-            "fld_type": "7",
-            "fld_type_id__flt_code": null,
-            "fld_list_id__lov_name": "CV_USER_PROFILE",
-            "fld_copy": true,
-            "fld_size": 10,
-            "fld_minsize": null,
-            "fld_precision": null,
-            "fld_fromdate_id__fld_name": null,
-            "fld_dfault": null,
-            "fld_indexable": false,
-            "fld_autocomp": "0",
-            "fld_groupby": false,
-            "fld_updall": true,
-            "fld_case": null,
-            "fld_righttoleft": false,
-            "fld_rendering": null,
-            "fld_speech": null,
-            "fld_calc": null,
-            "fld_objlist": null,
-            "fld_comment": null,
-            "fld_classification": null,
-            "row_module_id__mdl_name": "Capvital"
-           },
-           "links": [{
-            "object": "TranslateField",
-            "label": "Field translation",
-            "icon": "img/system/translation",
-            "field": "tsl_id",
-            "list": [
-             {
-              "object": "TranslateField",
-              "userkey": "F~cvUserProfile~ENU",
-              "item": {
-               "tsl_typeField": "F",
-               "tsl_id__fld_name": "cvUserProfile",
-               "tsl_lang": "ENU",
-               "tsl_value": "Profile",
-               "tsl_simplehelp": null,
-               "tsl_short_value": null,
-               "tsl_placeholder": null,
-               "tsl_listhelp": null,
-               "row_module_id__mdl_name": "Capvital",
-               "tsl_tooltip": null
-              }
-             },
-             {
-              "object": "TranslateField",
-              "userkey": "F~cvUserProfile~FRA",
-              "item": {
-               "tsl_typeField": "F",
-               "tsl_id__fld_name": "cvUserProfile",
-               "tsl_lang": "FRA",
-               "tsl_value": "Profil",
-               "tsl_simplehelp": null,
-               "tsl_short_value": null,
-               "tsl_placeholder": null,
-               "tsl_listhelp": null,
-               "row_module_id__mdl_name": "Capvital",
-               "tsl_tooltip": null
-              }
+          "userkey": "cvUserProfile",
+          "item": {
+           "fld_name": "cvUserProfile",
+           "fld_dbname": "cv_user_profile",
+           "fld_visible": "4",
+           "fld_updatable": "1",
+           "fld_required": true,
+           "fld_fonctid": false,
+           "fld_research": null,
+           "fld_researchreq": "0",
+           "fld_sort": "C",
+           "fld_more": false,
+           "fld_listmore": false,
+           "fld_listsum": null,
+           "fld_tray": null,
+           "fld_type": "7",
+           "fld_type_id__flt_code": null,
+           "fld_list_id__lov_name": "CV_USER_PROFILE",
+           "fld_copy": true,
+           "fld_size": 10,
+           "fld_minsize": null,
+           "fld_precision": null,
+           "fld_fromdate_id__fld_name": null,
+           "fld_dfault": null,
+           "fld_indexable": false,
+           "fld_autocomp": "0",
+           "fld_groupby": false,
+           "fld_updall": true,
+           "fld_case": null,
+           "fld_righttoleft": false,
+           "fld_rendering": null,
+           "fld_speech": null,
+           "fld_calc": null,
+           "fld_objlist": null,
+           "fld_comment": null,
+           "fld_classification": null,
+           "row_module_id__mdl_name": "Capvital"
+          },
+          "links": [{
+           "object": "TranslateField",
+           "label": "Field translation",
+           "icon": "img/system/translation",
+           "field": "tsl_id",
+           "list": [
+            {
+             "object": "TranslateField",
+             "userkey": "F~cvUserProfile~ENU",
+             "item": {
+              "tsl_typeField": "F",
+              "tsl_id__fld_name": "cvUserProfile",
+              "tsl_lang": "ENU",
+              "tsl_value": "Profile",
+              "tsl_simplehelp": null,
+              "tsl_short_value": null,
+              "tsl_placeholder": null,
+              "tsl_listhelp": null,
+              "row_module_id__mdl_name": "Capvital",
+              "tsl_tooltip": null
              }
-            ]
-           }]
+            },
+            {
+             "object": "TranslateField",
+             "userkey": "F~cvUserProfile~FRA",
+             "item": {
+              "tsl_typeField": "F",
+              "tsl_id__fld_name": "cvUserProfile",
+              "tsl_lang": "FRA",
+              "tsl_value": "Profil",
+              "tsl_simplehelp": null,
+              "tsl_short_value": null,
+              "tsl_placeholder": null,
+              "tsl_listhelp": null,
+              "row_module_id__mdl_name": "Capvital",
+              "tsl_tooltip": null
+             }
+            }
+           ]
           }]
          }]
-        },
-        {
-         "object": "ObjectFieldSystem",
-         "userkey": "CvUser~CvUser_CvAccount_id~100",
-         "item": {
-          "obf_object_id__obo_name": "CvUser",
-          "obf_field_id__fld_name": "CvUser_CvAccount_id",
-          "obf_field_id__fld_type": "0",
-          "obf_order": 100,
-          "obf_group_by": null,
-          "obf_dfault_order": null,
-          "obf_input": null,
-          "obf_ref_field_id__fld_name": null,
-          "obf_ref_object_id__obo_name": "CvAccount",
-          "obf_cascad": "R",
-          "obf_card": "0,n",
-          "obf_visible": true,
-          "obf_ref_export": true,
-          "obf_copy": false,
-          "obf_ref_order": 20,
-          "obf_fld_visible": null,
-          "obf_fld_required": null,
-          "obf_fld_updatable": null,
-          "obf_fld_research": null,
-          "obf_fld_more": null,
-          "obf_fld_listmore": null,
-          "obf_fld_researchreq": null,
-          "obf_fld_dfault": null,
-          "obf_field_id__fld_dfault": null,
-          "obf_area_id__ofa_name": null,
-          "obf_area_id__ofa_position": null,
-          "row_module_id__mdl_name": "Capvital"
-         },
-         "links": [{
-          "object": "Field",
-          "label": "Field",
-          "icon": "img/system/field",
-          "field": "",
-          "list": [{
-           "object": "Field",
-           "userkey": "CvUser_CvAccount_id",
-           "item": {
-            "fld_name": "CvUser_CvAccount_id",
-            "fld_dbname": "cvuser_cvaccount_id",
-            "fld_visible": "3",
-            "fld_updatable": "1",
-            "fld_required": false,
-            "fld_fonctid": false,
-            "fld_research": null,
-            "fld_researchreq": "0",
-            "fld_sort": "C",
-            "fld_more": false,
-            "fld_listmore": false,
-            "fld_listsum": null,
-            "fld_tray": null,
-            "fld_type": "0",
-            "fld_type_id__flt_code": null,
-            "fld_list_id__lov_name": null,
-            "fld_copy": true,
-            "fld_size": 11,
-            "fld_minsize": null,
-            "fld_precision": null,
-            "fld_fromdate_id__fld_name": null,
-            "fld_dfault": null,
-            "fld_indexable": false,
-            "fld_autocomp": "0",
-            "fld_groupby": false,
-            "fld_updall": true,
-            "fld_case": null,
-            "fld_righttoleft": false,
-            "fld_rendering": null,
-            "fld_speech": null,
-            "fld_calc": null,
-            "fld_objlist": null,
-            "fld_comment": null,
-            "fld_classification": null,
-            "row_module_id__mdl_name": "Capvital"
-           },
-           "links": [{
-            "object": "TranslateField",
-            "label": "Field translation",
-            "icon": "img/system/translation",
-            "field": "tsl_id",
-            "list": [
-             {
-              "object": "TranslateField",
-              "userkey": "F~CvUser_CvAccount_id~ENU",
-              "item": {
-               "tsl_typeField": "F",
-               "tsl_id__fld_name": "CvUser_CvAccount_id",
-               "tsl_lang": "ENU",
-               "tsl_value": "Account",
-               "tsl_simplehelp": null,
-               "tsl_short_value": null,
-               "tsl_placeholder": null,
-               "tsl_listhelp": null,
-               "row_module_id__mdl_name": "Capvital",
-               "tsl_tooltip": null
-              }
-             },
-             {
-              "object": "TranslateField",
-              "userkey": "F~CvUser_CvAccount_id~FRA",
-              "item": {
-               "tsl_typeField": "F",
-               "tsl_id__fld_name": "CvUser_CvAccount_id",
-               "tsl_lang": "FRA",
-               "tsl_value": "Compte",
-               "tsl_simplehelp": null,
-               "tsl_short_value": null,
-               "tsl_placeholder": null,
-               "tsl_listhelp": null,
-               "row_module_id__mdl_name": "Capvital",
-               "tsl_tooltip": null
-              }
-             }
-            ]
-           }]
-          }]
-         }]
-        },
-        {
-         "object": "ObjectFieldSystem",
-         "userkey": "CvUser~cvAccountName~110",
-         "item": {
-          "obf_object_id__obo_name": "CvUser",
-          "obf_field_id__fld_name": "cvAccountName",
-          "obf_field_id__fld_type": "3",
-          "obf_order": 110,
-          "obf_group_by": null,
-          "obf_dfault_order": null,
-          "obf_input": null,
-          "obf_ref_field_id__fld_name": "CvUser_CvAccount_id",
-          "obf_ref_object_id__obo_name": "CvAccount",
-          "obf_cascad": null,
-          "obf_card": null,
-          "obf_visible": null,
-          "obf_ref_export": true,
-          "obf_copy": null,
-          "obf_ref_order": null,
-          "obf_fld_visible": null,
-          "obf_fld_required": null,
-          "obf_fld_updatable": null,
-          "obf_fld_research": null,
-          "obf_fld_more": null,
-          "obf_fld_listmore": null,
-          "obf_fld_researchreq": null,
-          "obf_fld_dfault": null,
-          "obf_field_id__fld_dfault": null,
-          "obf_area_id__ofa_name": null,
-          "obf_area_id__ofa_position": null,
-          "row_module_id__mdl_name": "Capvital"
-         }
-        }
-       ]
+        }]
+       }]
       }
      ]
     },
@@ -2577,8 +3241,11 @@
      "object": "ObjectInternal",
      "userkey": "CvUserAdherent",
      "item": {
-      "obo_name": "CvUserAdherent",
-      "obo_dbtable": "cv_user_adherent",
+      "obo_name": {
+       "value": "CvUserAdherent",
+       "oldvalue": "CvUserAdherent"
+      },
+      "obo_dbtable": "m_user",
       "obo_role": "OBJ",
       "obo_class": null,
       "obo_script_id": {
@@ -2587,15 +3254,15 @@
        "field": "obo_script_id",
        "mime": "text/plain",
        "name": "CvUserAdherent.java",
-       "id": "7489",
+       "id": "7065",
        "object": "ObjectInternal",
-       "rowid": "2024"
+       "rowid": "2009"
       },
       "obo_usets": "1",
       "obo_nosearch": "1",
       "obo_comment": null,
       "obo_type": "O",
-      "obo_searchspec": "t.cv_user_profile like 'Supplier'",
+      "obo_searchspec": "t.cv_user_profile like 'Adherent'",
       "obo_delspec": null,
       "obo_exportorder": null,
       "obo_distinct": false,
@@ -2670,7 +3337,7 @@
           "tsl_typeObject": "O",
           "tsl_id__obo_name": "CvUserAdherent",
           "tsl_lang": "ENU",
-          "tsl_value": "Adherent",
+          "tsl_value": "Adherents",
           "tsl_help": null,
           "row_module_id__mdl_name": "Capvital"
          }
@@ -2682,8 +3349,169 @@
           "tsl_typeObject": "O",
           "tsl_id__obo_name": "CvUserAdherent",
           "tsl_lang": "FRA",
-          "tsl_value": "Adhérent",
+          "tsl_value": "Adhérents",
           "tsl_help": null,
+          "row_module_id__mdl_name": "Capvital"
+         }
+        }
+       ]
+      },
+      {
+       "object": "ObjectFieldSystem",
+       "label": "Object fields",
+       "icon": "img/system/object_field",
+       "field": "obf_object_id",
+       "list": [
+        {
+         "object": "ObjectFieldSystem",
+         "userkey": "CvUserAdherent~CvUserAdherent_CvAdherent_id~100",
+         "item": {
+          "obf_object_id__obo_name": "CvUserAdherent",
+          "obf_field_id__fld_name": "CvUserAdherent_CvAdherent_id",
+          "obf_field_id__fld_type": "0",
+          "obf_order": 100,
+          "obf_group_by": null,
+          "obf_dfault_order": null,
+          "obf_input": null,
+          "obf_ref_field_id__fld_name": null,
+          "obf_ref_object_id__obo_name": "CvAdherent",
+          "obf_cascad": "R",
+          "obf_card": "0,n",
+          "obf_visible": true,
+          "obf_ref_export": true,
+          "obf_copy": false,
+          "obf_ref_order": null,
+          "obf_fld_visible": null,
+          "obf_fld_required": null,
+          "obf_fld_updatable": null,
+          "obf_fld_research": null,
+          "obf_fld_more": null,
+          "obf_fld_listmore": null,
+          "obf_fld_researchreq": null,
+          "obf_fld_dfault": null,
+          "obf_field_id__fld_dfault": null,
+          "obf_area_id__ofa_name": null,
+          "obf_area_id__ofa_position": null,
+          "row_module_id__mdl_name": "Capvital"
+         },
+         "links": [{
+          "object": "Field",
+          "label": "Field",
+          "icon": "img/system/field",
+          "field": "",
+          "list": [{
+           "object": "Field",
+           "userkey": "CvUserAdherent_CvAdherent_id",
+           "item": {
+            "fld_name": "CvUserAdherent_CvAdherent_id",
+            "fld_dbname": "cvuseradherent_cvadherent_id",
+            "fld_visible": "3",
+            "fld_updatable": "1",
+            "fld_required": false,
+            "fld_fonctid": false,
+            "fld_research": null,
+            "fld_researchreq": "0",
+            "fld_sort": "C",
+            "fld_more": false,
+            "fld_listmore": false,
+            "fld_listsum": null,
+            "fld_tray": null,
+            "fld_type": "0",
+            "fld_type_id__flt_code": null,
+            "fld_list_id__lov_name": null,
+            "fld_copy": true,
+            "fld_size": 11,
+            "fld_minsize": null,
+            "fld_precision": null,
+            "fld_fromdate_id__fld_name": null,
+            "fld_dfault": null,
+            "fld_indexable": false,
+            "fld_autocomp": "0",
+            "fld_groupby": false,
+            "fld_updall": true,
+            "fld_case": null,
+            "fld_righttoleft": false,
+            "fld_rendering": null,
+            "fld_speech": null,
+            "fld_calc": null,
+            "fld_objlist": null,
+            "fld_comment": null,
+            "fld_classification": null,
+            "row_module_id__mdl_name": "Capvital"
+           },
+           "links": [{
+            "object": "TranslateField",
+            "label": "Field translation",
+            "icon": "img/system/translation",
+            "field": "tsl_id",
+            "list": [
+             {
+              "object": "TranslateField",
+              "userkey": "F~CvUserAdherent_CvAdherent_id~ENU",
+              "item": {
+               "tsl_typeField": "F",
+               "tsl_id__fld_name": "CvUserAdherent_CvAdherent_id",
+               "tsl_lang": "ENU",
+               "tsl_value": "Adherent",
+               "tsl_simplehelp": null,
+               "tsl_short_value": null,
+               "tsl_placeholder": null,
+               "tsl_listhelp": null,
+               "row_module_id__mdl_name": "Capvital",
+               "tsl_tooltip": null
+              }
+             },
+             {
+              "object": "TranslateField",
+              "userkey": "F~CvUserAdherent_CvAdherent_id~FRA",
+              "item": {
+               "tsl_typeField": "F",
+               "tsl_id__fld_name": "CvUserAdherent_CvAdherent_id",
+               "tsl_lang": "FRA",
+               "tsl_value": "Adhérent",
+               "tsl_simplehelp": null,
+               "tsl_short_value": null,
+               "tsl_placeholder": null,
+               "tsl_listhelp": null,
+               "row_module_id__mdl_name": "Capvital",
+               "tsl_tooltip": null
+              }
+             }
+            ]
+           }]
+          }]
+         }]
+        },
+        {
+         "object": "ObjectFieldSystem",
+         "userkey": "CvUserAdherent~cvAdherentName~110",
+         "item": {
+          "obf_object_id__obo_name": "CvUserAdherent",
+          "obf_field_id__fld_name": "cvAdherentName",
+          "obf_field_id__fld_type": "3",
+          "obf_order": 110,
+          "obf_group_by": null,
+          "obf_dfault_order": null,
+          "obf_input": null,
+          "obf_ref_field_id__fld_name": "CvUserAdherent_CvAdherent_id",
+          "obf_ref_object_id__obo_name": "CvAdherent",
+          "obf_cascad": null,
+          "obf_card": null,
+          "obf_visible": null,
+          "obf_ref_export": true,
+          "obf_copy": null,
+          "obf_ref_order": null,
+          "obf_fld_visible": null,
+          "obf_fld_required": null,
+          "obf_fld_updatable": null,
+          "obf_fld_research": null,
+          "obf_fld_more": null,
+          "obf_fld_listmore": null,
+          "obf_fld_researchreq": null,
+          "obf_fld_dfault": null,
+          "obf_field_id__fld_dfault": null,
+          "obf_area_id__ofa_name": null,
+          "obf_area_id__ofa_position": null,
           "row_module_id__mdl_name": "Capvital"
          }
         }
@@ -2759,9 +3587,9 @@
        "field": "obo_script_id",
        "mime": "text/plain",
        "name": "CvUserSupplier.java",
-       "id": "7490",
+       "id": "7066",
        "object": "ObjectInternal",
-       "rowid": "2023"
+       "rowid": "2006"
       },
       "obo_usets": "1",
       "obo_nosearch": "1",
@@ -2862,6 +3690,167 @@
        ]
       },
       {
+       "object": "ObjectFieldSystem",
+       "label": "Object fields",
+       "icon": "img/system/object_field",
+       "field": "obf_object_id",
+       "list": [
+        {
+         "object": "ObjectFieldSystem",
+         "userkey": "CvUserSupplier~CvUserSupplier_CvSupplier_id~100",
+         "item": {
+          "obf_object_id__obo_name": "CvUserSupplier",
+          "obf_field_id__fld_name": "CvUserSupplier_CvSupplier_id",
+          "obf_field_id__fld_type": "0",
+          "obf_order": 100,
+          "obf_group_by": null,
+          "obf_dfault_order": null,
+          "obf_input": null,
+          "obf_ref_field_id__fld_name": null,
+          "obf_ref_object_id__obo_name": "CvSupplier",
+          "obf_cascad": "R",
+          "obf_card": "0,n",
+          "obf_visible": true,
+          "obf_ref_export": true,
+          "obf_copy": false,
+          "obf_ref_order": null,
+          "obf_fld_visible": null,
+          "obf_fld_required": null,
+          "obf_fld_updatable": null,
+          "obf_fld_research": null,
+          "obf_fld_more": null,
+          "obf_fld_listmore": null,
+          "obf_fld_researchreq": null,
+          "obf_fld_dfault": null,
+          "obf_field_id__fld_dfault": null,
+          "obf_area_id__ofa_name": null,
+          "obf_area_id__ofa_position": null,
+          "row_module_id__mdl_name": "Capvital"
+         },
+         "links": [{
+          "object": "Field",
+          "label": "Field",
+          "icon": "img/system/field",
+          "field": "",
+          "list": [{
+           "object": "Field",
+           "userkey": "CvUserSupplier_CvSupplier_id",
+           "item": {
+            "fld_name": "CvUserSupplier_CvSupplier_id",
+            "fld_dbname": "cvusersupplier_cvsupplier_id",
+            "fld_visible": "3",
+            "fld_updatable": "1",
+            "fld_required": false,
+            "fld_fonctid": false,
+            "fld_research": null,
+            "fld_researchreq": "0",
+            "fld_sort": "C",
+            "fld_more": false,
+            "fld_listmore": false,
+            "fld_listsum": null,
+            "fld_tray": null,
+            "fld_type": "0",
+            "fld_type_id__flt_code": null,
+            "fld_list_id__lov_name": null,
+            "fld_copy": true,
+            "fld_size": 11,
+            "fld_minsize": null,
+            "fld_precision": null,
+            "fld_fromdate_id__fld_name": null,
+            "fld_dfault": null,
+            "fld_indexable": false,
+            "fld_autocomp": "0",
+            "fld_groupby": false,
+            "fld_updall": true,
+            "fld_case": null,
+            "fld_righttoleft": false,
+            "fld_rendering": null,
+            "fld_speech": null,
+            "fld_calc": null,
+            "fld_objlist": null,
+            "fld_comment": null,
+            "fld_classification": null,
+            "row_module_id__mdl_name": "Capvital"
+           },
+           "links": [{
+            "object": "TranslateField",
+            "label": "Field translation",
+            "icon": "img/system/translation",
+            "field": "tsl_id",
+            "list": [
+             {
+              "object": "TranslateField",
+              "userkey": "F~CvUserSupplier_CvSupplier_id~ENU",
+              "item": {
+               "tsl_typeField": "F",
+               "tsl_id__fld_name": "CvUserSupplier_CvSupplier_id",
+               "tsl_lang": "ENU",
+               "tsl_value": "Supplier",
+               "tsl_simplehelp": null,
+               "tsl_short_value": null,
+               "tsl_placeholder": null,
+               "tsl_listhelp": null,
+               "row_module_id__mdl_name": "Capvital",
+               "tsl_tooltip": null
+              }
+             },
+             {
+              "object": "TranslateField",
+              "userkey": "F~CvUserSupplier_CvSupplier_id~FRA",
+              "item": {
+               "tsl_typeField": "F",
+               "tsl_id__fld_name": "CvUserSupplier_CvSupplier_id",
+               "tsl_lang": "FRA",
+               "tsl_value": "Fournisseur",
+               "tsl_simplehelp": null,
+               "tsl_short_value": null,
+               "tsl_placeholder": null,
+               "tsl_listhelp": null,
+               "row_module_id__mdl_name": "Capvital",
+               "tsl_tooltip": null
+              }
+             }
+            ]
+           }]
+          }]
+         }]
+        },
+        {
+         "object": "ObjectFieldSystem",
+         "userkey": "CvUserSupplier~cvSupplierName~110",
+         "item": {
+          "obf_object_id__obo_name": "CvUserSupplier",
+          "obf_field_id__fld_name": "cvSupplierName",
+          "obf_field_id__fld_type": "3",
+          "obf_order": 110,
+          "obf_group_by": null,
+          "obf_dfault_order": null,
+          "obf_input": null,
+          "obf_ref_field_id__fld_name": "CvUserSupplier_CvSupplier_id",
+          "obf_ref_object_id__obo_name": "CvSupplier",
+          "obf_cascad": null,
+          "obf_card": null,
+          "obf_visible": null,
+          "obf_ref_export": true,
+          "obf_copy": null,
+          "obf_ref_order": null,
+          "obf_fld_visible": null,
+          "obf_fld_required": null,
+          "obf_fld_updatable": null,
+          "obf_fld_research": null,
+          "obf_fld_more": null,
+          "obf_fld_listmore": null,
+          "obf_fld_researchreq": null,
+          "obf_fld_dfault": null,
+          "obf_field_id__fld_dfault": null,
+          "obf_area_id__ofa_name": null,
+          "obf_area_id__ofa_position": null,
+          "row_module_id__mdl_name": "Capvital"
+         }
+        }
+       ]
+      },
+      {
        "object": "Function",
        "label": "Function",
        "icon": "img/system/function",
@@ -2940,6 +3929,131 @@
       "row_module_id__mdl_name": "Capvital"
      },
      "links": [
+      {
+       "object": "Domain",
+       "label": "Sub-domain",
+       "icon": "img/system/domain",
+       "list": [{
+        "object": "Domain",
+        "userkey": "CvAdminUserDomain",
+        "item": {
+         "obd_name": "CvAdminUserDomain",
+         "obd_comment": null,
+         "obd_type": "D",
+         "obd_view_id__viw_name": null,
+         "obd_nohome": true,
+         "obd_icon": "img/color/team_2",
+         "obd_order": 100,
+         "obd_domain_id__obd_name": "CvAdminDomain",
+         "row_module_id__mdl_name": "Capvital"
+        },
+        "links": [
+         {
+          "object": "TranslateDomain",
+          "label": "Domain translation",
+          "icon": "img/system/translation",
+          "field": "tsl_id",
+          "list": [
+           {
+            "object": "TranslateDomain",
+            "userkey": "O~CvAdminUserDomain~ENU",
+            "item": {
+             "tsl_typeObject": "O",
+             "tsl_id__obd_name": "CvAdminUserDomain",
+             "tsl_lang": "ENU",
+             "tsl_value": "Users",
+             "tsl_help": null,
+             "row_module_id__mdl_name": "Capvital"
+            }
+           },
+           {
+            "object": "TranslateDomain",
+            "userkey": "O~CvAdminUserDomain~FRA",
+            "item": {
+             "tsl_typeObject": "O",
+             "tsl_id__obd_name": "CvAdminUserDomain",
+             "tsl_lang": "FRA",
+             "tsl_value": "Utilisateurs",
+             "tsl_help": null,
+             "row_module_id__mdl_name": "Capvital"
+            }
+           }
+          ]
+         },
+         {
+          "object": "Function",
+          "label": "Function",
+          "icon": "img/system/function",
+          "field": "fct_object_id",
+          "list": [{
+           "object": "Function",
+           "userkey": "CV_ADMIN_USER_DOMAIN_D",
+           "item": {
+            "fct_name": "CV_ADMIN_USER_DOMAIN_D",
+            "fct_object_id__obj_type": "D",
+            "fct_object_id__obj_name": "CvAdminUserDomain",
+            "fct_function": "L",
+            "fct_action_id__act_name": null,
+            "fct_view_id__viw_name": null,
+            "row_module_id__mdl_name": "Capvital"
+           },
+           "links": [{
+            "object": "Grant",
+            "label": "Grant",
+            "icon": "img/system/grant",
+            "field": "grt_function_id",
+            "list": [{
+             "object": "Grant",
+             "userkey": "CV_ADMIN~CV_ADMIN_USER_DOMAIN_D~CvAdminUserDomain~",
+             "item": {
+              "grt_group_id__grp_name": "CV_ADMIN",
+              "grt_function_id__fct_name": "CV_ADMIN_USER_DOMAIN_D",
+              "grt_function_id__fct_object_id__obj_type": "D",
+              "grt_function_id__fct_object_id__obj_name": "CvAdminUserDomain",
+              "grt_function_id__fct_action_id__act_name": null,
+              "grt_function_id__fct_function": "L",
+              "grt_activ": true,
+              "row_module_id__mdl_name": "Capvital"
+             }
+            }]
+           }]
+          }]
+         },
+         {
+          "object": "Map",
+          "label": "Main menu",
+          "icon": "img/system/main_menu",
+          "field": "map_domain_id",
+          "list": [
+           {
+            "object": "Map",
+            "userkey": "CvAdminUserDomain~10",
+            "item": {
+             "map_domain_id__obd_name": "CvAdminUserDomain",
+             "map_object_id__obj_name": "CvUserAdherent",
+             "map_process_id__pcs_name": null,
+             "map_order": 10,
+             "map_ext": false,
+             "row_module_id__mdl_name": "Capvital"
+            }
+           },
+           {
+            "object": "Map",
+            "userkey": "CvAdminUserDomain~20",
+            "item": {
+             "map_domain_id__obd_name": "CvAdminUserDomain",
+             "map_object_id__obj_name": "CvUserSupplier",
+             "map_process_id__pcs_name": null,
+             "map_order": 20,
+             "map_ext": false,
+             "row_module_id__mdl_name": "Capvital"
+            }
+           }
+          ]
+         }
+        ]
+       }]
+      },
       {
        "object": "TranslateDomain",
        "label": "Domain translation",
@@ -3022,7 +4136,7 @@
          "userkey": "CvAdminDomain~10",
          "item": {
           "map_domain_id__obd_name": "CvAdminDomain",
-          "map_object_id__obj_name": "CvUserAdherent",
+          "map_object_id__obj_name": "CvSupplier",
           "map_process_id__pcs_name": null,
           "map_order": 10,
           "map_ext": false,
@@ -3034,7 +4148,7 @@
          "userkey": "CvAdminDomain~20",
          "item": {
           "map_domain_id__obd_name": "CvAdminDomain",
-          "map_object_id__obj_name": "CvUserSupplier",
+          "map_object_id__obj_name": "CvAdherent",
           "map_process_id__pcs_name": null,
           "map_order": 20,
           "map_ext": false,
@@ -3046,33 +4160,9 @@
          "userkey": "CvAdminDomain~30",
          "item": {
           "map_domain_id__obd_name": "CvAdminDomain",
-          "map_object_id__obj_name": "CvAccount",
-          "map_process_id__pcs_name": null,
-          "map_order": 30,
-          "map_ext": false,
-          "row_module_id__mdl_name": "Capvital"
-         }
-        },
-        {
-         "object": "Map",
-         "userkey": "CvAdminDomain~40",
-         "item": {
-          "map_domain_id__obd_name": "CvAdminDomain",
-          "map_object_id__obj_name": "CvFinancialClaim",
-          "map_process_id__pcs_name": null,
-          "map_order": 40,
-          "map_ext": false,
-          "row_module_id__mdl_name": "Capvital"
-         }
-        },
-        {
-         "object": "Map",
-         "userkey": "CvAdminDomain~50",
-         "item": {
-          "map_domain_id__obd_name": "CvAdminDomain",
           "map_object_id__obj_name": "CvFinancialClaimImport",
           "map_process_id__pcs_name": null,
-          "map_order": 50,
+          "map_order": 30,
           "map_ext": false,
           "row_module_id__mdl_name": "Capvital"
          }
@@ -3091,7 +4181,7 @@
       "obd_view_id__viw_name": "CvSupplierHome",
       "obd_nohome": false,
       "obd_icon": null,
-      "obd_order": 20,
+      "obd_order": 30,
       "obd_domain_id__obd_name": null,
       "row_module_id__mdl_name": "Capvital"
      },
@@ -3179,7 +4269,7 @@
       "obd_view_id__viw_name": "CvAdherentHome",
       "obd_nohome": false,
       "obd_icon": null,
-      "obd_order": 30,
+      "obd_order": 40,
       "obd_domain_id__obd_name": null,
       "row_module_id__mdl_name": "Capvital"
      },
@@ -3494,87 +4584,251 @@
    "label": "Fields",
    "icon": "img/system/field",
    "field": "row_module_id",
-   "list": [{
-    "object": "Field",
-    "userkey": "cvAccountProfile",
-    "item": {
-     "fld_name": "cvAccountProfile",
-     "fld_dbname": "cv_account_profile",
-     "fld_visible": "3",
-     "fld_updatable": "1",
-     "fld_required": true,
-     "fld_fonctid": false,
-     "fld_research": null,
-     "fld_researchreq": "0",
-     "fld_sort": "C",
-     "fld_more": false,
-     "fld_listmore": false,
-     "fld_listsum": null,
-     "fld_tray": null,
-     "fld_type": "7",
-     "fld_type_id__flt_code": null,
-     "fld_list_id__lov_name": "CV_USER_PROFILE",
-     "fld_copy": true,
-     "fld_size": 10,
-     "fld_minsize": null,
-     "fld_precision": null,
-     "fld_fromdate_id__fld_name": null,
-     "fld_dfault": null,
-     "fld_indexable": false,
-     "fld_autocomp": "0",
-     "fld_groupby": false,
-     "fld_updall": true,
-     "fld_case": null,
-     "fld_righttoleft": false,
-     "fld_rendering": null,
-     "fld_speech": null,
-     "fld_calc": null,
-     "fld_objlist": null,
-     "fld_comment": null,
-     "fld_classification": null,
-     "row_module_id__mdl_name": "Capvital"
+   "list": [
+    {
+     "object": "Field",
+     "userkey": "cvAccountProfile",
+     "item": {
+      "fld_name": "cvAccountProfile",
+      "fld_dbname": "cv_account_profile",
+      "fld_visible": "3",
+      "fld_updatable": "1",
+      "fld_required": true,
+      "fld_fonctid": false,
+      "fld_research": null,
+      "fld_researchreq": "0",
+      "fld_sort": "C",
+      "fld_more": false,
+      "fld_listmore": false,
+      "fld_listsum": null,
+      "fld_tray": null,
+      "fld_type": "7",
+      "fld_type_id__flt_code": null,
+      "fld_list_id__lov_name": "CV_USER_PROFILE",
+      "fld_copy": true,
+      "fld_size": 10,
+      "fld_minsize": null,
+      "fld_precision": null,
+      "fld_fromdate_id__fld_name": null,
+      "fld_dfault": null,
+      "fld_indexable": false,
+      "fld_autocomp": "0",
+      "fld_groupby": false,
+      "fld_updall": true,
+      "fld_case": null,
+      "fld_righttoleft": false,
+      "fld_rendering": null,
+      "fld_speech": null,
+      "fld_calc": null,
+      "fld_objlist": null,
+      "fld_comment": null,
+      "fld_classification": null,
+      "row_module_id__mdl_name": "Capvital"
+     },
+     "links": [{
+      "object": "TranslateField",
+      "label": "Field translation",
+      "icon": "img/system/translation",
+      "field": "tsl_id",
+      "list": [
+       {
+        "object": "TranslateField",
+        "userkey": "F~cvAccountProfile~ENU",
+        "item": {
+         "tsl_typeField": "F",
+         "tsl_id__fld_name": "cvAccountProfile",
+         "tsl_lang": "ENU",
+         "tsl_value": "Profile",
+         "tsl_simplehelp": null,
+         "tsl_short_value": null,
+         "tsl_placeholder": null,
+         "tsl_listhelp": null,
+         "row_module_id__mdl_name": "Capvital",
+         "tsl_tooltip": null
+        }
+       },
+       {
+        "object": "TranslateField",
+        "userkey": "F~cvAccountProfile~FRA",
+        "item": {
+         "tsl_typeField": "F",
+         "tsl_id__fld_name": "cvAccountProfile",
+         "tsl_lang": "FRA",
+         "tsl_value": "Profil",
+         "tsl_simplehelp": null,
+         "tsl_short_value": null,
+         "tsl_placeholder": null,
+         "tsl_listhelp": null,
+         "row_module_id__mdl_name": "Capvital",
+         "tsl_tooltip": null
+        }
+       }
+      ]
+     }]
     },
-    "links": [{
-     "object": "TranslateField",
-     "label": "Field translation",
-     "icon": "img/system/translation",
-     "field": "tsl_id",
-     "list": [
-      {
-       "object": "TranslateField",
-       "userkey": "F~cvAccountProfile~ENU",
-       "item": {
-        "tsl_typeField": "F",
-        "tsl_id__fld_name": "cvAccountProfile",
-        "tsl_lang": "ENU",
-        "tsl_value": "Profile",
-        "tsl_simplehelp": null,
-        "tsl_short_value": null,
-        "tsl_placeholder": null,
-        "tsl_listhelp": null,
-        "row_module_id__mdl_name": "Capvital",
-        "tsl_tooltip": null
+    {
+     "object": "Field",
+     "userkey": "CvFinancialClaim_CvAccount_id",
+     "item": {
+      "fld_name": "CvFinancialClaim_CvAccount_id",
+      "fld_dbname": "cvfinancialclaim_cvaccount_id",
+      "fld_visible": "3",
+      "fld_updatable": "1",
+      "fld_required": false,
+      "fld_fonctid": false,
+      "fld_research": null,
+      "fld_researchreq": "0",
+      "fld_sort": "C",
+      "fld_more": false,
+      "fld_listmore": false,
+      "fld_listsum": null,
+      "fld_tray": null,
+      "fld_type": "0",
+      "fld_type_id__flt_code": null,
+      "fld_list_id__lov_name": null,
+      "fld_copy": true,
+      "fld_size": 11,
+      "fld_minsize": null,
+      "fld_precision": null,
+      "fld_fromdate_id__fld_name": null,
+      "fld_dfault": null,
+      "fld_indexable": false,
+      "fld_autocomp": "0",
+      "fld_groupby": false,
+      "fld_updall": true,
+      "fld_case": null,
+      "fld_righttoleft": false,
+      "fld_rendering": null,
+      "fld_speech": null,
+      "fld_calc": null,
+      "fld_objlist": null,
+      "fld_comment": null,
+      "fld_classification": null,
+      "row_module_id__mdl_name": "Capvital"
+     },
+     "links": [{
+      "object": "TranslateField",
+      "label": "Field translation",
+      "icon": "img/system/translation",
+      "field": "tsl_id",
+      "list": [
+       {
+        "object": "TranslateField",
+        "userkey": "F~CvFinancialClaim_CvAccount_id~ENU",
+        "item": {
+         "tsl_typeField": "F",
+         "tsl_id__fld_name": "CvFinancialClaim_CvAccount_id",
+         "tsl_lang": "ENU",
+         "tsl_value": "Account",
+         "tsl_simplehelp": null,
+         "tsl_short_value": null,
+         "tsl_placeholder": null,
+         "tsl_listhelp": null,
+         "row_module_id__mdl_name": "Capvital",
+         "tsl_tooltip": null
+        }
+       },
+       {
+        "object": "TranslateField",
+        "userkey": "F~CvFinancialClaim_CvAccount_id~FRA",
+        "item": {
+         "tsl_typeField": "F",
+         "tsl_id__fld_name": "CvFinancialClaim_CvAccount_id",
+         "tsl_lang": "FRA",
+         "tsl_value": "Account",
+         "tsl_simplehelp": null,
+         "tsl_short_value": null,
+         "tsl_placeholder": null,
+         "tsl_listhelp": null,
+         "row_module_id__mdl_name": "Capvital",
+         "tsl_tooltip": null
+        }
        }
-      },
-      {
-       "object": "TranslateField",
-       "userkey": "F~cvAccountProfile~FRA",
-       "item": {
-        "tsl_typeField": "F",
-        "tsl_id__fld_name": "cvAccountProfile",
-        "tsl_lang": "FRA",
-        "tsl_value": "Profil",
-        "tsl_simplehelp": null,
-        "tsl_short_value": null,
-        "tsl_placeholder": null,
-        "tsl_listhelp": null,
-        "row_module_id__mdl_name": "Capvital",
-        "tsl_tooltip": null
+      ]
+     }]
+    },
+    {
+     "object": "Field",
+     "userkey": "CvUser_CvAccount_id",
+     "item": {
+      "fld_name": "CvUser_CvAccount_id",
+      "fld_dbname": "cvuser_cvaccount_id",
+      "fld_visible": "3",
+      "fld_updatable": "1",
+      "fld_required": false,
+      "fld_fonctid": false,
+      "fld_research": null,
+      "fld_researchreq": "0",
+      "fld_sort": "C",
+      "fld_more": false,
+      "fld_listmore": false,
+      "fld_listsum": null,
+      "fld_tray": null,
+      "fld_type": "0",
+      "fld_type_id__flt_code": null,
+      "fld_list_id__lov_name": null,
+      "fld_copy": true,
+      "fld_size": 11,
+      "fld_minsize": null,
+      "fld_precision": null,
+      "fld_fromdate_id__fld_name": null,
+      "fld_dfault": null,
+      "fld_indexable": false,
+      "fld_autocomp": "0",
+      "fld_groupby": false,
+      "fld_updall": true,
+      "fld_case": null,
+      "fld_righttoleft": false,
+      "fld_rendering": null,
+      "fld_speech": null,
+      "fld_calc": null,
+      "fld_objlist": null,
+      "fld_comment": null,
+      "fld_classification": null,
+      "row_module_id__mdl_name": "Capvital"
+     },
+     "links": [{
+      "object": "TranslateField",
+      "label": "Field translation",
+      "icon": "img/system/translation",
+      "field": "tsl_id",
+      "list": [
+       {
+        "object": "TranslateField",
+        "userkey": "F~CvUser_CvAccount_id~ENU",
+        "item": {
+         "tsl_typeField": "F",
+         "tsl_id__fld_name": "CvUser_CvAccount_id",
+         "tsl_lang": "ENU",
+         "tsl_value": "Account",
+         "tsl_simplehelp": null,
+         "tsl_short_value": null,
+         "tsl_placeholder": null,
+         "tsl_listhelp": null,
+         "row_module_id__mdl_name": "Capvital",
+         "tsl_tooltip": null
+        }
+       },
+       {
+        "object": "TranslateField",
+        "userkey": "F~CvUser_CvAccount_id~FRA",
+        "item": {
+         "tsl_typeField": "F",
+         "tsl_id__fld_name": "CvUser_CvAccount_id",
+         "tsl_lang": "FRA",
+         "tsl_value": "Compte",
+         "tsl_simplehelp": null,
+         "tsl_short_value": null,
+         "tsl_placeholder": null,
+         "tsl_listhelp": null,
+         "row_module_id__mdl_name": "Capvital",
+         "tsl_tooltip": null
+        }
        }
-      }
-     ]
-    }]
-   }]
+      ]
+     }]
+    }
+   ]
   },
   {
    "object": "BPMState",
@@ -3703,6 +4957,86 @@
    ]
   },
   {
+   "object": "Theme",
+   "label": "Themes",
+   "icon": "img/system/theme",
+   "field": "row_module_id",
+   "list": [{
+    "object": "Theme",
+    "userkey": "ThemeCapvital",
+    "item": {
+     "thm_name": "ThemeCapvital",
+     "thm_logo_id": {
+      "path": "files/Theme/ThemeCapvital/logo.svg",
+      "size": 14755,
+      "field": "thm_logo_id",
+      "mime": "image/svg+xml",
+      "name": "logo.svg",
+      "id": "7127",
+      "object": "Theme",
+      "rowid": "6"
+     },
+     "thm_logo_invert": null,
+     "thm_logo2_id": null,
+     "thm_favicon_id": null,
+     "thm_color1": null,
+     "thm_color2": null,
+     "thm_text2": null,
+     "thm_color3": null,
+     "thm_text3": null,
+     "thm_base": "simplicite",
+     "thm_css_doc": {
+      "path": "files/Theme/ThemeCapvital/ThemeCapvital_gen.css",
+      "size": 149110,
+      "field": "thm_css_doc",
+      "mime": "text/css",
+      "name": "ThemeCapvital_gen.css",
+      "id": "7111",
+      "object": "Theme",
+      "rowid": "6"
+     },
+     "thm_addon": {
+      "path": "files/Theme/ThemeCapvital/addon.less",
+      "size": 0,
+      "field": "thm_addon",
+      "mime": "text/less",
+      "name": "addon.less",
+      "id": "7383",
+      "object": "Theme",
+      "rowid": "6"
+     },
+     "thm_searchbox": null,
+     "thm_active": null,
+     "thm_font": null,
+     "thm_iconset": null,
+     "thm_code_editor_theme": null,
+     "thm_html_editor_theme": "LIGHT",
+     "thm_menu_dom_c": null,
+     "thm_menu_dom_t": null,
+     "thm_menu_dact_c": null,
+     "thm_menu_dact_t": null,
+     "thm_menu_sub_c": null,
+     "thm_menu_sub_t": null,
+     "thm_menu_sact_c": null,
+     "thm_menu_sact_t": null,
+     "thm_menu_sta_c": null,
+     "thm_menu_sta_t": null,
+     "thm_compact": false,
+     "row_module_id__mdl_name": "Capvital",
+     "thm_const": {
+      "path": "files/Theme/ThemeCapvital/const.less",
+      "size": 132,
+      "field": "thm_const",
+      "mime": "text/less",
+      "name": "constants.less",
+      "id": "7384",
+      "object": "Theme",
+      "rowid": "6"
+     }
+    }
+   }]
+  },
+  {
    "object": "View",
    "label": "Views",
    "icon": "img/system/view",
@@ -3715,11 +5049,11 @@
       "viw_name": "CapvitalAdminHome",
       "viw_ui": "<div>\n\t<div class=\"area\" data-area=\"1\"><\/div>\n\t<div class=\"area\" data-area=\"2\"><\/div>\n<\/div>",
       "viw_order": 10,
-      "viw_icon": null,
+      "viw_icon": "img/color/data_encryption",
       "viw_disp_id__dis_code": null,
-      "viw_scope": "Capvital",
+      "viw_scope": null,
       "row_module_id__mdl_name": "Capvital",
-      "viw_theme_id__thm_name": null,
+      "viw_theme_id__thm_name": "ThemeCapvital",
       "viw_lang": null
      },
      "links": [
@@ -3736,7 +5070,7 @@
           "tsl_typeView": "V",
           "tsl_id__viw_name": "CapvitalAdminHome",
           "tsl_lang": "ENU",
-          "tsl_value": "Capvital",
+          "tsl_value": "Capvital Admin",
           "tsl_help": null,
           "row_module_id__mdl_name": "Capvital"
          }
@@ -3748,7 +5082,7 @@
           "tsl_typeView": "V",
           "tsl_id__viw_name": "CapvitalAdminHome",
           "tsl_lang": "FRA",
-          "tsl_value": "Capvital",
+          "tsl_value": "Admin Capvital",
           "tsl_help": null,
           "row_module_id__mdl_name": "Capvital"
          }
@@ -3860,6 +5194,22 @@
        ]
       },
       {
+       "object": "ViewGroup",
+       "label": "Active group",
+       "icon": "object",
+       "field": "vig_view_id",
+       "list": [{
+        "object": "ViewGroup",
+        "userkey": "CvAdherentHome~CV_ADHERENT",
+        "item": {
+         "vig_view_id__viw_name": "CvAdherentHome",
+         "vig_group_id__grp_name": "CV_ADHERENT",
+         "vig_group_id__grp_comment": null,
+         "row_module_id__mdl_name": "Capvital"
+        }
+       }]
+      },
+      {
        "object": "Function",
        "label": "Functions",
        "icon": "img/system/function",
@@ -3881,20 +5231,36 @@
          "label": "Grant",
          "icon": "img/system/grant",
          "field": "grt_function_id",
-         "list": [{
-          "object": "Grant",
-          "userkey": "CV_ADHERENT~_CV_ADHERENT_HOME_V~~",
-          "item": {
-           "grt_group_id__grp_name": "CV_ADHERENT",
-           "grt_function_id__fct_name": "_CV_ADHERENT_HOME_V",
-           "grt_function_id__fct_object_id__obj_type": null,
-           "grt_function_id__fct_object_id__obj_name": null,
-           "grt_function_id__fct_action_id__act_name": null,
-           "grt_function_id__fct_function": "V",
-           "grt_activ": true,
-           "row_module_id__mdl_name": "Capvital"
+         "list": [
+          {
+           "object": "Grant",
+           "userkey": "CV_ADHERENT~_CV_ADHERENT_HOME_V~~",
+           "item": {
+            "grt_group_id__grp_name": "CV_ADHERENT",
+            "grt_function_id__fct_name": "_CV_ADHERENT_HOME_V",
+            "grt_function_id__fct_object_id__obj_type": null,
+            "grt_function_id__fct_object_id__obj_name": null,
+            "grt_function_id__fct_action_id__act_name": null,
+            "grt_function_id__fct_function": "V",
+            "grt_activ": true,
+            "row_module_id__mdl_name": "Capvital"
+           }
+          },
+          {
+           "object": "Grant",
+           "userkey": "CV_ADMIN~_CV_ADHERENT_HOME_V~~",
+           "item": {
+            "grt_group_id__grp_name": "CV_ADMIN",
+            "grt_function_id__fct_name": "_CV_ADHERENT_HOME_V",
+            "grt_function_id__fct_object_id__obj_type": null,
+            "grt_function_id__fct_object_id__obj_name": null,
+            "grt_function_id__fct_action_id__act_name": null,
+            "grt_function_id__fct_function": "V",
+            "grt_activ": true,
+            "row_module_id__mdl_name": "Capvital"
+           }
           }
-         }]
+         ]
         }]
        }]
       }
@@ -3907,7 +5273,7 @@
       "viw_name": "CvSupplierHome",
       "viw_ui": "<p>Supplier<\/p>",
       "viw_order": 10,
-      "viw_icon": "bars",
+      "viw_icon": "img/color/data_sheet",
       "viw_disp_id__dis_code": null,
       "viw_scope": null,
       "row_module_id__mdl_name": "Capvital",
@@ -3928,7 +5294,7 @@
           "tsl_typeView": "V",
           "tsl_id__viw_name": "CvSupplierHome",
           "tsl_lang": "ENU",
-          "tsl_value": "Capvital",
+          "tsl_value": "Capvital Supplier",
           "tsl_help": null,
           "row_module_id__mdl_name": "Capvital"
          }
@@ -3940,12 +5306,28 @@
           "tsl_typeView": "V",
           "tsl_id__viw_name": "CvSupplierHome",
           "tsl_lang": "FRA",
-          "tsl_value": "Capvital",
+          "tsl_value": "Fournisseur Capvital",
           "tsl_help": null,
           "row_module_id__mdl_name": "Capvital"
          }
         }
        ]
+      },
+      {
+       "object": "ViewGroup",
+       "label": "Active group",
+       "icon": "object",
+       "field": "vig_view_id",
+       "list": [{
+        "object": "ViewGroup",
+        "userkey": "CvSupplierHome~CV_SUPPLIER",
+        "item": {
+         "vig_view_id__viw_name": "CvSupplierHome",
+         "vig_group_id__grp_name": "CV_SUPPLIER",
+         "vig_group_id__grp_comment": null,
+         "row_module_id__mdl_name": "Capvital"
+        }
+       }]
       },
       {
        "object": "Function",
@@ -4105,24 +5487,24 @@
      "mod_template_id__mtp_name": "ModelObject",
      "mod_doc": {
       "path": "files/Model/CapvitalModel.svg",
-      "size": 28842,
+      "size": 38030,
       "field": "mod_doc",
       "mime": "image/svg+xml",
-      "name": "CapvitalModel.svg",
-      "id": "7483",
+      "name": "model.svg",
+      "id": "7345",
       "object": "Model",
-      "rowid": "10"
+      "rowid": "9"
      },
      "mod_json": null,
      "mod_image": {
       "path": "files/Model/CapvitalModel.png",
-      "size": 72794,
+      "size": 80863,
       "field": "mod_image",
       "mime": "image/png",
       "name": "CapvitalModel.png",
-      "id": "7484",
+      "id": "7346",
       "object": "Model",
-      "rowid": "10"
+      "rowid": "9"
      },
      "row_module_id__mdl_name": "Capvital"
     }
@@ -4148,9 +5530,9 @@
       "field": "adp_script_id",
       "mime": "text/plain",
       "name": "CapvitalAdapter.java",
-      "id": "7491",
+      "id": "7067",
       "object": "Adapter",
-      "rowid": "15"
+      "rowid": "14"
      },
      "row_module_id__mdl_name": "Capvital"
     }

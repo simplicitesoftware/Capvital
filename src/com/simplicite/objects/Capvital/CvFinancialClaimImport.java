@@ -4,6 +4,11 @@ import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.util.*;
 
+import org.apache.commons.io.IOUtils;
+import org.apache.tika.Tika;
+import org.apache.tika.exception.TikaException;
+import org.xml.sax.SAXException;
+
 import com.simplicite.util.*;
 import com.simplicite.util.exceptions.*;
 import com.simplicite.util.tools.*;
@@ -35,19 +40,29 @@ public class CvFinancialClaimImport extends ObjectDB {
 		if(doc!=null) {
 			try {
 				byte[] data = doc.getBytes(true);
+				InputStream inputStream = new ByteArrayInputStream(data);
+				String res = parseToStringExample(inputStream);
 				checkCSVConformity();
-				new Integration().importADP(g, "CapvitalAdapter", new ByteArrayInputStream(data), getName(), params);
+				new Integration().importADP(g, "CapvitalAdapter", inputStream, getName(), params);
 				importSuccess(doc);
 			} catch(CSVConformityException e) {
 				AppLog.error("Document content is not conform", e, g);
 			} catch(java.io.IOException e) {
 				AppLog.error("Unable to read document content", e, g);
+			} catch(TikaException e) {
+				AppLog.error("Unable to parse document content", e, g);
 			} 
 		}
 	}
 	
 	private void checkCSVConformity() throws CSVConformityException {
 		
+	}
+
+	private String parseToStringExample(InputStream inputStream) throws TikaException, java.io.IOException {
+		List<String> lines = IOUtils.readLines(inputStream, "UTF-8");
+		
+		return "";
 	}
 
 	@Override
