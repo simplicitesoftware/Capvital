@@ -3,6 +3,7 @@ package com.simplicite.objects.Capvital;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.util.*;
+import java.io.IOException;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.tika.Tika;
@@ -41,28 +42,25 @@ public class CvFinancialClaimImport extends ObjectDB {
 			try {
 				byte[] data = doc.getBytes(true);
 				InputStream inputStream = new ByteArrayInputStream(data);
-				String res = parseToStringExample(inputStream);
-				checkCSVConformity();
+				checkCSVConformity(inputStream);
 				new Integration().importADP(g, "CapvitalAdapter", inputStream, getName(), params);
 				importSuccess(doc);
 			} catch(CSVConformityException e) {
 				AppLog.error("Document content is not conform", e, g);
-			} catch(java.io.IOException e) {
+			} catch(IOException e) {
 				AppLog.error("Unable to read document content", e, g);
-			} catch(TikaException e) {
-				AppLog.error("Unable to parse document content", e, g);
-			} 
+			}
 		}
 	}
 	
-	private void checkCSVConformity() throws CSVConformityException {
-		
+	private void checkCSVConformity(InputStream inputStream) throws CSVConformityException, IOException {
+		parseToString(inputStream).forEach(line -> AppLog.info(line, getGrant()));
 	}
 
-	private String parseToStringExample(InputStream inputStream) throws TikaException, java.io.IOException {
+	private List<String> parseToString(InputStream inputStream) throws IOException {
 		List<String> lines = IOUtils.readLines(inputStream, "UTF-8");
 		
-		return "";
+		return lines;
 	}
 
 	@Override

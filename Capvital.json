@@ -1904,11 +1904,11 @@
       "obo_class": null,
       "obo_script_id": {
        "path": "src/com/simplicite/objects/Capvital/CvFinancialClaimImport.java",
-       "size": 3069,
+       "size": 3046,
        "field": "obo_script_id",
        "mime": "text/plain",
        "name": "CvFinancialClaimImport.java",
-       "id": "7106",
+       "id": "7463",
        "object": "ObjectInternal",
        "rowid": "2005"
       },
