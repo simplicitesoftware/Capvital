@@ -29,6 +29,8 @@ public class CapvitalAdapter extends CSVLineBasedAdapter {
 	
 	@Override
 	public String processValues(long lineNumber, String[] values){	
+		// ignore first line
+		if (lineNumber == 1) return null;
 		// Good practice: handle errors with exceptions		
 		try{
 
@@ -65,9 +67,12 @@ public class CapvitalAdapter extends CSVLineBasedAdapter {
 			String dbDate = values[0].split("/", -1)[2] +"-"+ values[0].split("/", -1)[1]+ "-"+ values[0].split("/", -1)[0];
 			financialClaim.setFieldValue("cvFcDate", dbDate);
 			financialClaim.setFieldValue("cvFcInvoice", values[1]);
-			financialClaim.setFieldValue("cvFcGrossSales", values[2]);
-			financialClaim.setFieldValue("CvFinancialClaim_CvAccount_id", 1);
-			financialClaim.setFieldValue("CvFinancialClaim_CvAccount_id.cvAccountName", values[3]);
+			financialClaim.setFieldValue("CvFinancialClaim_CvAdherent_id", getAdherentId(values[2]));
+			financialClaim.setFieldValue("cvFcRefProduit", values[3]);
+			financialClaim.setFieldValue("cvFcGrossSales", values[4]);
+			financialClaim.setFieldValue("cvFcTVA", values[5]);
+			financialClaim.setFieldValue("cvFcTotal", values[6]);
+
 			financialClaim.setFieldValue("CvFinancialClaim_CvFinancialClaimImport_id", getParameter("importId"));
 			createMsg = financialClaim.create();
 			if(createMsg != null) AppLog.info(createMsg, getGrant());
@@ -75,5 +80,11 @@ public class CapvitalAdapter extends CSVLineBasedAdapter {
 		if(!Tool.isEmpty(createMsg)){
 			throw new CapvitalAdapterException(createMsg);
 		}
+	}
+
+	private String getAdherentId(String adherentName) throws CapvitalAdapterException {
+		String res = Tool.isEmpty(adherentName) ? "" : getGrant().simpleQuery("select row_id from cv_adherent where cv_adherent_name='" + adherentName + "'");
+		if(res == null) throw new CapvitalAdapterException("Adherent " + adherentName + " cannot be found in db");
+		return res;
 	}
 }

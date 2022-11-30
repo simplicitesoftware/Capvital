@@ -59,8 +59,33 @@ paths:
         type: string
         required: false
       - in: query
+        name: CvFinancialClaim_CvAdherent_id
+        description: Search filter for Adherents
+        type: string
+        required: false
+      - in: query
+        name: CvFinancialClaim_CvAdherent_id__cvAdherentName
+        description: Search filter for Adherent
+        type: string
+        required: false
+      - in: query
+        name: cvFcRefProduit
+        description: Search filter for Product reference
+        type: string
+        required: false
+      - in: query
         name: cvFcGrossSales
         description: Search filter for Gross sales
+        type: integer
+        required: false
+      - in: query
+        name: cvFcTVA
+        description: Search filter for TVA
+        type: integer
+        required: false
+      - in: query
+        name: cvFcTotal
+        description: Search filter for Total
         type: integer
         required: false
       - in: query
@@ -70,7 +95,7 @@ paths:
         required: false
       - in: query
         name: CvFinancialClaim_CvFinancialClaimImport_id__cvFcImportDate
-        description: Search filter for Financial claim import Date
+        description: Search filter for Import date
         type: string
         required: false
       - in: query
@@ -2193,20 +2218,35 @@ definitions:
       cvFcKey:
         description: Cv fc key
         type: string
+      cvFcTVA:
+        description: TVA
+        type: integer
       cvFcDate:
         description: Date
         type: string
         example: yyyy-MM-dd
-      cvFcInvoice:
-        description: Invoice
+      CvFinancialClaim_CvAdherent_id__cvAdherentName:
+        description: Adherent
         type: string
       cvFcGrossSales:
         description: Gross sales
         type: integer
       CvFinancialClaim_CvFinancialClaimImport_id__cvFcImportDate:
-        description: Financial claim import Date
+        description: Import date
         type: string
         example: yyyy-MM-dd HH:mm:ss
+      cvFcTotal:
+        description: Total
+        type: integer
+      cvFcRefProduit:
+        description: Product reference
+        type: string
+      cvFcInvoice:
+        description: Invoice
+        type: string
+      CvFinancialClaim_CvAdherent_id:
+        description: Adherents
+        type: string
       row_id:
         description: Unique technical row ID
         type: string

@@ -6,17 +6,9 @@ import java.util.*;
 import java.io.IOException;
 
 import org.apache.commons.io.IOUtils;
-import org.apache.tika.Tika;
-import org.apache.tika.exception.TikaException;
-import org.xml.sax.SAXException;
 
 import com.simplicite.util.*;
-import com.simplicite.util.exceptions.*;
-import com.simplicite.util.tools.*;
-import com.simplicite.util.tools.Parameters.DocParam;
 import com.simplicite.util.Integration;
-
-import ch.simschla.minify.cli.App;
 
 /**
  * Business object CvFinancialClaimImport
@@ -42,11 +34,12 @@ public class CvFinancialClaimImport extends ObjectDB {
 			try {
 				byte[] data = doc.getBytes(true);
 				InputStream inputStream = new ByteArrayInputStream(data);
-				checkCSVConformity(inputStream);
+				//checkCSVConformity(inputStream);
 				new Integration().importADP(g, "CapvitalAdapter", inputStream, getName(), params);
 				importSuccess(doc);
-			} catch(CSVConformityException e) {
-				AppLog.error("Document content is not conform", e, g);
+			// } catch(CSVConformityException e) {
+			// 	AppLog.error("Document content is not conform", e, g);
+			// 
 			} catch(IOException e) {
 				AppLog.error("Unable to read document content", e, g);
 			}

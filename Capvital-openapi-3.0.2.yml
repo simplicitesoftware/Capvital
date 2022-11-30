@@ -361,20 +361,35 @@ components:
         cvFcKey:
           description: Cv fc key
           type: string
+        cvFcTVA:
+          description: TVA
+          type: integer
         cvFcDate:
           description: Date
           type: string
           example: yyyy-MM-dd
-        cvFcInvoice:
-          description: Invoice
+        CvFinancialClaim_CvAdherent_id__cvAdherentName:
+          description: Adherent
           type: string
         cvFcGrossSales:
           description: Gross sales
           type: integer
         CvFinancialClaim_CvFinancialClaimImport_id__cvFcImportDate:
-          description: Financial claim import Date
+          description: Import date
           type: string
           example: yyyy-MM-dd HH:mm:ss
+        cvFcTotal:
+          description: Total
+          type: integer
+        cvFcRefProduit:
+          description: Product reference
+          type: string
+        cvFcInvoice:
+          description: Invoice
+          type: string
+        CvFinancialClaim_CvAdherent_id:
+          description: Adherents
+          type: string
         row_id:
           description: Unique technical row ID
           type: string
@@ -480,10 +495,40 @@ paths:
         description: Search filter for Invoice
         required: false
       - schema:
+          type: string
+        in: query
+        name: CvFinancialClaim_CvAdherent_id
+        description: Search filter for Adherents
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: CvFinancialClaim_CvAdherent_id__cvAdherentName
+        description: Search filter for Adherent
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: cvFcRefProduit
+        description: Search filter for Product reference
+        required: false
+      - schema:
           type: integer
         in: query
         name: cvFcGrossSales
         description: Search filter for Gross sales
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: cvFcTVA
+        description: Search filter for TVA
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: cvFcTotal
+        description: Search filter for Total
         required: false
       - schema:
           type: string
@@ -495,7 +540,7 @@ paths:
           type: string
         in: query
         name: CvFinancialClaim_CvFinancialClaimImport_id__cvFcImportDate
-        description: Search filter for Financial claim import Date
+        description: Search filter for Import date
         required: false
       - schema:
           type: string

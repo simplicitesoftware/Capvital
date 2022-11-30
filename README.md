@@ -36,7 +36,12 @@
 | `cvFcKey`                                                    | char(255)                                | yes*     | yes       |          | -                                                                                |
 | `cvFcDate`                                                   | date                                     | yes      | yes       |          | -                                                                                |
 | `cvFcInvoice`                                                | char(255)                                | yes      | yes       |          | -                                                                                |
+| `CvFinancialClaim_CvAdherent_id` link to **`CvAdherent`**    | id                                       |          | yes       |          | -                                                                                |
+| _Ref. `CvFinancialClaim_CvAdherent_id.cvAdherentName`_       | _char(255)_                              |          |           |          | -                                                                                |
+| `cvFcRefProduit`                                             | char(255)                                |          | yes       |          | -                                                                                |
 | `cvFcGrossSales`                                             | int(11)                                  | yes      | yes       |          | -                                                                                |
+| `cvFcTVA`                                                    | int(11)                                  | yes      | yes       |          | -                                                                                |
+| `cvFcTotal`                                                  | int(11)                                  | yes      | yes       |          | -                                                                                |
 | `CvFinancialClaim_CvFinancialClaimImport_id` link to **`CvFinancialClaimImport`** | id                                       |          | yes       |          | -                                                                                |
 | _Ref. `CvFinancialClaim_CvFinancialClaimImport_id.cvFcImportDate`_ | _datetime_                               |          |           |          | -                                                                                |
 | _Ref. `CvFinancialClaim_CvFinancialClaimImport_id.CvFinancialClaimImport_CvSupplier_id`_ | _id_                                     |          |           |          | -                                                                                |
@@ -105,8 +110,12 @@
 
 | Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      |
 |--------------------------------------------------------------|------------------------------------------|----------|-----------|----------|----------------------------------------------------------------------------------|
-| `CvUserAdherent_CvAdherent_id` link to **`CvAdherent`**      | id                                       |          | yes       |          | -                                                                                |
+| `CvUserAdherent_CvAdherent_id` link to **`CvAdherent`**      | id                                       | yes      | yes       |          | -                                                                                |
 | _Ref. `CvUserAdherent_CvAdherent_id.cvAdherentName`_         | _char(255)_                              |          |           |          | -                                                                                |
+
+### Custom actions
+
+* `resetPassword`: 
 
 `CvUserSupplier` business object definition
 -------------------------------------------
@@ -117,6 +126,16 @@
 
 | Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      |
 |--------------------------------------------------------------|------------------------------------------|----------|-----------|----------|----------------------------------------------------------------------------------|
-| `CvUserSupplier_CvSupplier_id` link to **`CvSupplier`**      | id                                       |          | yes       |          | -                                                                                |
+| `CvUserSupplier_CvSupplier_id` link to **`CvSupplier`**      | id                                       | yes      | yes       |          | -                                                                                |
 | _Ref. `CvUserSupplier_CvSupplier_id.cvSupplierName`_         | _char(255)_                              |          |           |          | -                                                                                |
+
+### Custom actions
+
+* `resetPassword`: 
+
+`CvAdminDashboard` external object definition
+---------------------------------------------
+
+
+
 
