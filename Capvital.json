@@ -145,48 +145,6 @@
       "usp_param_id__sys_desc": "Force password change (set at user level)",
       "row_module_id__mdl_name": "Capvital"
      }
-    },
-    {
-     "object": "UserSysParam",
-     "userkey": "dtom~FORCE_CHANGE_PASSWORD",
-     "item": {
-      "usp_user_id__usr_login": "dtom",
-      "usp_param_id__sys_code": "FORCE_CHANGE_PASSWORD",
-      "usp_value": "yes",
-      "usp_param_id__sys_type": "PRV",
-      "usp_param_id__sys_value": "empty",
-      "usp_param_id__sys_value2": null,
-      "usp_param_id__sys_desc": "Force password change (set at user level)",
-      "row_module_id__mdl_name": "Capvital"
-     }
-    },
-    {
-     "object": "UserSysParam",
-     "userkey": "mwelch~FORCE_CHANGE_PASSWORD",
-     "item": {
-      "usp_user_id__usr_login": "mwelch",
-      "usp_param_id__sys_code": "FORCE_CHANGE_PASSWORD",
-      "usp_value": "yes",
-      "usp_param_id__sys_type": "PRV",
-      "usp_param_id__sys_value": "empty",
-      "usp_param_id__sys_value2": null,
-      "usp_param_id__sys_desc": "Force password change (set at user level)",
-      "row_module_id__mdl_name": "Capvital"
-     }
-    },
-    {
-     "object": "UserSysParam",
-     "userkey": "plouineaux~FORCE_CHANGE_PASSWORD",
-     "item": {
-      "usp_user_id__usr_login": "plouineaux",
-      "usp_param_id__sys_code": "FORCE_CHANGE_PASSWORD",
-      "usp_value": "yes",
-      "usp_param_id__sys_type": "PRV",
-      "usp_param_id__sys_value": "empty",
-      "usp_param_id__sys_value2": null,
-      "usp_param_id__sys_desc": "Force password change (set at user level)",
-      "row_module_id__mdl_name": "Capvital"
-     }
     }
    ]
   },
